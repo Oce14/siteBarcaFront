@@ -1,0 +1,30 @@
+<div class="call-action style-1 content-inner-1">
+  <div class="container">
+    <div class="inner-action overlay-primary-dark"
+      style="background-image:url('assets/images/background/bg1.jpg'); background-size: cover; background-repeat: no-repeat;">
+      <div class="row inner-content justify-content-center">
+        <div class="col-xl-6 col-lg-9 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="section-head text-center">
+            <h2 class="title text-white">Don’t miss our weekly updates about donations</h2>
+          </div>
+          @if(message){
+            <p [ngClass]="{ 'text-success': success, 'text-danger': !success }">{{ message }}</p>
+          }
+          <form class="dzSubscribe" [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
+            <div class="dzSubscribeMsg text-white"></div>
+            <div class="input-group">
+              <input name="email" formControlName="email" required="required" type="email" class="form-control"
+                placeholder="Enter your email address...">
+              <div class="input-group-addon">
+                <button name="submit" value="Submit" type="submit" class="btn btn-secondary btn-rounded-lg">
+                  <span>SUBSCRIBE</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

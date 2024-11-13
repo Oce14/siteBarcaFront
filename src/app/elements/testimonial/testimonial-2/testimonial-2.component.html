@@ -1,0 +1,49 @@
+<section class="content-inner testimonial-wrapper2" style="background-image:url('assets/images/background/bg10.jpg'); background-position: center;">
+  <div class="container">
+    <div class="section-head text-center wow fadeInUp" data-wow-delay="0.8s">
+      <h5 class="sub-title">What people are saying</h5>
+      <h2 class="title">Success Stories</h2>
+    </div>
+  </div>
+  <div class="min-container position-relative">
+    <div class="swiper testimonial-swiper2">
+      <div class="swiper-wrapper">
+        @for(item of data; track item){
+        <div class="swiper-slide">
+          <div class="testimonial-2 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="testimonial-media">
+              <img src="{{ item.image }}" alt="">
+            </div>
+            <div class="testimonial-content">
+              <h5 class="testimonial-title">{{ item.title }}</h5>
+              <p class="testimonial-text text-dark">{{ item.desc }}
+              <a href="javascript:void(0);"  data-bs-toggle="modal" data-bs-target="#read">Read More</a></p>
+              <div class="testimonial-info">
+                <div class="quotes">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="clearfix">
+                  <h5 class="testimonial-name">{{ item.name }}.</h5>
+                  <span class="testimonial-position">{{ item.position }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+    <div class="swiper-btn swiper-btn-center-lr">
+      <div class="test-swiper-prev btn-prev style-2">
+        <i class="flaticon-left-arrow-1"></i>
+      </div>
+      <div class="test-swiper-next btn-next style-2">
+        <i class="flaticon-next"></i>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center m-t30">
+    <a [routerLink]="['/fundraiser-detail']" class="btn btn-secondary m-r15 m-b15">Start A Fundraiser For Free</a>
+    <a [routerLink]="['/contact-us']" class="btn btn-dark m-b15 ms-1">Talk To Us</a>
+  </div>
+</section>

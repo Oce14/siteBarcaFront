@@ -1,0 +1,46 @@
+<section class="bg-primary form-wrapper1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="section-head">
+          <h5 class="sub-title text-white">JOIN US</h5>
+          <h2 class="title text-white">We Need Your Help</h2>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <form class="dzForm" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+          <div class="dzFormMsg">
+            @if(submitted && f['email'].errors && f['email'].errors['required']==true){
+              <div class="err alert alert-danger">{{ submissionStatus }} </div>
+            }
+            @if(submitted && successFullStatus) {
+              <div class="err alert alert-{{ submissionStatus!='Submiting..'? 'success':'danger' }}">{{ submissionStatus }} </div>
+            }
+          </div>
+          <input type="hidden" class="form-control" name="dzToDo" value="Contact">
+          <input type="hidden" class="form-control" name="reCaptchaEnable" value="0">
+          <div class="row g-4">
+            <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+              <input formControlName="fname" required="" type="text" class="form-control" placeholder="First Name">
+            </div>
+            <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
+              <input formControlName="lname" required="" type="text" class="form-control" placeholder="Last Name">
+            </div>
+            <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+              <input formControlName="email" required="" type="email" class="form-control" placeholder="Email Address">
+            </div>
+            <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.8s">
+              <input formControlName="mobile" required="" type="number" class="form-control" placeholder="Phone Number">
+            </div>
+            <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="1.0s">
+              <input formControlName="message" required="" type="text" class="form-control" placeholder="Your Message">
+            </div>
+            <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="1.2s">
+              <button name="submit" type="submit" value="Submit" class="btn btn-dark btn-block h-100">Submit Now</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

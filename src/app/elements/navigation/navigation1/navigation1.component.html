@@ -1,0 +1,34 @@
+<ul class="nav navbar-nav navbar navbar-left">
+  @for(item of sidebarMenu; track item; let i = $index;){
+    @if(item.route){
+    <li><a routerLink="{{ item.route }}">{{ item.title }}</a></li>
+    } @else {
+    <li class="sub-menu-down" [ngClass]="{'active': item.title == activeMenu, 'open': i.toString() == toggleMenu}">
+      <a href="javascript:void(0);" (click)="opneMenu(i)">{{ item.title }}</a>
+      @if(item.subMenu){
+      <ul class="sub-menu">
+        @for(subitem of item?.subMenu; track subitem; let sub_i = $index){
+        <li [ngClass]="{'active': subitem.title == activeSubMenu, 'open': sub_i.toString() == toggleSubMenu}">
+          @if(!subitem.subsubMenu){
+          <a routerLink="{{ subitem.route }}">{{ subitem.title }}</a>
+          }
+          @if(subitem.subsubMenu){
+          <a href="javascript:void(0);" (click)="opneSubMenu(sub_i)">{{ subitem.title }}
+            <i class="fa fa-angle-right"></i>
+          </a>
+          <ul class="sub-menu">
+            @for(subSubItem of subitem.subsubMenu; track subSubItem){
+            <li [ngClass]="{'active': subSubItem.title == activeSubSubMenu}">
+              <a routerLink="{{ subSubItem.route }}">{{ subSubItem.title }}</a>
+            </li>
+            }
+          </ul>
+          }
+        </li>
+        }
+      </ul>
+      }
+    </li>
+    }
+  }
+</ul>

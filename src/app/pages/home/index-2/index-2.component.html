@@ -1,0 +1,132 @@
+<!-- <div id="loading-area" class="loading-page-2">
+	<div class="loading-inner">
+		<img src="assets/images/lodaer2.gif" alt="">
+	</div>
+</div> -->
+
+
+<div class="page-wraper">
+
+	<!-- Header -->
+	<app-header-2></app-header-2>
+	<!-- Header End -->
+
+	<div class="page-content bg-white">
+		<!-- Banner -->
+		<app-banner-2></app-banner-2>
+
+		<!-- About Us -->
+		<app-about-us-1></app-about-us-1>
+		<!-- About Us End-->
+
+		<!-- service -->
+		<app-service-1></app-service-1>
+		<!-- service -->
+
+		<!-- Fundraiser Steps -->
+    <app-content-2></app-content-2>
+		<!-- Fundraiser Steps -->
+
+		<!-- Online Courses -->
+		<app-course-1></app-course-1>
+		<!-- Online Courses End -->
+
+		<!-- Testimonials -->
+		<app-testimonial-2 [data]="testimonial"></app-testimonial-2>
+		<!-- Testimonials End -->
+
+		<!-- Map -->
+		<app-map-1></app-map-1>
+		<!-- Map End-->
+
+		<!-- Our Blog  -->
+		<section class="content-inner-2">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-7 col-lg-12">
+						<div class="section-head wow fadeInUp" data-wow-delay="0.2s">
+							<h5 class="sub-title">FROM OUR BLOG</h5>
+							<h2 class="title">Recent News & Updates</h2>
+						</div>
+            @for(item of blogList; track item){
+						<div class="dz-card style-6 blog-half wow fadeInUp" data-wow-delay="0.2s">
+							<div class="dz-media">
+								<a [routerLink]="['/blog-details']"><img src="{{ item.image }}" alt=""></a>
+								<ul class="dz-badge-list">
+									<li><a href="javascript:void(0);" class="dz-badge">{{ item.date }}</a></li>
+								</ul>
+								<a [routerLink]="['/blog-details']" class="btn btn-secondary">Read More</a>
+							</div>
+							<div class="dz-info">
+								<h4 class="dz-title"><a [routerLink]="['/blog-details']">{{ item.title }}</a></h4>
+								<div class="dz-meta">
+									<ul>
+										<li class="dz-user">
+											<i class="fa-solid fa-user"></i>
+											By <span>{{ item.userName }}</span>
+										</li>
+										<li class="dz-date ms-1">
+											<i class="fa-solid fa-message"></i>
+											{{ item.comment }} Comments
+										</li>
+									</ul>
+								</div>
+								<p>{{ item.desc }}</p>
+							</div>
+						</div>
+            }
+					</div>
+					<div class="col-xl-5 col-lg-12 m-b30 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="dz-card style-7" style="background-image: url(assets/images/blog/blog-grid-2/pic1.jpg)">
+							<div class="dz-category">
+								<ul class="dz-badge-list">
+									<li><a href="javascript:void(0);" class="dz-badge">14 Fan 2022</a></li>
+								</ul>
+							</div>
+							<div class="dz-info">
+								<h2 class="dz-title"><a [routerLink]="['/blog-details']" class="text-white">Directly support individuals Charity</a></h2>
+								<div class="dz-meta">
+									<ul>
+										<li class="dz-user">
+											<i class="fa-solid fa-user"></i>
+											By <span>KK Sharma</span>
+										</li>
+										<li class="dz-date ms-1">
+											<i class="fa-solid fa-message"></i>
+											24 Comments
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Our Blog End  -->
+
+		<!-- Client Logo -->
+		<div class="clients-wrapper">
+      <div class="container">
+        <app-clients-swiper></app-clients-swiper>
+			</div>
+		</div>
+		<!-- Client Logo -->
+
+		<!-- Call Action -->
+    <div class="footer-feature-wrapper">
+      <div class="container">
+        <app-call-to-action2></app-call-to-action2>
+      </div>
+    </div>
+
+		<!-- Call Action -->
+
+	</div>
+
+	<!-- Footer -->
+  <app-footer-2></app-footer-2>
+  <!-- Footer End -->
+
+  <app-scroll-top-button></app-scroll-top-button>
+</div>

@@ -1,0 +1,83 @@
+@for(item of data; track item; let i = $index){
+  @if((i%2)==0){
+  <div class="row align-items-center project-bx left m-b50 {{ item.aadclass }}">
+    <div class="col-lg-6 col-md-12 m-b30">
+      <div class="dz-media split-box">
+        <img src="{{ item.image }}" alt="" class="app-1">
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 m-b30 ps-3">
+      <div class="dz-content wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+        <h3 class="title m-b20">{{ item.title }}</h3>
+        <p class="m-b0">{{ item.desc }}</p>
+        <div class="fund-count m-t20 m-b25">
+          <h2 class="text-primary">$ <span [countUp]="item.counter" [options]="opts"></span>.24</h2>
+          <h6>Total funded</h6>
+        </div>
+        <div class="author-wrappper">
+          <div class="author-media">
+            <img src="{{ item.userImage }}" alt="">
+          </div>
+          <div class="author-content">
+            <div class="author-head">
+              <h6 class="author-name">{{ item.userName }}</h6>
+              <ul class="rating-list">
+                @for(starRow of [].constructor(5); track starRow; let i = $index){
+                  @if(item.rating > i){
+                    <li><i class="fa fa-star" [ngClass]="[i == 4 ? 'me-0':'me-1']"></i></li>
+                  } @else {
+                    <li><i class="fa fa-star gray-light" [ngClass]="[i == 4 ? 'me-0':'me-1']"></i></li>
+                  }
+                }
+              </ul>
+            </div>
+            <ul class="author-meta">
+              <li class="campaign">{{ item.campaign }} Campaign</li>
+              <li class="location">{{ item.location }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  }@else{
+  <div class="row align-items-center project-bx right m-b50 {{ item.aadclass }}">
+    <div class="col-lg-6 col-md-12 m-b30">
+      <h3 class="m-b20">{{ item.title }}</h3>
+      <p class="m-b0">{{ item.desc }}</p>
+      <div class="fund-count m-t20 m-b25">
+        <h2 class="text-primary">$ <span [countUp]="item.counter" [options]="opts"></span>.43</h2>
+        <h6>Total funded</h6>
+      </div>
+      <div class="author-wrappper">
+        <div class="author-media">
+          <img src="{{ item.userImage }}" alt="">
+        </div>
+        <div class="author-content">
+          <div class="author-head">
+            <a href="javascript:void(0);"><h6 class="author-name">{{ item.userName }}</h6></a>
+            <ul class="rating-list">
+              @for(starRow of [].constructor(5); track starRow; let i = $index){
+                @if(item.rating > i){
+                  <li><i class="fa fa-star" [ngClass]="[i == 4 ? 'me-0':'me-1']"></i></li>
+                } @else {
+                  <li><i class="fa fa-star gray-light" [ngClass]="[i == 4 ? 'me-0':'me-1']"></i></li>
+                }
+              }
+            </ul>
+          </div>
+          <ul class="author-meta">
+            <li class="campaign">{{ item.campaign }} Campaign</li>
+            <li class="location">{{ item.location }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 m-b30">
+      <div class="dz-media split-box">
+        <img src="{{ item.image }}" alt="" class="app-1">
+      </div>
+    </div>
+  </div>
+  }
+}

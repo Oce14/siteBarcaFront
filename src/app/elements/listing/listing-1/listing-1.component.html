@@ -1,0 +1,55 @@
+<ul id="masonry"  class="row masonry-grid">
+  @for(item of data; track item){
+  <li class="{{ addClass }} {{ item.filterClass }}">
+    <div class="dz-card style-2 overlay-skew">
+      <div class="dz-media">
+        <a [routerLink]="['/fundraiser-detail']"><img src="{{ item.projectImg }}" alt=""></a>
+      </div>
+      <div class="dz-info">
+        <ul class="dz-category">
+          <li><a href="javascript:void(0);">{{ item.category | uppercase  }}</a></li>
+        </ul>
+        <h5 class="dz-title"><a [routerLink]="['/fundraiser-detail']">{{ item.title }}</a></h5>
+        <div class="progress-bx style-1">
+          <div class="progress">
+            <div class="progress-bar progress-bar-secondary progress-bar-striped progress-bar-animated"
+              role="progressbar" [attr.aria-valuenow]="item.progress" aria-valuemin="0" aria-valuemax="100" [style.width.%]="item.progress">
+            </div>
+          </div>
+          <ul class="progress-tag">
+            <li class="raised">
+              <i class="las la-coins"></i> Raised: <span class="text-primary">{{ item.totalRaised | currency: 'USD':true:'2.0'}}</span>
+            </li>
+            <li class="goal">
+              <i class="lar la-calendar"></i><span class="me-1">{{ item.left_day}}</span>Days left
+            </li>
+          </ul>
+        </div>
+        <div class="author-wrappper">
+          <div class="author-media">
+            <img src="{{ item.image }}" alt="">
+          </div>
+          <div class="author-content">
+            <div class="author-head">
+              <h6 class="author-name">{{ item.name }}</h6>
+              <ul class="rating-list">
+                @for(starRow of [].constructor(5); track starRow; let i = $index){
+                  @if(item.rating > i){
+                    <li><i class="fa fa-star" [ngClass]="[i == 4 ? 'me-0':'me-1']"></i></li>
+                  } @else {
+                    <li><i class="fa fa-star gray-light" [ngClass]="[i == 4 ? 'me-0':'me-1']"></i></li>
+                  }
+                }
+              </ul>
+            </div>
+            <ul class="author-meta">
+              <li class="campaign">12 Campaign</li>
+              <li class="location">{{ item.location }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  }
+</ul>

@@ -1,0 +1,22 @@
+<div class="swiper team-slider-load">
+  <div class="swiper-wrapper">
+    @for(item of data; track item){
+    <div class="swiper-slide">
+      <div class="dz-team style-1 m-b30 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="dz-media">
+          <a routerLink="/instructor"><img src="{{ item.img }}" alt=""></a>
+          <ul class="team-social">
+            <li><a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" class="fab fa-instagram"></a></li>
+            <li><a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a></li>
+          </ul>
+        </div>
+        <div class="dz-content">
+          <h5 class="dz-name">{{ item.name }}</h5>
+          <span class="dz-position text-primary">{{ item.position }}</span>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>

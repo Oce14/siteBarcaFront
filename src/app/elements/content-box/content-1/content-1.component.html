@@ -1,0 +1,60 @@
+<div class="donate-form form-wrapper" style="background-image:url('assets/images/background/bg2.jpg');">
+  <div class="donate-info">
+    <h2 class="title m-b20">Donate Today</h2>
+    <p>Charity law within the UK varies among England and Wales, Scotland and Northern Ireland, but the fundamental principles are the same</p>
+  </div>
+  <div class="form-content">
+    <form class="dzForm" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <input type="hidden" class="form-control" name="dzToDo" value="Contact">
+      <input type="hidden" class="form-control" name="reCaptchaEnable" value="0">
+      <div class="dzFormMsg">
+        @if(submitted && f['flexRadioDefault'].errors && f['flexRadioDefault'].errors['required']==true){
+          <div class="err alert alert-danger">{{ submissionStatus }} </div>
+        }
+        @if(submitted && successFullStatus) {
+          <div class="err alert alert-{{ submissionStatus!='Submiting..'? 'success':'danger' }}">{{ submissionStatus }} </div>
+        }
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="number" name="dzOther[Other_Amount]" class="form-control donate-input" value="{{modalDonateSelect.flexRadioDefault}}"  placeholder="Other Amount (USD)">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="tag-donate style-3">
+            <div class="donate-categories">
+              <div class="form-check">
+                <input class="form-check-input donate-fill" type="radio" formControlName="flexRadioDefault" id="flexRadioDefault1d" value="10"(click)="getvalue(10)">
+                <label class="form-check-label" for="flexRadioDefault1d">$10</label>
+              </div>
+            </div>
+            <div class="donate-categories">
+              <div class="form-check">
+                <input class="form-check-input donate-fill" type="radio" formControlName="flexRadioDefault" id="flexRadioDefault2d" value="25" (click)="getvalue(25)">
+                <label class="form-check-label" for="flexRadioDefault2d">$25</label>
+              </div>
+            </div>
+            <div class="donate-categories">
+              <div class="form-check">
+                <input class="form-check-input donate-fill" type="radio" formControlName="flexRadioDefault" id="flexRadioDefault3d" value="50" (click)="getvalue(15)">
+                <label class="form-check-label" for="flexRadioDefault3d">$50</label>
+              </div>
+            </div>
+            <div class="donate-categories">
+              <div class="form-check">
+                <input class="form-check-input donate-fill" type="radio" formControlName="flexRadioDefault" id="flexRadioDefault4d" value="100" (click)="getvalue(100)">
+                <label class="form-check-label" for="flexRadioDefault4d">$100</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <button name="submit" type="submit" value="Submit" class="btn btn-dark">Donate Now</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

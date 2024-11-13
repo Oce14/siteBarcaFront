@@ -1,0 +1,15 @@
+
+<div class="swiper banner-swiper">
+
+  <div class="swiper-wrapper">
+
+    @for(item of data; track item){
+      <div class="swiper-slide">
+        <div class="clients-logo">
+          <img class="logo-main" src="{{ item.img }}" alt="">
+        </div>
+      </div>
+    }
+
+  </div>
+</div>

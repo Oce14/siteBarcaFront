@@ -1,0 +1,9 @@
+<ng-template ngFor let-arrayData [ngForOf]="data">
+  <section class="testimonial-wrapper1 content-inner {{ arrayData.section_custom_class }}">
+    <div class="section-head text-center wow fadeInUp" data-wow-delay="0.2s">
+      <h2 class="title" [innerHtml]="arrayData.section_title"></h2>
+      <p>{{ arrayData.section_description }} </p>
+    </div>
+    <app-testimonial-swiper [data]="arrayData.testimonial"></app-testimonial-swiper>
+  </section>
+</ng-template>

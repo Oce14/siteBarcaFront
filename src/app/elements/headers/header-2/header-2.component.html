@@ -1,0 +1,320 @@
+<header class="site-header mo-left header style-2 {{ headerClass }}">
+  <!-- Main Header site-header mo-left header-transparent header style-2 -->
+  <div class="sticky-header main-bar-wraper navbar-expand-lg">
+    <div class="main-bar clearfix ">
+      <div class="container-fluid clearfix">
+        <!-- Website Logo -->
+        <div class="logo-header mostion logo-dark">
+          <a [routerLink]="['/index']"><img src="assets/images/logo-{{ headerClass?'3':'2' }}.png" alt=""></a>
+        </div>
+        @if(headerClass){
+        <div class="logo-header mostion logo-light">
+          <a href="index.html"><img src="assets/images/logo-white-3.png" alt=""></a>
+        </div>
+        }
+        <!-- Nav Toggle Button -->
+        <button class="navbar-toggler collapsed navicon justify-content-end" type="button"
+          [ngClass]="{'open':navbarToggler}" type="button" (click)="opneSidebar()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Extra Nav -->
+        <div class="extra-nav">
+          <div class="extra-cell d-flex align-items-center">
+            <ul class="nav-link-list">
+              <li><a href="javascript:void(0);" (click)="open(loginContent)" class="btn-login text-primary">Login</a>
+              </li>
+              <li><a href="javascript:void(0);" (click)="open(loginContent)" class="btn-login">Sign Up</a></li>
+            </ul>
+            <a class="btn btn-primary btnhover1" href="javascript:void(0);" (click)="openModal(modalDonate)">
+              <span>Donate Now</span>
+              <i class="flaticon-heart ms-3 {{ headerClass?'':'text-secondary' }}"></i>
+            </a>
+
+            <a href="javascript:void(0);" class="menu-btn" (click)="toggleClass()">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="22" y="11" width="4" height="4" rx="2" fill="#003B4A" />
+                <rect x="11" width="4" height="4" rx="2" fill="#003B4A" />
+                <rect x="22" width="4" height="4" rx="2" fill="#003B4A" />
+                <rect x="11" y="11" width="4" height="4" rx="2" fill="#003B4A" />
+                <rect x="11" y="22" width="4" height="4" rx="2" fill="#003B4A" />
+                <rect width="4" height="4" rx="2" fill="#003B4A" />
+                <rect y="11" width="4" height="4" rx="2" fill="#003B4A" />
+                <rect x="22" y="22" width="4" height="4" rx="2" fill="#003B4A" />
+                <rect y="22" width="4" height="4" rx="2" fill="#003B4A" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Header Nav -->
+        <div class="header-nav navbar-collapse collapse justify-content-start" [ngClass]="{'show':navbarToggler}">
+          <div class="logo-header logo-dark">
+            <a [routerLink]="['/index']"><img src="assets/images/logo-2.png" alt=""></a>
+          </div>
+
+          <app-navigation1></app-navigation1>
+
+          <div class="header-bottom">
+            <a href="javascript:void(0);" class="btn btn-light btn-login btn-sm" (click)="open(loginContent)">
+              <i class="flaticon-logout me-3"></i>Login / Sign Up
+            </a>
+            <div class="dz-social-icon">
+              <ul>
+                <li><a target="_blank" class="fab fa-facebook-f" href="https://www.facebook.com/"></a></li>
+                <li><a target="_blank" class="fab fa-twitter" href="https://twitter.com/"></a></li>
+                <li><a target="_blank" class="fab fa-linkedin-in" href="https://www.linkedin.com/"></a></li>
+                <li><a target="_blank" class="fab fa-instagram" href="https://www.instagram.com/"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main Header End -->
+</header>
+<!-- Contact Sidebar -->
+<div class="contact-sidebar" [class.active]="isActive">
+  <div class="contact-box">
+    <div class="logo-contact logo-dark">
+      <a [routerLink]="['/index']"><img src="assets/images/logo-2.png" alt=""></a>
+    </div>
+    <div class="m-b50 contact-text">
+      <div class="dz-title">
+        <h4>About us</h4>
+        <div class="dz-separator style-1 text-primary mb-0"></div>
+      </div>
+      <p>Aliquam erat massa porttitor vel egestas sit tristique ultricies lorem aliquet venenatis libero a nulla
+        placerat egestas.</p>
+      <a [routerLink]="['/about-us']" class="btn btn-primary btn-sm">READ MORE</a>
+    </div>
+    <div class="dz-title">
+      <h4>Contact Info</h4>
+      <div class="dz-separator style-1 text-primary mb-0"></div>
+    </div>
+    <div class="icon-bx-wraper left">
+      <div class="icon-md m-r20">
+        <span class="icon-cell"><i class="las la-phone-volume"></i></span>
+      </div>
+      <div class="icon-content">
+        <h5 class="tilte">Call Now</h5>
+        <p class="m-b0">+91 123 456 7890,<br> +91 987 654 3210</p>
+      </div>
+    </div>
+    <div class="icon-bx-wraper left">
+      <div class="icon-md m-r20">
+        <span class="icon-cell"><i class="las la-envelope-open"></i></span>
+      </div>
+      <div class="icon-content">
+        <h5 class="tilte">Email Now</h5>
+        <p class="m-b0">{{ email }}</p>
+      </div>
+    </div>
+    <div class="icon-bx-wraper left">
+      <div class="icon-md m-r20">
+        <span class="icon-cell"><i class="las la-map-marker"></i></span>
+      </div>
+      <div class="icon-content">
+        <h5 class="tilte">Location</h5>
+        <p class="m-b0">15/B Miranda House, New York, US</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="menu-close" (click)="toggleClass()"></div>
+
+<ng-template #loginContent let-modal>
+  <span #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+    <h2 class="title">Login Your Account</h2>
+    <form action="index.html">
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Email Address">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password">
+        <div class="reset-password">
+          <a class="btn-link" href="javascript:void(0);" (click)="open(resetPassword)"
+            (click)="modal.dismiss('Cross click')">Reset password?</a>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-outline-primary btn-block">Login</button>
+      </div>
+      <div class="form-group">
+        <a href="javascript:void(0);" class="btn facebook btn-block"><i class="fa-brands fa-facebook-f m-r10"></i>Log
+          in with Facebook</a>
+      </div>
+      <div class="form-group">
+        <a href="javascript:void(0);" class="btn google-plus btn-block"><i class="fa-brands fa-google m-r10"></i>Log
+          in with Google</a>
+      </div>
+      <div class="sign-text">
+        <span>Don't have a Crowdfunding account?
+          <a href="javascript:void(0);" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
+            aria-controls="collapseExample">Sign up</a></span>
+      </div>
+    </form>
+  </span>
+
+  <!-- Sign Up Your Account -->
+  <span class="sign-up" #collapse="ngbCollapse" [ngbCollapse]="!isCollapsed">
+    <h2 class="title">Sign Up Your Account</h2>
+    <form action="index.html">
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Email Address">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-outline-primary btn-block">Sign Up</button>
+      </div>
+      <div class="form-group">
+        <a href="javascript:void(0);" class="btn facebook btn-block"><i class="fa-brands fa-facebook-f m-r10"></i>Log
+          in with Facebook</a>
+      </div>
+      <div class="form-group">
+        <a href="javascript:void(0);" class="btn google-plus btn-block"><i class="fa-brands fa-google m-r10"></i>Log
+          in with Google</a>
+      </div>
+      <div class="sign-text">
+        <span>Don't have a Crowdfunding account?
+          <a class="btn-link" href="javascript:void(0);" (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">Login</a>
+        </span>
+      </div>
+    </form>
+  </span>
+</ng-template>
+
+<ng-template #resetPassword let-modal>
+  <!-- Reset Password -->
+  <span class="reset-password">
+    <h2 class="title">Reset password?</h2>
+    <form>
+      <div class="form-group password-icon-bx">
+        <i class="fa fa-lock"></i>
+        <p>Enter your email address associated with your account, and we'll email you a link to reset your
+          password...</p>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Enter email address">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-outline-primary btn-block">Send reset link</button>
+      </div>
+      <a href="javascript:void(0);" class="sign-text" aria-label="Close" (click)="open(loginContent)"
+        (click)="modal.dismiss('Cross click')">Back</a>
+    </form>
+  </span>
+</ng-template>
+
+<ng-template #modalDonate let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title">Choose a donation amount</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"><i
+        class="flaticon-close"></i></button>
+  </div>
+  <div class="modal-body">
+    <form class="p-0" action="">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="tag-donate style-1">
+            <div class="donate-categories">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault"
+                  name="flexRadioDefault" value="500" id="flexRadioDefault11">
+                <label class="form-check-label" for="flexRadioDefault11">
+                  $500
+                </label>
+              </div>
+            </div>
+            <div class="donate-categories">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault"
+                  value="1000" name="flexRadioDefault2" id="flexRadioDefault22">
+                <label class="form-check-label" for="flexRadioDefault22">
+                  $1000
+                </label>
+              </div>
+            </div>
+            <div class="donate-categories">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault"
+                  value="2000" name="flexRadioDefault3" id="flexRadioDefault33">
+                <label class="form-check-label" for="flexRadioDefault33">
+                  $2000
+                </label>
+              </div>
+            </div>
+            <div class="donate-categories">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault"
+                  value="5000" name="flexRadioDefault4" id="flexRadioDefault44">
+                <label class="form-check-label" for="flexRadioDefault44">
+                  $5000
+                </label>
+              </div>
+            </div>
+            <p>Most Donors donate approx <span>${{modalDonateSelect.flexRadioDefault}}</span> to this Fundraiser</p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label class="form-label">Other Amount</label>
+            <div class="input-group">
+              <input type="number" class="form-control" placeholder="Other Amount">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <div class="input-group">
+              <input name="dzName" required="" type="text" class="form-control" placeholder="Jakob Bothman">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label class="form-label">Email address</label>
+            <div class="input-group">
+              <input name="dzEmail" required type="text" class="form-control" placeholder="info@mail.com">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <div class="input-group">
+              <input type="number" class="form-control" placeholder="Phone Number">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label class="form-label">Address</label>
+            <div class="input-group">
+              <input required type="text" class="form-control" placeholder="Address">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label class="form-label">Pancard</label>
+            <div class="input-group">
+              <input type="number" class="form-control" placeholder="Pancard">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group mb-0 text-center">
+            <button name="submit" type="submit" value="Submit" class="btn btn-primary btn-block">Proceed To Pay</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</ng-template>

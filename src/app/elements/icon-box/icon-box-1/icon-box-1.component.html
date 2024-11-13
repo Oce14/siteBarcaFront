@@ -1,0 +1,26 @@
+<section class="content-inner">
+  <div class="container">
+    <div class="section-head text-center">
+      <h5 class="sub-title">CATEGORIES</h5>
+      <h2 class="m-b20">Why choose Akcel</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis no</p>
+    </div>
+    <div class="row">
+      @for(item of data; track item;){
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="icon-bx-wraper box-hover style-2 m-b30">
+          <div class="icon-lg">
+            <a [routerLink]="['/services-details']" class="icon-cell">
+              <i class="{{ item.icon }}"></i>
+            </a>
+          </div>
+          <div class="icon-content">
+            <h5 class="dz-tilte m-b10 text-capitalize">{{ item.title }}</h5>
+            <p>{{ item.desc }}</p>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+@if(sectionData){
+@for(contentData of sectionData; track contentData){
+<div class="content-inner-3 section-pattren1">
+  <div class="container">
+    <div class="section-head text-center wow fadeInUp" data-wow-delay="0.2s">
+      <h5 class="sub-title">{{ contentData.section_subtitle }}</h5>
+      <h2 class="title" [innerHtml]="contentData.section_title"></h2>
+      <p>{{ contentData.section_description }}</p>
+    </div>
+    <div class="swiper categories-swiper">
+      <app-categories-swiper [data]="contentData.category"></app-categories-swiper>
+    </div>
+  </div>
+</div>
+}
+}

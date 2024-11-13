@@ -1,0 +1,40 @@
+@if(timeRemaining){
+<div class="clock">
+  <div class="clock-item clock-days countdown-time-value">
+    <div id="canvas-days" class="clock-canvas">
+      <canvas id="ChartDays" style="position: relative;display: inline-block;width: 155px;height: 155px;" class="kineticjs-content"></canvas>
+    </div>
+    <div class="text">
+      <p class="val">{{ timeRemaining.days }}</p>
+      <p class="type-days type-time" data-border-color="#fff">Days</p>
+    </div>
+  </div>
+  <div class="clock-item clock-hours countdown-time-value">
+    <div id="canvas-hours" class="clock-canvas">
+      <canvas id="ChartHours" style="position: relative;display: inline-block;width: 155px;height: 155px;" class="kineticjs-content"></canvas>
+    </div>
+    <div class="text">
+      <p class="val">{{ timeRemaining.hours }}</p>
+      <p class="type-hours type-time" data-border-color="#fff">Hours</p>
+    </div>
+  </div>
+  <div class="clock-item clock-minutes countdown-time-value">
+    <div id="canvas-seconds" class="clock-canvas">
+      <canvas id="ChartMinutes" style="position: relative;display: inline-block;width: 155px;height: 155px;" class="kineticjs-content"></canvas>
+    </div>
+    <div class="text">
+      <p class="val">{{ timeRemaining.minutes }}</p>
+      <p class="type-minutes type-time" data-border-color="#fff">Minutes</p>
+    </div>
+  </div>
+  <div class="clock-item clock-seconds countdown-time-value">
+    <div id="canvas-seconds" class="clock-canvas">
+      <canvas id="ChartSeconds" style="position: relative;display: inline-block;width: 155px;height: 155px;" class="kineticjs-content"></canvas>
+    </div>
+    <div class="text">
+      <p class="val">{{ timeRemaining.seconds }}</p>
+      <p class="type-seconds type-time" data-border-color="#fff">Seconds</p>
+    </div>
+  </div>
+</div>
+}

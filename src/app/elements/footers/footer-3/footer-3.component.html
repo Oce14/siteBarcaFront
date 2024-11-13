@@ -1,0 +1,104 @@
+<footer class="site-footer style-3 background-luminosity overlay-black-dark" id="footer" style="background-image: url(assets/images/main-slider/slider1/slider-bg2.jpg)">
+  <div class="footer-subscribe-wrapper">
+    <div class="container">
+      <div class="wrapper-inner">
+        <div class="row align-items-center">
+          <div class="col-xl-6 col-lg-9 wow fadeInUp" data-wow-delay="0.2s">
+            <h2 class="title text-white m-b0">Don’t miss our weekly updates about donations</h2>
+          </div>
+          <div class="col-xl-6 col-lg-9 wow fadeInUp" data-wow-delay="0.4s">
+            <form class="dzSubscribe" [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
+              <div class="dzSubscribeMsg text-white">
+                @if(message){
+                  <p [ngClass]="{ 'text-success': success, 'text-danger': !success }">{{ message }}</p>
+                }
+              </div>
+              <div class="input-group">
+                <input name="email" formControlName="email" type="email" class="form-control transparent m-r20" placeholder="Enter your email address...">
+                <button name="submit" value="Submit" type="submit" class="btn btn-primary">
+                  <span>SUBSCRIBE</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="widget widget_about">
+            <div class="footer-logo logo-white">
+              <a [routerLink]="['/index']"><img src="assets/images/logo-white-3.png" alt=""></a>
+            </div>
+            <p>Akcel is a Crowdfunding & Charity Website by DexignZone lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+            <div class="dz-social-icon style-1">
+              <ul>
+                <li><a target="_blank" class="fab fa-facebook-f me-1" href="https://www.facebook.com/"></a></li>
+                <li><a target="_blank" class="fab fa-instagram me-1" href="https://www.instagram.com/"></a></li>
+                <li><a target="_blank" class="fab fa-twitter me-1" href="https://twitter.com/"></a></li>
+                <li><a target="_blank" class="fab fa-youtube" href="https://youtube.com/"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-3 col-6 wow fadeInUp" data-wow-delay="0.4s">
+          <div class="widget widget_services">
+            <h5 class="footer-title">Resources</h5>
+            <ul>
+              <li><a [routerLink]="['/how-it-works']">How It Works</a></li>
+              <li><a [routerLink]="['/ask-a-question']">Ask A Question</a></li>
+              <li><a [routerLink]="['/project-story']">Project Story</a></li>
+              <li><a [routerLink]="['/mission']">Mission</a></li>
+              <li><a [routerLink]="['/certificates']">Certificates</a></li>
+              <li><a [routerLink]="['/terms-and-condition']">Terms And Condition</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-3 col-6 wow fadeInUp" data-wow-delay="0.6s">
+          <div class="widget widget_services">
+            <h5 class="footer-title">Blog Posts</h5>
+            <ul>
+              <li><a [routerLink]="['/about-us']">About Us</a></li>
+              <li><a [routerLink]="['/volunteer']">Volunteer</a></li>
+              <li><a [routerLink]="['/happy-clients']">Happy Clients</a></li>
+              <li><a [routerLink]="['/project']">Project</a></li>
+              <li><a [routerLink]="['/contact-us']">Contact Us</a></li>
+              <li><a [routerLink]="['/faq']">Faq</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
+          <div class="widget widget_getintuch">
+            <h5 class="footer-title">Get in Touch with Us</h5>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt text-primary"></i>
+                <span>832  Thompson Drive, San Fransisco CA 94107, United States</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone text-primary"></i>
+                <span>394-091-3312</span>
+              </li>
+              <li>
+                <i class="fa fa-envelope text-primary"></i>
+                <span>{{ dxEmial }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer Bottom Part -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="text-center">
+        <span class="copyright-text">Akcel Crowdfunding & Charity Website  -  © <span class="current-year"> 2024 </span> by <a href="https://dexignzone.com/" target="_blank">DexignZone</a></span>
+      </div>
+    </div>
+  </div>
+</footer>

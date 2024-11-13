@@ -1,0 +1,172 @@
+
+<div class="main-bnr-one">
+  <div class="swiper-container main-slider">
+    <div class="swiper-wrapper">
+      @for(item of slide; track item){
+        <div class="swiper-slide">
+          <div class="banner-inner" [style.backgroundImage]="'url(' + item.bgImage + ')'">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-6 col-md-12">
+                  <div class="banner-content">
+                    <div class="top-content">
+                      <h5 class="sub-title text-secondary">{{ item.subtitle }}</h5>
+                      <h1 class="title">{{ item.title }} </h1>
+                      <p>{{ item.desc }}</p>
+                      <div class="d-flex align-items-center">
+                        <a class="btn btn-primary btnhover1" href="javascript:void(0);" (click)="modalDonate(content)">
+                          <span>Donate</span>
+                          <i class="flaticon-heart text-secondary ms-3"></i>
+                        </a>
+                        <a [routerLink]="['/about-us']" class="btn btn-secondary btnhover2">Learn More <i class="flaticon-right-arrows ms-3"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                  <div class="banner-media row gx-4">
+                    <div class="col-5">
+                      <div class="main-img1">
+                        <img src="{{ item.mainImg1 }}" alt="">
+                      </div>
+                      <div class="main-img2">
+                        <img src="{{ item.mainImg2 }}" alt="">
+                      </div>
+                    </div>
+                    <div class="col-7">
+                      <div class="main-img3">
+                        <img src="{{ item.mainImg3 }}" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <svg class="shape1" width="187" height="559" viewBox="0 0 187 559" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M158 245C71.6 224.2 -50.6667 146.333 -101 110V497C95.8 534.6 153.667 344.667 158 245Z" fill="var(--primary)"/>
+              <path d="M-113 2C-12 190 292.675 -12.9435 143 241C54 392 93 529 -100 556" stroke="var(--secondary)" stroke-width="6"/>
+            </svg>
+            <svg class="shape3" viewBox="0 0 619 356" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 3C68 113 148 236.892 316 249C427 257 557 198 626 354" stroke="var(--secondary)" stroke-width="8"/>
+              <path d="M440.576 119.632C305 113 297.836 59.5755 261 11H619V266C594 162 551.867 125.077 440.576 119.632Z" fill="var(--primary)"/>
+            </svg>
+          </div>
+        </div>
+      }
+    </div>
+    <div class="bottom-wrapper">
+      <ul class="social-list">
+        <li><a target="_blank" href="https://www.facebook.com/">Facebook</a></li>
+        <li><a target="_blank" href="https://twitter.com/">Twitter</a></li>
+        <li><a target="_blank" href="https://www.instagram.com/">Instagram</a></li>
+      </ul>
+      <div class="btn-wrapper">
+        <div class="main-btn main-btn-prev swiper-main-btn-prev"><i class="fa fa-angle-left"></i></div>
+        <div class="main-btn main-btn-next swiper-main-btn-next"><i class="fa fa-angle-right"></i></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #content let-modal>
+  <div class="modal-header ">
+    <h5 class="modal-title">Choose a donation amount</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"> <i class="flaticon-close"></i></button>
+  </div>
+  <div class="modal-body">
+    <form >
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="tag-donate style-1">
+            <div class="donate-categories">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault" name="flexRadioDefault" value="500" id="flexRadioDefault11">
+                <label class="form-check-label" for="flexRadioDefault11">
+                  $500
+                </label>
+              </div>
+            </div>
+            <div class="donate-categories">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault" value="1000"  name="flexRadioDefault2" id="flexRadioDefault22">
+                <label class="form-check-label" for="flexRadioDefault22">
+                  $1000
+                </label>
+              </div>
+            </div>
+            <div class="donate-categories">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault" value="2000"  name="flexRadioDefault3" id="flexRadioDefault33">
+                <label class="form-check-label" for="flexRadioDefault33">
+                  $2000
+                </label>
+              </div>
+            </div>
+            <div class="donate-categories">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault" value="5000"  name="flexRadioDefault4" id="flexRadioDefault44">
+                <label class="form-check-label" for="flexRadioDefault44">
+                  $5000
+                </label>
+              </div>
+            </div>
+            <p>Most Donors donate approx <span>${{modalDonateSelect.flexRadioDefault}}</span> to this Fundraiser</p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label class="form-label">Other Amount</label>
+            <div class="input-group">
+              <input type="number" class="form-control" placeholder="Other Amount">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <div class="input-group">
+              <input name="dzName" required="" type="text" class="form-control" placeholder="Jakob Bothman">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label class="form-label">Email address</label>
+            <div class="input-group">
+              <input name="dzEmail" required type="text" class="form-control" placeholder="info@mail.com">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <div class="input-group">
+              <input type="number" class="form-control" placeholder="Phone Number">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label class="form-label">Address</label>
+            <div class="input-group">
+              <input required type="text" class="form-control" placeholder="Address">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label class="form-label">Pancard</label>
+            <div class="input-group">
+              <input type="number" class="form-control" placeholder="Pancard">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="form-group mb-0 text-center">
+            <button name="submit" type="submit" value="Submit" class="btn btn-primary btn-block">Proceed To Pay</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</ng-template>

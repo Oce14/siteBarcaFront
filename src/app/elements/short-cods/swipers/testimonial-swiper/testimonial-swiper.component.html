@@ -1,0 +1,39 @@
+<div class="swiper testimonial-swiper1">
+  <div class="swiper-wrapper">
+    @for(item of data; track item;){
+      <div class="swiper-slide">
+        <div class="testimonial-1 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="testimonial-text">
+            <p>“{{ item.text }}..</p>
+          </div>
+          <div class="testimonial-details">
+            <div class="testimonial-info">
+              <div class="testimonial-pic">
+                <img src="{{ item.image }}" alt="">
+              </div>
+              <div class="clearfix">
+                <h5 class="testimonial-name">{{ item.name }}</h5>
+                <span class="testimonial-position">{{ item.position }}</span>
+              </div>
+            </div>
+            <div class="testimonial-rating">
+              <ul>
+                @for(starRow of [].constructor(5); track starRow; let i = $index){
+                  @if(item.rating > i){
+                    <li><i class="fa fa-star" [ngClass]="[i == 4 ? 'me-0':'me-1']"></i></li>
+                  } @else {
+                    <li><i class="fa fa-star gray-light" [ngClass]="[i == 4 ? 'me-0':'me-1']"></i></li>
+                  }
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+  <div class="swiper-btn container swiper-btn-center-lr">
+    <div class="test-swiper-prev btn-prev style-1"><i class="fa fa-arrow-left-long"></i></div>
+    <div class="test-swiper-next btn-next style-1"><i class="fa fa-arrow-right-long"></i></div>
+  </div>
+</div>

@@ -1,0 +1,162 @@
+<header class="site-header mo-left header style-1">
+  <!-- Top Header -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="dz-topbar-inner d-flex justify-content-between align-items-center">
+        <div class="dz-topbar-left">
+          <ul>
+            <li>Welcome to Akcel, Crowdfunding & Charity Agency</li>
+            <li>
+              <a href="javascript:void(0);" class="badge badge-primary btn-login  ms-1" (click)="open(loginContent)">
+                <i class="flaticon-logout me-2"></i>Login / Sign Up
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="dz-topbar-right">
+          <ul>
+            <li class="me-1"><i class="fas fa-map-marker-alt"></i> 394-091-3312</li>
+            <li><i class="fas fa-envelope"></i>{{ email }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <div class="sticky-header main-bar-wraper navbar-expand-lg">
+    <div class="main-bar clearfix ">
+      <div class="container clearfix">
+        <!-- Website Logo -->
+        <div class="logo-header mostion logo-dark">
+          <a [routerLink]="['/index']"><img src="assets/images/logo.png" alt=""></a>
+        </div>
+        <!-- Nav Toggle Button -->
+        <button class="navbar-toggler collapsed navicon justify-content-end" [ngClass]="{'open':navbarToggler}" type="button" (click)="opneSidebar()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Extra Nav -->
+        <div class="extra-nav">
+          <div class="extra-cell">
+            <a [routerLink]="['/contact-us']" class="btn btn-outline-secondary btnhover1">
+              <i class="fa-solid fa-user"></i>
+              <span class="m-l10">My Account</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Header Nav -->
+        <div class="header-nav navbar-collapse collapse justify-content-end" [ngClass]="{'show':navbarToggler}">
+          <div class="logo-header logo-dark">
+            <a [routerLink]="['/index']"><img src="assets/images/logo.png" alt=""></a>
+          </div>
+          <app-navigation1></app-navigation1>
+          <div class="header-bottom">
+            <a href="javascript:void(0);" class="btn btn-light btn-login btn-sm" (click)="open(loginContent)">
+              <i class="flaticon-logout me-3"></i>Login / Sign Up
+            </a>
+            <div class="dz-social-icon">
+              <ul>
+                <li><a target="_blank" class="fab fa-facebook-f" href="https://www.facebook.com/"></a></li>
+                <li><a target="_blank" class="fab fa-twitter" href="https://twitter.com/"></a></li>
+                <li><a target="_blank" class="fab fa-linkedin-in" href="https://www.linkedin.com/"></a></li>
+                <li><a target="_blank" class="fab fa-instagram" href="https://www.instagram.com/"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main Header End -->
+</header>
+
+<ng-template #loginContent let-modal>
+  <span #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+    <h2 class="title">Login Your Account</h2>
+    <form action="index.html">
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Email Address">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password">
+        <div class="reset-password">
+          <a class="btn-link" href="javascript:void(0);" (click)="open(resetPassword)"
+            (click)="modal.dismiss('Cross click')">Reset password?</a>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-outline-primary btn-block">Login</button>
+      </div>
+      <div class="form-group">
+        <a href="javascript:void(0);" class="btn facebook btn-block"><i class="fa-brands fa-facebook-f m-r10"></i>Log
+          in with Facebook</a>
+      </div>
+      <div class="form-group">
+        <a href="javascript:void(0);" class="btn google-plus btn-block"><i class="fa-brands fa-google m-r10"></i>Log
+          in with Google</a>
+      </div>
+      <div class="sign-text">
+        <span>Don't have a Crowdfunding account?
+          <a href="javascript:void(0);" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
+            aria-controls="collapseExample">Sign up</a></span>
+      </div>
+    </form>
+  </span>
+
+  <!-- Sign Up Your Account -->
+  <span class="sign-up" #collapse="ngbCollapse" [(ngbCollapse)]="!isCollapsed">
+    <h2 class="title">Sign Up Your Account</h2>
+    <form action="index.html">
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Email Address">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-outline-primary btn-block">Sign Up</button>
+      </div>
+      <div class="form-group">
+        <a href="javascript:void(0);" class="btn facebook btn-block"><i class="fa-brands fa-facebook-f m-r10"></i>Log
+          in with Facebook</a>
+      </div>
+      <div class="form-group">
+        <a href="javascript:void(0);" class="btn google-plus btn-block"><i class="fa-brands fa-google m-r10"></i>Log
+          in with Google</a>
+      </div>
+      <div class="sign-text">
+        <span>Don't have a Crowdfunding account?
+          <a class="btn-link" href="javascript:void(0);" (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">Login</a>
+        </span>
+      </div>
+    </form>
+  </span>
+</ng-template>
+
+
+<ng-template #resetPassword let-modal>
+  <!-- Reset Password -->
+  <span class="reset-password">
+    <h2 class="title">Reset password?</h2>
+    <form>
+      <div class="form-group password-icon-bx">
+        <i class="fa fa-lock"></i>
+        <p>Enter your email address associated with your account, and we'll email you a link to reset your
+          password...</p>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Enter email address">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-outline-primary btn-block">Send reset link</button>
+      </div>
+      <a href="javascript:void(0);" class="sign-text" aria-label="Close" (click)="open(loginContent)"
+        (click)="modal.dismiss('Cross click')">Back</a>
+    </form>
+  </span>
+</ng-template>

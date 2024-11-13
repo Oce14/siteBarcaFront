@@ -1,0 +1,53 @@
+<div class="page-wraper">
+
+	<!-- Coming Soon Start -->
+	<div class="coming-soon background-luminosity" data-text="CHARITY" style="background-image: url(assets/images/background/bg5.jpg)">
+		<div class="inner-content">
+			<div class="logo-header logo-light">
+				<a [routerLink]="['/index']"><img src="assets/images/logo-white.png" alt=""></a>
+			</div>
+			<h1 class="dz-head">We Are Coming <span class="text-secondary">Soon !</span></h1>
+			<p>We`ll be here soon with our new awesome site, subscribe to be notified.</p>
+			<a [routerLink]="['/contact-us']" class="btn btn-light btn-skew m-r15"> <span>GET IN TOUCH</span></a>
+			<a href="javascript:void(0);" (click)="open(SubscribeModal)" class="btn btn-skew btn-secondary"><span>SUBSCRIBE NOW</span></a>
+		</div>
+		<div class="countdown-timer countdown-container">
+			<app-countdown-timer></app-countdown-timer>
+		</div>
+	</div>
+	<!-- Coming Soon End -->
+
+	<ng-template #SubscribeModal let-modal>
+    <!-- Reset Password -->
+    <div class="modal-dialog modal-dialog-centered m-0" role="document">
+      <div class="inquiry-adv">
+        <img src="assets/images/banner/bnr3.jpg" alt="Image">
+      </div>
+      <div class="modal-content p-4">
+        <div class="modal-header">
+          <i class="fa-solid fa-envelope"></i>
+          <h5 class="modal-title" id="exampleModalLongTitle">Subscribe To Our Newsletter</h5>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">×</button>
+        </div>
+        <div class="modal-body">
+          <form class="dz-subscription dzSubscribe" [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
+            <div class="dzSubscribeMsg">
+              @if(message){
+                <p [ngClass]="{ 'text-success': success, 'text-danger': !success }">{{ message }}</p>
+              }
+            </div>
+            <div class="input-group mb-3">
+              <input formControlName="name" required type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="input-group mb-3">
+              <input formControlName="email" required type="email" class="form-control" placeholder="Your Email Address">
+            </div>
+            <div class="text-center">
+              <button name="submit" type="submit" value="Submit" class="btn btn-primary">SUBSCRIBE NOW </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

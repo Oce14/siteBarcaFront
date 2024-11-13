@@ -1,0 +1,31 @@
+<div class="swiper recent-blog1">
+  <div class="swiper-wrapper">
+    @for(item of data; track item){
+    <div class="swiper-slide">
+      <div class="dz-card style-4 wow fadeInUp" data-wow-delay="0.2s" style="background-image:url('{{ item.blogImage }}');">
+        <div class="dz-info">
+          <div class="dz-meta">
+            <ul>
+              <li class="post-author">
+                <img src="{{ item.userImage }}" alt=""> By {{ item.name }}
+              </li>
+              <li class="post-comments">{{ item.comments }} Comments</li>
+              <li class="post-date">
+                <span class="day">{{ item.day }}</span>
+                <span class="month">{{ item.month }}</span>
+              </li>
+            </ul>
+          </div>
+          <h5 class="dz-title"><a [routerLink]="['/blog-details']">{{ item.title }}</a></h5>
+          <p>{{ item.desc }}</p>
+          <a [routerLink]="['/blog-details']" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>
+<div class="swiper-btn swiper-btn-center-lr">
+  <div class="swiper-button-prev btn-prev style-2"><i class="flaticon-left-arrow-1"></i></div>
+  <div class="swiper-button-next btn-next style-2"><i class="flaticon-next"></i></div>
+</div>

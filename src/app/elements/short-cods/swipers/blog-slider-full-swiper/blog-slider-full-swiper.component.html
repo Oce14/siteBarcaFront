@@ -1,0 +1,35 @@
+<div class="swiper blog-slider-full">
+  <div class="swiper-wrapper m-b5">
+    @for(item of data; track item){
+    <div class="swiper-slide">
+      <div class="dz-card style-1 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="dz-media">
+          <a [routerLink]="['/blog-details']"><img src="{{ item.blogImage }}" alt=""></a>
+          <ul class="dz-badge-list">
+            <li><a href="javascript:void(0);" class="dz-badge">{{ item.category }}</a></li>
+          </ul>
+          <a [routerLink]="['/blog-details']" class="btn btn-secondary">Read More</a>
+        </div>
+        <div class="dz-info">
+          <h5 class="dz-title"><a [routerLink]="['/blog-details']">{{ item.title }}</a></h5>
+          <p>{{ item.desc }}</p>
+
+          <div class="author-wrappper">
+            <div class="author-media">
+              <img src="{{ item.userImage }}" alt="">
+            </div>
+            <div class="author-content">
+              <div class="author-head">
+                <h6 class="author-name">{{ item.name }}</h6>
+              </div>
+              <ul class="author-meta">
+                <li class="date">{{ item.date }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>

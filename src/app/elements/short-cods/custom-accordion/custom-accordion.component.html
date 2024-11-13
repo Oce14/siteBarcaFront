@@ -1,0 +1,16 @@
+<div ngbAccordion [closeOthers]="true">
+	@for (item of data; track item; let i = $index) {
+		<div ngbAccordionItem [collapsed]="(i+1) !== active">
+			<h2 ngbAccordionHeader>
+				<button ngbAccordionButton><b>{{ item.title }} </b><span class="toggle-close"></span></button>
+			</h2>
+			<div ngbAccordionCollapse>
+				<div ngbAccordionBody>
+					<ng-template>
+            <p class="m-b0">{{ item.desc }}</p>
+					</ng-template>
+				</div>
+			</div>
+		</div>
+	}
+</div>

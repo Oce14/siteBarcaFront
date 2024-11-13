@@ -1,0 +1,43 @@
+<section class="content-inner section-wrapper4">
+  <div class="container">
+    <div class="row">
+      <!-- Donate -->
+      <div class="col-xl-5 col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+        <app-content-1></app-content-1>
+      </div>
+	    <!-- Donate End-->
+      <div class="col-xl-7 col-lg-6 m-b30 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="section-inner">
+          <div class="section-head m-b30">
+            <h5 class="sub-title">About Us</h5>
+            <h2 class="title">Help is<br> Our Main Goal</h2>
+          </div>
+          <div class="row m-b30">
+            <div class="col-xl-7">
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it.</p>
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </div>
+            <div class="col-xl-5">
+              <div class="counter-text-wrapper">
+                <div class="counter-text m-b30">
+                  <h4>Donation Raised</h4>
+                  <div class="counter-num text-primary">
+                    $<span class="counter" [countUp]="55000" [options]="opts"></span>
+                  </div>
+                </div>
+                <div class="counter-text">
+                  <h4>Donation Goal</h4>
+                  <div class="counter-num text-primary">
+                    $<span class="counter" [countUp]="25000" [options]="opts"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a [routerLink]="['/about-us']" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img class="img-1" src="assets/images/side-images/pic2.png" alt="images">
+</section>

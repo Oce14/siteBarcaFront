@@ -1,0 +1,65 @@
+<section class="testimonial-wrapper3 content-inner" style="background-image:url('assets/images/background/bg10.jpg'); background-position: center;">
+  <div class="container">
+    <div class="row align-items-center wow fadeInUp" data-wow-delay="0.2s">
+      <div class="col-md-8 col-sm-8 col-9">
+        <div class="section-head">
+          <h5 class="sub-title">What people are saying</h5>
+          <h2 class="title text-white">Success Stories</h2>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-3">
+        <div class="swiper-btn float-sm-end m-b40">
+          <div class="test-swiper-prev btn-prev text-white">
+            <i class="flaticon-left-arrow-1"></i>
+          </div>
+          <div class="test-swiper-next btn-next text-white">
+            <i class="flaticon-next"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="resize-wrapper">
+    <div class="swiper testimonial-swiper3 m-b30">
+      <div class="swiper-wrapper">
+        @for(item of data; track item){
+          <div class="swiper-slide">
+            <div class="testimonial-3 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="testimonial-media">
+                <img src="{{ item.image }}" alt="">
+              </div>
+              <div class="testimonial-content">
+                <h5 class="testimonial-title" [innerHtml]="item.title "></h5>
+                <p class="testimonial-text">{{ item.desc }}<a href="javascript:void(0); ms-1" (click)="modal(content)">Read More</a></p>
+                <div class="testimonial-info">
+                  <div class="quotes">
+                    <i class="fa-solid fa-quote-left"></i>
+                  </div>
+                  <div class="clearfix">
+                    <h5 class="testimonial-name">{{ item.name }}</h5>
+                    <span class="testimonial-position">{{ item.position }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+    <a [routerLink]="['/become-a-fundraiser']" class="btn btn-primary m-r15 m-b15 wow fadeInUp" data-wow-delay="0.2s">Start A Fundraiser For Free</a>
+    <a [routerLink]="['/contact-us']" class="btn btn-light m-b15 wow fadeInUp ms-1" data-wow-delay="0.4s">Talk To Us</a>
+  </div>
+
+  <!-- Counter -->
+  <div class="container">
+    <div class="row">
+      <app-counter3 [colmeAdd]="'col-lg-3'"></app-counter3>
+    </div>
+  </div>
+</section>
+
+<ng-template #content let-modal>
+  <div class="modal-body">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  </div>
+</ng-template>

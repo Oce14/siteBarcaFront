@@ -1,0 +1,15 @@
+<div class="dz-bnr-inr style-1 text-center overlay-primary-dark {{ classAdd }}" [style.backgroundImage]="'url(' + bgImage + ')'">
+  <div class="container">
+    <div class="dz-bnr-inr-entry">
+      <h1>{{ title }}</h1>
+      <!-- Breadcrumb Row -->
+      <nav aria-label="breadcrumb" class="breadcrumb-row">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a [routerLink]="['/index']">Home</a></li>
+          <li class="breadcrumb-item active ms-1" aria-current="page">{{ title }}</li>
+        </ul>
+      </nav>
+      <!-- Breadcrumb Row End -->
+    </div>
+  </div>
+</div>

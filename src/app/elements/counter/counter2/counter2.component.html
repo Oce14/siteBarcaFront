@@ -1,0 +1,29 @@
+<ng-template ngFor let-arrayData [ngForOf]="data">
+  <div class="counter-wrapper-1 content-inner-3 {{ arrayData.section_custom_class }}">
+    <div class="container">
+      <div class="counter-inner bg-secondary">
+        @if(arrayData.section_title){
+        <div class="section-head text-center">
+          <h2 class="title text-white" [innerHtml]="arrayData.section_title"></h2>
+        </div>
+        }
+        <div class="row">
+          @for(item of arrayData.list; track item){
+          <div class="col-lg-3 col-6 m-b30 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="counter-style-1 text-center">
+              <span class="counter counter-num" [countUp]="item.countUp" [options]="opts"></span>
+              <p class="counter-text">{{ item.title }}</p>
+            </div>
+          </div>
+          }
+        </div>
+        <img src="assets/images/counter/pattren1.png" class="pattren1 move-2" alt="">
+        <img src="assets/images/counter/pattren2.png" class="pattren2 move-2" alt="">
+        <img src="assets/images/counter/pattren3.png" class="pattren3 move-2" alt="">
+        <img src="assets/images/counter/pattren4.png" class="pattren4 move-2" alt="">
+        <img src="assets/images/counter/pattren5.png" class="pattren5 move-2" alt="">
+        <img src="assets/images/counter/pattren6.png" class="pattren6 move-2" alt="">
+      </div>
+    </div>
+  </div>
+</ng-template>

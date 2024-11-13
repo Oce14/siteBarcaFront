@@ -1,0 +1,37 @@
+<section class="content-inner-2 section-pattren1 {{ newClassAdd }}">
+  <div class="container">
+    <div class="row about-bx3 align-items-center">
+      <div class="col-lg-5">
+        <div class="dz-media">
+          <img src="assets/images/main-slider/pic1.png" alt="image">
+        </div>
+      </div>
+      <div class="col-lg-7 m-b50">
+        <div class="section-head">
+          <h5 class="sub-title">Our Mission</h5>
+          <h2>Change The World for Better Futures</h2>
+          <p class="m-t20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-sm-4 col-6 m-b30">
+            <h2><span class="counter" [countUp]="4556" [options]="opts"></span></h2>
+            <span class="counter-text">Total Donor</span>
+          </div>
+          <div class="col-lg-3 col-sm-4 col-6 m-b30">
+            <h2><span class="counter" [countUp]="874" [options]="opts"></span></h2>
+            <span class="counter-text">Volunteer</span>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-12 m-b30">
+            <h2>$ <span class="counter" [countUp]="195234" [options]="opts"></span></h2>
+            <span class="counter-text">Total Donation</span>
+          </div>
+        </div>
+        <a [routerLink]="['/project-story']" class="m-r30 m-sm-r10 btn btn-secondary">See Projects <i class="flaticon-right-arrows ps-3"></i></a>
+        <a [routerLink]="['/how-it-works']" class="btn btn-outline-dark ms-1">How It Works</a>
+      </div>
+    </div>
+  </div>
+  @if(svgIcone){
+  <span [innerHTML]="contentSvgImage"></span>
+  }
+</section>

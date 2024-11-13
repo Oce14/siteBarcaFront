@@ -1,0 +1,253 @@
+
+<section class="content-inner-1 section-pattren1 overlay-white-dark" style="background-image:url('assets/images/background/bg4.jpg'); background-repeat: no-repeat; background-size: cover;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <div class="form-wrapper overflow-hidden">
+          <div id="smartwizard" class="form-wizard">
+            <mat-stepper linear #stepper>
+              <mat-step [stepControl]="firstFormGroup">
+                <h4 class="title">Where are you located? </h4>
+                <form [formGroup]="firstFormGroup">
+                    <mat-form-field appearance="outline" class="col-md-6">
+                      <mat-label>Country</mat-label>
+                      <mat-select disableRipple formControlName="country">
+                        <mat-option value="India">India</mat-option>
+                        <mat-option value="United Kingdom">United Kingdom</mat-option>
+                        <mat-option value="United State Of America">United State Of America</mat-option>
+                        <mat-option value="Japan">Japan</mat-option>
+                        <mat-option value="England">England</mat-option>
+                        <mat-option value="Russia">Russia</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="col-md-6">
+                      <mat-label>Postcode</mat-label>
+                      <input type="number" matInput placeholder="324009" formControlName="postcode">
+                    </mat-form-field>
+                    <div class="tag-donate style-1 mt-2">
+                      <div class="donate-categories">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                           <label class="form-check-label" for="flexCheckDefault1">
+                            <span>Animals</span>
+                           </label>
+                        </div>
+                      </div>
+                      <div class="donate-categories">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                           <label class="form-check-label" for="flexCheckDefault2">
+                            <span>Business</span>
+                           </label>
+                        </div>
+                      </div>
+                      <div class="donate-categories">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+                           <label class="form-check-label" for="flexCheckDefault3">
+                            <span>Community</span>
+                           </label>
+                        </div>
+                      </div>
+                      <div class="donate-categories">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+                           <label class="form-check-label" for="flexCheckDefault4">
+                            <span>Creative</span>
+                           </label>
+                        </div>
+                      </div>
+                      <div class="donate-categories">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
+                           <label class="form-check-label" for="flexCheckDefault5">
+                            <span>Education</span>
+                           </label>
+                        </div>
+                      </div>
+                      <div class="donate-categories">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6">
+                           <label class="form-check-label" for="flexCheckDefault6">
+                            <span>Emergencies</span>
+                           </label>
+                        </div>
+                      </div>
+                      <div class="donate-categories">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7">
+                           <label class="form-check-label" for="flexCheckDefault7">
+                            <span>Environment</span>
+                           </label>
+                        </div>
+                      </div>
+                      <div class="donate-categories">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault8">
+                           <label class="form-check-label" for="flexCheckDefault8">
+                            <span>Events</span>
+                           </label>
+                        </div>
+                      </div>
+                      <div class="donate-categories">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault9">
+                           <label class="form-check-label" for="flexCheckDefault9">
+                            <span>Faith</span>
+                           </label>
+                        </div>
+                      </div>
+                      <div class="donate-categories">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault10">
+                           <label class="form-check-label" for="flexCheckDefault10">
+                            <span>Family</span>
+                           </label>
+                        </div>
+                      </div>
+                      <div class="donate-categories">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault11">
+                           <label class="form-check-label" for="flexCheckDefault11">
+                            <span>Funeral & Memorial</span>
+                           </label>
+                        </div>
+                      </div>
+                      <div class="donate-categories">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault12">
+                           <label class="form-check-label" for="flexCheckDefault12">
+                            <span>Medical</span>
+                           </label>
+                        </div>
+                      </div>
+                      <div class="donate-categories">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault13">
+                           <label class="form-check-label" for="flexCheckDefault13">
+                            <span>Other</span>
+                           </label>
+                        </div>
+                      </div>
+                      <div class="donate-categories">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault14">
+                           <label class="form-check-label" for="flexCheckDefault14">
+                            <span>Sports</span>
+                           </label>
+                        </div>
+                      </div>
+                      <div class="donate-categories">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault15">
+                           <label class="form-check-label" for="flexCheckDefault15">
+                            <span>Travel</span>
+                           </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="float-end mt-4">
+                        <button class="btn sw-btn-prev sw-btn disabled me-1 text-white" matStepperPrevious>Previous</button>
+                        <button matStepperNext  color="primary" class="btn sw-btn-next sw-btn text-white">Next</button>
+                    </div>
+                </form>
+              </mat-step>
+              <mat-step [stepControl]="secondFormGroup" [optional]="isOptional">
+                <h4 class="title">What's your name?</h4>
+                <form [formGroup]="secondFormGroup" class="p-2">
+                    <mat-form-field appearance="outline" class="col-md-6 mb-2">
+                        <mat-label>First Name</mat-label>
+                        <input type="text" matInput placeholder="First Name" formControlName="firstName">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="col-md-6 mb-2">
+                        <mat-label>Last Name</mat-label>
+                        <input type="text" matInput placeholder="Last Name" formControlName="lastName">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="col-md-6 mb-2">
+                        <mat-label>Phone Number</mat-label>
+                        <input type="number" matInput placeholder="832141251" formControlName="phoneNumber">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="col-md-6 mb-2">
+                        <mat-label>Email address</mat-label>
+                        <input type="email" matInput placeholder="marseloque@mail.com" formControlName="email">
+                    </mat-form-field>
+                    <div class="float-end mt-4">
+                      <button class="btn sw-btn-prev sw-btn me-1 text-white" matStepperPrevious>Previous</button>
+                      <button matStepperNext  color="primary" class="btn sw-btn-next sw-btn text-white">Next</button>
+                    </div>
+                </form>
+              </mat-step>
+              <mat-step [stepControl]="therdFormGroup" [optional]="isOptional">
+                <h4 class="title">Your initial target</h4>
+                <form [formGroup]="therdFormGroup" class="p-2">
+                  <div class="row sp15">
+                    <mat-form-field appearance="outline" class="col-12">
+                      <mat-label>Amount</mat-label>
+                      <input type="number" matInput placeholder="Amount" formControlName="amount">
+                    </mat-form-field>
+                  </div>
+                  <p>Bear in mind that transaction fees, including credit and debit charges, are deducted from each donation.</p>
+                  <div class="target-bx bg-grey">
+                    <p>To receive money raised, please make sure:</p>
+                    <ol>
+                      <li>A passport or an Australian driving licence</li>
+                      <li>A bank account in Australia</li>
+                      <li>A postal address in Australia</li>
+                    </ol>
+                  </div>
+                  <div class="float-end">
+                    <button class="btn sw-btn-prev sw-btn me-1 text-white" matStepperPrevious>Previous</button>
+                    <button matStepperNext color="primary" class="btn sw-btn-next sw-btn text-white">Next</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step [stepControl]="forthFormGroup" [optional]="isOptional">
+                <h4 class="title">What's your name?</h4>
+                <form [formGroup]="forthFormGroup" class="p-2">
+                  <mat-form-field appearance="outline" class="col-12 mb-2">
+                      <mat-label>Name</mat-label>
+                      <input type="text" matInput placeholder="Name" formControlName="name">
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" class="col-12 mb-2">
+                      <mat-label>Phone Number</mat-label>
+                      <input type="number" matInput placeholder="832141251" formControlName="phoneNumber">
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" class="col-12 mb-2">
+                    <mat-label>Medical Condition</mat-label>
+                    <mat-select disableRipple formControlName="medicalCondition">
+                      <mat-option value="Does Not Require Hospitalisation">Does Not Require Hospitalisation</mat-option>
+                      <mat-option value="Require Hospitalisation">Require Hospitalisation</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" class="col-12 mb-2">
+                    <mat-label>Age</mat-label>
+                    <mat-select disableRipple formControlName="age">
+                      <mat-option value="40 Years">40 Years</mat-option>
+                      <mat-option value="50 Years">50 Years</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" class="col-12">
+                    <mat-label>Enter Your City</mat-label>
+                    <input type="text" matInput placeholder="Your City" formControlName="city">
+                  </mat-form-field>
+                  <div class="float-end mt-4">
+                    <button class="btn sw-btn-prev sw-btn  me-1 text-white" matStepperPrevious>Previous</button>
+                    <button matStepperNext color="primary" class="btn sw-btn-next sw-btn text-white">Next</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                <p>Successfully Submitted !</p>
+                <div>
+                  <button matStepperPrevious class="btn sw-btn-prev sw-btn  me-1 text-white">Previous</button>
+                  <button (click)="stepper.reset()" color="primary" class="btn sw-btn-next sw-btn text-white">Reset</button>
+                </div>
+              </mat-step>
+            </mat-stepper>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
