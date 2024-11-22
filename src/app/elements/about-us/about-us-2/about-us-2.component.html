@@ -3,42 +3,71 @@
     <div class="row about-bx5 align-items-center">
       <div class="col-lg-6 m-b30">
         <div class="dz-about-media">
-          <div class="img-wrapper wow fadeInUp" data-wow-delay="0.2s">
-            <img src="assets/images/about/pic2.jpg" alt="" class="img1">
-            <a href="javascript:void(0);" class="popup-youtube video-btn" (click)="openPopupYoutube('//www.youtube.com/embed/bdBG5VO01e0?autoplay=1')"><i class="fa-solid fa-play"></i></a>
-          </div>
-          <img src="assets/images/about/pic3.jpg" alt=""  class="img2 wow fadeInUp" data-wow-delay="0.4s">
-        </div>
-      </div>
-      <div class="col-lg-6 m-b30 wow fadeInUp" data-wow-delay="0.6s">
-        <div class="section-head">
-          <h5 class="sub-title">About Us</h5>
-          <h2>Help is <br>Our Main Goal</h2>
-        </div>
-        <h4 class="font-weight-500 m-b10">We Need Your Help</h4>
-        <p class="m-b20">Nunc vulputate urna ut erat posuere accumsan. Curabitur ut commodo mauris, ac volutpat dui. Nullam eget enim ut mi bibendum ultrices. Pellentesque non feugiat nisi. </p>
-        <div class="dz-about-info">
-          <div class="row">
-            <div class="col-lg-6 col-sm-6">
-              <ul class="list-check-3">
-                <li>Food Donate</li>
-                <li>Medical Care</li>
-                <li>Child Education</li>
-                <li>Children's Charities</li>
-              </ul>
-            </div>
-            <div class="col-lg-6 col-sm-6">
-              <ul class="list-check-3">
-                <li>Human Care</li>
-                <li>Pure Water</li>
-                <li>Medical Facilities</li>
-                <li>Pure Education</li>
-              </ul>
+          <div class="img-wrapper wow fadeInUp myImage" data-wow-delay="0.2s">
+            <!-- <section class="content-inner-2"> -->
+            <!-- <div class="container"> -->
+            <!-- <div class="row"> -->
+            @for(item of dataList; track item){
+            <!-- <div class="col-xl-3 col-lg-4 col-sm-6"> -->
+            <div class="dz-team style-1 m-b30">
+              <div class="dz-media">
+                <a href="javascript:void(0)"><img src="{{ item.image }}" alt=""></a>
+                <ul class="team-social">
+                  <li><a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a></li>
+                  <li><a href="https://www.instagram.com/" target="_blank" class="fab fa-instagram"></a></li>
+                  <li><a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a></li>
+                </ul>
+              </div>
+              <div class="dz-content">
+                <h5 class="dz-name">{{ item.name }}</h5>
+                <span class="dz-position text-primary">{{ item.position }}</span>
+              </div>
             </div>
           </div>
+          }
+          <!-- </div> -->
+          <!-- </div> -->
+          <!-- </section> -->
+          <!-- <img src="assets/images/about/pic5.jpg" alt="" class="img1 myImage"> -->
+          <a href="javascript:void(0);" class="popup-youtube video-btn"
+            (click)="openPopupYoutube('//www.youtube.com/embed/bdBG5VO01e0?autoplay=1')"><i
+              class="fa-solid fa-play"></i></a>
         </div>
-        <a [routerLink]="['/about-us']" class="btn btn-primary">About Us</a>
+        <img src="assets/images/about/pic4.jpg" alt="" class="img2 wow fadeInUp myImage" data-wow-delay="0.4s">
       </div>
     </div>
+    <div class="col-lg-6 m-b30 wow fadeInUp" data-wow-delay="0.6s">
+      <div class="section-head">
+        <h5 class="sub-title">Qui sommes nous ?</h5>
+        <h3>Ensemble, semons des graines de solidarité</h3>
+      </div>
+      <h5 class="font-weight-500 m-b10">Nous avons besoin de vous</h5>
+      <p class="m-b20">L’association BARCA (merci en moré) est une organisation à but non lucratif reconnue d’utilité
+        publique. En agissant entre la France et le Burkina Faso, nous développons des projets concrets pour soutenir
+        l’éducation, la culture et l’autonomie : </p>
+      <div class="dz-about-info">
+        <div class="row">
+          <div class="col-lg-6 col-sm-6">
+            <ul class="list-check-3">
+              <li>Aide aux devoirs</li>
+              <li>Initiation aux gestes de secours</li>
+              <li>Formation en langues française et anglaise</li>
+              <li>Création d’emplois</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-sm-6">
+            <ul class="list-check-3">
+              <li>Formation au jardinage</li>
+              <li>Sensibilisation à la biodiversité</li>
+              <li>Préservation de la culture burkinabé</li>
+              <li>Autosuffisance alimentaire</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="m-b20">Votre aide est essentielle pour donner vie à ces initiatives et bâtir un avenir durable.</p>
+      <a [routerLink]="['/about-us']" class="btn btn-primary">Qui sommes nous ?</a>
+    </div>
+  </div>
   </div>
 </section>

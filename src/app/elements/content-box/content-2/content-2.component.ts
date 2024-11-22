@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { SVGImageService } from '../../../constent/SVGImage/svgimage.service';
+import { Map1Component } from "../../map/map-1/map-1.component";
 
 @Component({
   selector: 'app-content-2',
   standalone: true,
   imports: [
-    RouterLink
+    RouterLink,
+    Map1Component
   ],
   templateUrl: './content-2.component.html',
   styleUrl: './content-2.component.css'
@@ -15,10 +17,10 @@ import { SVGImageService } from '../../../constent/SVGImage/svgimage.service';
 export class Content2Component {
   svgIconData: any;
   constructor(private sanitizer: DomSanitizer, private svgIcons: SVGImageService) { }
-  contentData:any = [];
+  contentData: any = [];
   ngOnInit() {
     this.svgIconData = this.svgIcons.elements_svgImage.fundraiserSVG;
-    this.svgIconData.map((item: any, index: number)=>{
+    this.svgIconData.map((item: any, index: number) => {
       this.contentData.push(
         {
           svgIcon: item,

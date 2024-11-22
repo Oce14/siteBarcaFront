@@ -1,11 +1,17 @@
 <section class="content-inner-1 section-wrapper3">
   <div class="container">
     <div class="section-head text-center wow fadeInUp" data-wow-delay="0.2s">
-      <h6 class="sub-title">START YOUR FUNDRAISER</h6>
-      <h2 class="title">Start A Fundraiser In Three<br> Simple Steps</h2>
+      <h6 class="sub-title">Notre Projet</h6>
+      <h2 class="title">Construire un centre d’enseignement participatif à Zagtouli</h2>
+      <p class="m-b30">Zagtouli est un village
+        péri-urbain à 7km du centre de <strong><br>Ouagadougou (capitale du
+          Burkina Faso)</strong></p>
     </div>
-    <div class="row justify-content-center">
-      @for(item of contentData; track item; let  i = $index){
+    <!-- Map -->
+    <app-map-1></app-map-1>
+    <!-- Map End-->
+    <!-- <div class="row justify-content-center">
+      @for(item of contentData; track item; let i = $index){
       <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
         <div class="icon-bx-wraper text-center style-5 m-b30">
           <div class="icon-lg m-b30">
@@ -21,14 +27,19 @@
         </div>
       </div>
       }
-    </div>
+    </div> -->
     <div class="text-center btn-bottom wow fadeInUp" data-wow-delay="0.8s">
-      <a href="javascript:void(0)" class="btn btn-primary">Start your fundraiser</a>
+      <a href="javascript:void(0)" class="btn btn-primary">Faire un don</a>
     </div>
   </div>
-  <img src="assets/images/side-images/pic1.png" alt="images" class="img-1">
+
+  <!-- <img src="assets/images/side-images/pic1.png" alt="images" class="img-1"> -->
   <svg class="img-2" width="345" height="466" viewBox="0 0 345 466" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M262.501 40.6868L271.004 4.93595C271.493 2.87988 273.898 1.96049 275.634 3.16598L311.982 28.408C314.116 29.8902 313.485 33.2002 310.955 33.793L266.104 44.3019C263.933 44.8106 261.985 42.8565 262.501 40.6868Z" fill="var(--secondary)"/>
-    <path d="M260 20.0002C202.667 8.66685 91.4001 7.40018 105 93.0002C122 200 217 215 288 255C359 295 350 340 322 384C294 428 184 500 -28 442" stroke="var(--secondary)" stroke-width="3" stroke-dasharray="10 10"/>
+    <path
+      d="M262.501 40.6868L271.004 4.93595C271.493 2.87988 273.898 1.96049 275.634 3.16598L311.982 28.408C314.116 29.8902 313.485 33.2002 310.955 33.793L266.104 44.3019C263.933 44.8106 261.985 42.8565 262.501 40.6868Z"
+      fill="var(--secondary)" />
+    <path
+      d="M260 20.0002C202.667 8.66685 91.4001 7.40018 105 93.0002C122 200 217 215 288 255C359 295 350 340 322 384C294 428 184 500 -28 442"
+      stroke="var(--secondary)" stroke-width="3" stroke-dasharray="10 10" />
   </svg>
 </section>

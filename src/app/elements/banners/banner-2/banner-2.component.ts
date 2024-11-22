@@ -7,7 +7,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 SwiperCore.use([EffectFade]);
 
-interface type{
+interface type {
   subtitle: string,
   title: string,
   desc: string,
@@ -68,51 +68,33 @@ export class Banner2Component {
     });
   }
 
-  slide:type[] = [
+  slide: type[] = [
     {
-      subtitle: 'GIVE A HAND TO MAKE',
-      title: 'Your Donation Can Change the World',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip',
-      bgImage: 'assets/images/main-slider/slider1/slider-bg1.jpg',
+      subtitle: 'Apprendre, c\'est grandir',
+      title: 'Un centre d\'enseignement participatif',
+      desc: 'Le centre offrira aux jeunes qui le souhaitent un accès à des cours de soutien scolaire, de l\'aide aux devoirs, une préparation aux examens, ainsi qu\'à diverses activités éducatives pour nourrir leur soif de savoir et les aider à construire leur avenir.',
+      bgImage: 'assets/images/main-slider/slider1/fontBanner1.jpg',
       mainImg1: 'assets/images/main-slider/slider1/pic1.jpg',
       mainImg2: 'assets/images/main-slider/slider1/pic2.jpg',
       mainImg3: 'assets/images/main-slider/slider1/pic3.jpg'
     },
     {
-      subtitle: 'HELPING HAND FOR CHILDREN',
-      title: 'Give a Helping Hand for Children',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.',
-      bgImage: 'assets/images/main-slider/slider1/slider-bg2.jpg',
-      mainImg1: 'assets/images/main-slider/slider1/pic4.jpg',
+      subtitle: 'Planter un arbre, c\'est semer l\'espoir',
+      title: 'Plantation d\'arbres fruitiers',
+      desc: 'Création d\'un jardin où des formations au jardinage seront proposées à ceux qui le souhaitent. Nous souhaitons sensibiliser les jeunes à la biodiversité et préserver la richesse de la culture burkinabé.',
+      bgImage: 'assets/images/main-slider/slider1/fontBanner2.jpg',
+      mainImg1: 'assets/images/main-slider/slider1/arbre1.jpg',
       mainImg2: 'assets/images/main-slider/slider1/pic5.jpg',
       mainImg3: 'assets/images/main-slider/slider1/pic6.jpg'
     },
     {
-      subtitle: 'CHILD THE OF EDUCATION',
-      title: 'Give  a Child the of Education',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip',
-      bgImage: 'assets/images/main-slider/slider1/slider-bg3.jpg',
+      subtitle: 'L\'eau, source de vie et de développement',
+      title: 'Forage et distribution d\'eau',
+      desc: 'Le Burkina Faso, pays enclavé dans une région aride, fait face à un défi crucial : l\'accès à l\'eau. Essentielle à la vie quotidienne et aux activités agricoles, pilier de l\'économie burkinabé, l\'eau est au cœur des besoins de la population.',
+      bgImage: 'assets/images/main-slider/slider1/fontBanner3.jpg',
       mainImg1: 'assets/images/main-slider/slider1/pic7.jpg',
       mainImg2: 'assets/images/main-slider/slider1/pic8.jpg',
       mainImg3: 'assets/images/main-slider/slider1/pic9.jpg'
-    },
-    {
-      subtitle: 'GIVE A HAND TO MAKE',
-      title: 'Your Donation Can Change the World',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip',
-      bgImage: 'assets/images/main-slider/slider1/slider-bg1.jpg',
-      mainImg1: 'assets/images/main-slider/slider1/pic1.jpg',
-      mainImg2: 'assets/images/main-slider/slider1/pic2.jpg',
-      mainImg3: 'assets/images/main-slider/slider1/pic3.jpg'
-    },
-    {
-      subtitle: 'HELPING HAND FOR CHILDREN',
-      title: 'Give a Helping Hand for Children',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.',
-      bgImage: 'assets/images/main-slider/slider1/slider-bg2.jpg',
-      mainImg1: 'assets/images/main-slider/slider1/pic4.jpg',
-      mainImg2: 'assets/images/main-slider/slider1/pic5.jpg',
-      mainImg3: 'assets/images/main-slider/slider1/pic6.jpg'
     }
   ]
 }

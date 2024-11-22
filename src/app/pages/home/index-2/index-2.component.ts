@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Header2Component } from '../../../elements/headers/header-2/header-2.component';
 import { SVGImageService } from '../../../constent/SVGImage/svgimage.service';
 import { Banner2Component } from '../../../elements/banners/banner-2/banner-2.component';
-import { AboutUs1Component } from '../../../elements/about-us/about-us-1/about-us-1.component';
+import { AboutUs2Component } from '../../../elements/about-us/about-us-2/about-us-2.component';
 import { Service1Component } from '../../../elements/service/service-1/service-1.component';
 import { Content2Component } from '../../../elements/content-box/content-2/content-2.component';
 import { Course1Component } from '../../../elements/courses/course-1/course-1.component';
@@ -29,7 +29,7 @@ interface testimonialTypep {
     RouterLink,
     Header2Component,
     Banner2Component,
-    AboutUs1Component,
+    AboutUs2Component,
     Service1Component,
     Content2Component,
     Course1Component,
@@ -48,7 +48,7 @@ export class Index2Component {
 
   elements: any = '';
 
-  constructor(){
+  constructor() {
     document.body.setAttribute('class', 'data-typography-1 data-theme-1');
     document.body.setAttribute('data-color', "color_2");
   }
@@ -92,7 +92,7 @@ export class Index2Component {
   blogList = [
     {
       image: 'assets/images/blog/blog-grid/pic1.jpg',
-      date:'14 Fan 2022',
+      date: '14 Fan 2022',
       title: 'Start a fundraiser for yourself in World',
       desc: 'Nostrud tem exrcitation duis laboris nisi ut aliquip sed duis aute cupidata.',
       userName: 'KK Sharma',
@@ -100,7 +100,7 @@ export class Index2Component {
     },
     {
       image: 'assets/images/blog/blog-grid/pic2.jpg',
-      date:'14 Fan 2022',
+      date: '14 Fan 2022',
       title: 'Start a fundraiser for yourself in World',
       desc: 'Nostrud tem exrcitation duis laboris nisi ut aliquip sed duis aute cupidata.',
       userName: 'KK Sharma',

@@ -1,0 +1,8 @@
+.right {
+    transform: scale(1) !important;
+}
+
+.myP {
+    margin-top: revert !important;
+    font-weight: bold !important;
+}

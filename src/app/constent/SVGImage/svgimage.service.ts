@@ -11,7 +11,7 @@ export class SVGImageService {
   // Content SVG ----
   content_svgImage = {
     ourTeamSVG: this.sanitizer.bypassSecurityTrustHtml
-    (`
+      (`
           <svg class="shape-1 move-1" viewBox="0 0 95 95" xmlns="http://www.w3.org/2000/svg" width="81" height="63"
             fill="var(--primary)" xmlns:v="https://vecta.io/nano">
             <circle cx="16.695" cy="3.497" r="3.497" />
@@ -83,7 +83,7 @@ export class SVGImageService {
           </svg>
     `),
     recentProjectsSVG: this.sanitizer.bypassSecurityTrustHtml
-    (`
+      (`
       <svg class="shape-1 move-1" viewBox="0 0 95 95" xmlns="http://www.w3.org/2000/svg" width="81" height="63"
         fill="var(--primary)" xmlns:v="https://vecta.io/nano">
         <circle cx="16.695" cy="3.497" r="3.497"></circle>
@@ -154,7 +154,7 @@ export class SVGImageService {
       </svg>
     `),
     blogSliderFullSVG: this.sanitizer.bypassSecurityTrustHtml
-    (`
+      (`
       <svg class="shape-6 move-2" xmlns="http://www.w3.org/2000/svg" width="57" height="43" fill="var(--secondary)"
         xmlns:v="https://vecta.io/nano">
         <circle cx="11.261" cy="2.559" r="2.559"></circle>
@@ -223,7 +223,7 @@ export class SVGImageService {
       </svg>
     `),
     map1_SVG: this.sanitizer.bypassSecurityTrustHtml
-    (`
+      (`
       <svg class="shape1" width="95" height="393" viewBox="0 0 95 393" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 153.397C60.3799 138.853 145.825 84.4055 181 59V329.604C43.468 355.895 3.02832 223.087 0 153.397Z" fill="var(--primary)"/>
         <path d="M212 2C141.176 133.668 -72.4699 -8.46584 32.4863 169.386C94.8953 275.141 67.5475 371.09 202.884 390" stroke="var(--secondary)" stroke-width="6"/>
@@ -255,8 +255,8 @@ export class SVGImageService {
         </g>
       </svg>
     `),
-    call_to_2_SVG:  this.sanitizer.bypassSecurityTrustHtml
-    (`
+    call_to_2_SVG: this.sanitizer.bypassSecurityTrustHtml
+      (`
       <svg width="81" height="66" viewBox="0 0 81 66" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M32.8415 39.1484C31.7105 39.1484 30.7937 38.2316 30.7937 37.1006V12.1683C30.7937 11.2084 30.0129 10.4277 29.053 10.4277C28.0932 10.4277 27.3124 11.2084 27.3124 12.1683V37.1009C27.3124 38.2319 26.3955 39.1487 25.2646 39.1487C24.1337 39.1487 23.2168 38.2319 23.2168 37.1009V12.1683C23.2168 8.95016 25.8349 6.33203 29.053 6.33203C32.2712 6.33203 34.8893 8.95016 34.8893 12.1683V37.1009C34.8893 38.2317 33.9724 39.1484 32.8415 39.1484Z" fill="#141818"/>
         <path d="M17.6877 39.1483C16.5567 39.1483 15.6399 38.2314 15.6399 37.1005V10.2738C15.6399 9.31391 14.8591 8.53313 13.8992 8.53313C12.9394 8.53313 12.1586 9.31391 12.1586 10.2738V15.5152C12.1586 16.6461 11.2417 17.563 10.1108 17.563C8.97986 17.563 8.06299 16.6461 8.06299 15.5152V10.2738C8.06299 7.05563 10.6811 4.4375 13.8992 4.4375C17.1174 4.4375 19.7355 7.05563 19.7355 10.2738V37.1008C19.7355 38.2316 18.8186 39.1483 17.6877 39.1483Z" fill="#141818"/>
@@ -272,8 +272,8 @@ export class SVGImageService {
         <path d="M40.4717 65.3515C39.9087 65.3515 39.36 65.1912 38.8845 64.8876C37.2651 63.8543 22.9356 54.5757 18.5136 47.1012C16.4859 43.6736 15.5815 40.3681 15.5815 36.3828C15.5815 31.8025 17.1348 27.9112 20.0736 25.1295C22.7651 22.5818 26.4497 21.1787 30.448 21.1787C35.6008 21.1787 38.6947 23.3289 40.485 25.4206C42.227 23.4253 45.3383 21.1787 50.5145 21.1787C54.5133 21.1787 58.1989 22.5817 60.893 25.1289C63.8355 27.9111 65.3906 31.8026 65.3906 36.3828C65.3906 40.3736 64.4878 43.679 62.4634 47.1012C58.009 54.6312 43.6726 63.8637 42.0526 64.8917C41.5787 65.1923 41.0319 65.3515 40.4717 65.3515ZM30.4481 25.2743C25.087 25.2743 19.6773 28.7092 19.6773 36.3828C19.6773 39.6361 20.3836 42.2179 22.0386 45.0157C25.6278 51.0828 37.5862 59.1456 40.4753 61.0381C46.158 57.3676 55.8311 50.2679 58.9383 45.0157C60.59 42.2237 61.2948 39.6418 61.2948 36.3828C61.2948 28.7092 55.8805 25.2743 50.5142 25.2743C45.8461 25.2743 43.6278 27.5837 42.589 29.5211C42.1706 30.3017 41.3594 30.7865 40.472 30.7865C39.5828 30.7865 38.7709 30.3001 38.3528 29.5175C37.3186 27.582 35.1075 25.2743 30.4481 25.2743Z" fill="#141818"/>
       </svg>
     `),
-    banner_1_SVG:  this.sanitizer.bypassSecurityTrustHtml
-    (`
+    banner_1_SVG: this.sanitizer.bypassSecurityTrustHtml
+      (`
       <svg class="shape-1 move-2" viewBox="0 0 95 95" xmlns="http://www.w3.org/2000/svg" width="81" height="63"
         fill="var(--primary)" xmlns:v="https://vecta.io/nano">
         <circle cx="16.695" cy="3.497" r="3.497" />
@@ -351,8 +351,8 @@ export class SVGImageService {
         <circle cx="44.533" cy="40.438" r="2.559" />
       </svg>
     `),
-    footer_2_SVG:  this.sanitizer.bypassSecurityTrustHtml
-    (`
+    footer_2_SVG: this.sanitizer.bypassSecurityTrustHtml
+      (`
       <svg class="shape1" width="194" height="418" viewBox="0 0 194 418" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M172 183.598C107.617 168.098 16.5071 110.075 -21 83V371.381C125.65 399.399 168.771 257.867 172 183.598Z" fill="var(--primary)"/>
         <path d="M-30 2C45.2503 142.152 272.249 -9.14019 160.733 180.171C94.4237 292.74 123.481 394.872 -20.3143 415" stroke="var(--secondary)" stroke-width="6"/>
@@ -362,8 +362,8 @@ export class SVGImageService {
         <path d="M343.949 87.7759C238.291 82.6 232.707 40.9079 204 3H483V202C463.517 120.839 430.681 92.0248 343.949 87.7759Z" fill="var(--primary)"/>
       </svg>
     `),
-    counter_4_SVG:  this.sanitizer.bypassSecurityTrustHtml
-    (`
+    counter_4_SVG: this.sanitizer.bypassSecurityTrustHtml
+      (`
       <svg class="shape-1 move-1" viewBox="0 0 81 63" xmlns="http://www.w3.org/2000/svg" width="81" height="63" fill="var(--primary)" xmlns:v="https://vecta.io/nano"><circle cx="16.695" cy="3.497" r="3.497"></circle><circle cx="12.296" cy="21.975" r="3.497"></circle><circle cx="7.896" cy="40.453" r="3.497"></circle><circle cx="3.497" cy="58.931" r="3.497"></circle><circle cx="36.933" cy="3.497" r="3.497"></circle><circle cx="32.534" cy="21.975" r="3.497"></circle><circle cx="28.134" cy="40.453" r="3.497"></circle><circle cx="23.735" cy="58.931" r="3.497"></circle><circle cx="57.171" cy="3.497" r="3.497"></circle><circle cx="52.772" cy="21.975" r="3.497"></circle><circle cx="48.372" cy="40.453" r="3.497"></circle><circle cx="43.973" cy="58.931" r="3.497"></circle><circle cx="77.409" cy="3.497" r="3.497"></circle><circle cx="73.01" cy="21.975" r="3.497"></circle><circle cx="68.61" cy="40.453" r="3.497"></circle><circle cx="64.211" cy="58.931" r="3.497"></circle></svg>
       <svg class="shape-2 move-2" viewBox="0 0 81 63" xmlns="http://www.w3.org/2000/svg" width="81" height="63" fill="var(--secondary)" xmlns:v="https://vecta.io/nano"><circle cx="11.261" cy="2.559" r="2.559"></circle><ellipse cx="8.19" cy="15.1" rx="2.559" ry="2.303"></ellipse><circle cx="5.375" cy="27.897" r="2.303"></circle><circle cx="2.559" cy="40.438" r="2.559"></circle><ellipse cx="25.85" cy="2.559" rx="2.303" ry="2.559"></ellipse><ellipse cx="23.035" cy="15.1" rx="2.559" ry="2.303"></ellipse><ellipse cx="19.963" cy="27.897" rx="2.559" ry="2.303"></ellipse><ellipse cx="16.124" cy="40.438" rx="2.303" ry="2.559"></ellipse><ellipse cx="39.67" cy="2.559" rx="2.303" ry="2.559"></ellipse><circle cx="36.599" cy="15.1" r="2.303"></circle><ellipse cx="33.784" cy="27.897" rx="2.559" ry="2.303"></ellipse><circle cx="30.713" cy="40.438" r="2.559"></circle><circle cx="54.259" cy="2.559" r="2.559"></circle><circle cx="50.42" cy="15.1" r="2.303"></circle><circle cx="47.349" cy="27.897" r="2.303"></circle><circle cx="44.533" cy="40.438" r="2.559"></circle></svg>
       <svg class="shape-3 move-1" xmlns="http://www.w3.org/2000/svg" width="81" height="48" viewBox="0 0 81 48" fill="none">
@@ -395,8 +395,8 @@ export class SVGImageService {
         </g>
       </svg>
     `),
-    happyClientSVG:  this.sanitizer.bypassSecurityTrustHtml
-    (`
+    happyClientSVG: this.sanitizer.bypassSecurityTrustHtml
+      (`
       <svg class="shape-1 move-1" viewBox="0 0 81 63" xmlns="http://www.w3.org/2000/svg" width="81" height="63" fill="var(--primary)" xmlns:v="https://vecta.io/nano"><circle cx="16.695" cy="3.497" r="3.497"></circle><circle cx="12.296" cy="21.975" r="3.497"></circle><circle cx="7.896" cy="40.453" r="3.497"></circle><circle cx="3.497" cy="58.931" r="3.497"></circle><circle cx="36.933" cy="3.497" r="3.497"></circle><circle cx="32.534" cy="21.975" r="3.497"></circle><circle cx="28.134" cy="40.453" r="3.497"></circle><circle cx="23.735" cy="58.931" r="3.497"></circle><circle cx="57.171" cy="3.497" r="3.497"></circle><circle cx="52.772" cy="21.975" r="3.497"></circle><circle cx="48.372" cy="40.453" r="3.497"></circle><circle cx="43.973" cy="58.931" r="3.497"></circle><circle cx="77.409" cy="3.497" r="3.497"></circle><circle cx="73.01" cy="21.975" r="3.497"></circle><circle cx="68.61" cy="40.453" r="3.497"></circle><circle cx="64.211" cy="58.931" r="3.497"></circle></svg>
       <svg class="shape-2 move-2"  xmlns="http://www.w3.org/2000/svg"  fill="var(--secondary)" xmlns:v="https://vecta.io/nano"><circle cx="11.261" cy="2.559" r="2.559"></circle><ellipse cx="8.19" cy="15.1" rx="2.559" ry="2.303"></ellipse><circle cx="5.375" cy="27.897" r="2.303"></circle><circle cx="2.559" cy="40.438" r="2.559"></circle><ellipse cx="25.85" cy="2.559" rx="2.303" ry="2.559"></ellipse><ellipse cx="23.035" cy="15.1" rx="2.559" ry="2.303"></ellipse><ellipse cx="19.963" cy="27.897" rx="2.559" ry="2.303"></ellipse><ellipse cx="16.124" cy="40.438" rx="2.303" ry="2.559"></ellipse><ellipse cx="39.67" cy="2.559" rx="2.303" ry="2.559"></ellipse><circle cx="36.599" cy="15.1" r="2.303"></circle><ellipse cx="33.784" cy="27.897" rx="2.559" ry="2.303"></ellipse><circle cx="30.713" cy="40.438" r="2.559"></circle><circle cx="54.259" cy="2.559" r="2.559"></circle><circle cx="50.42" cy="15.1" r="2.303"></circle><circle cx="47.349" cy="27.897" r="2.303"></circle><circle cx="44.533" cy="40.438" r="2.559"></circle></svg>
       <svg class="shape-3 move-1" xmlns="http://www.w3.org/2000/svg" width="81" height="48" viewBox="0 0 81 48" fill="none">
@@ -428,8 +428,8 @@ export class SVGImageService {
         </g>
       </svg>
     `),
-    form_3_SVG:  this.sanitizer.bypassSecurityTrustHtml
-    (`
+    form_3_SVG: this.sanitizer.bypassSecurityTrustHtml
+      (`
       <svg class="shape-1 move-1" viewBox="0 0 81 63" xmlns="http://www.w3.org/2000/svg" width="81" height="63" fill="var(--primary)" xmlns:v="https://vecta.io/nano"><circle cx="16.695" cy="3.497" r="3.497"></circle><circle cx="12.296" cy="21.975" r="3.497"></circle><circle cx="7.896" cy="40.453" r="3.497"></circle><circle cx="3.497" cy="58.931" r="3.497"></circle><circle cx="36.933" cy="3.497" r="3.497"></circle><circle cx="32.534" cy="21.975" r="3.497"></circle><circle cx="28.134" cy="40.453" r="3.497"></circle><circle cx="23.735" cy="58.931" r="3.497"></circle><circle cx="57.171" cy="3.497" r="3.497"></circle><circle cx="52.772" cy="21.975" r="3.497"></circle><circle cx="48.372" cy="40.453" r="3.497"></circle><circle cx="43.973" cy="58.931" r="3.497"></circle><circle cx="77.409" cy="3.497" r="3.497"></circle><circle cx="73.01" cy="21.975" r="3.497"></circle><circle cx="68.61" cy="40.453" r="3.497"></circle><circle cx="64.211" cy="58.931" r="3.497"></circle></svg>
       <svg class="shape-2 move-2" viewBox="0 0 81 63" xmlns="http://www.w3.org/2000/svg" width="81" height="63"  fill="var(--secondary)" xmlns:v="https://vecta.io/nano"><circle cx="11.261" cy="2.559" r="2.559"></circle><ellipse cx="8.19" cy="15.1" rx="2.559" ry="2.303"></ellipse><circle cx="5.375" cy="27.897" r="2.303"></circle><circle cx="2.559" cy="40.438" r="2.559"></circle><ellipse cx="25.85" cy="2.559" rx="2.303" ry="2.559"></ellipse><ellipse cx="23.035" cy="15.1" rx="2.559" ry="2.303"></ellipse><ellipse cx="19.963" cy="27.897" rx="2.559" ry="2.303"></ellipse><ellipse cx="16.124" cy="40.438" rx="2.303" ry="2.559"></ellipse><ellipse cx="39.67" cy="2.559" rx="2.303" ry="2.559"></ellipse><circle cx="36.599" cy="15.1" r="2.303"></circle><ellipse cx="33.784" cy="27.897" rx="2.559" ry="2.303"></ellipse><circle cx="30.713" cy="40.438" r="2.559"></circle><circle cx="54.259" cy="2.559" r="2.559"></circle><circle cx="50.42" cy="15.1" r="2.303"></circle><circle cx="47.349" cy="27.897" r="2.303"></circle><circle cx="44.533" cy="40.438" r="2.559"></circle></svg>
       <svg class="shape-3 move-1" xmlns="http://www.w3.org/2000/svg" width="81" height="48" viewBox="0 0 81 48" fill="none">
@@ -461,8 +461,8 @@ export class SVGImageService {
         </g>
       </svg>
     `),
-    aboutus_6_SVG:this.sanitizer.bypassSecurityTrustHtml
-    (`
+    aboutus_6_SVG: this.sanitizer.bypassSecurityTrustHtml
+      (`
       <svg class="shape-1 move-1" viewBox="0 0 81 63" xmlns="http://www.w3.org/2000/svg" width="81" height="63" fill="var(--primary)" xmlns:v="https://vecta.io/nano"><circle cx="16.695" cy="3.497" r="3.497"></circle><circle cx="12.296" cy="21.975" r="3.497"></circle><circle cx="7.896" cy="40.453" r="3.497"></circle><circle cx="3.497" cy="58.931" r="3.497"></circle><circle cx="36.933" cy="3.497" r="3.497"></circle><circle cx="32.534" cy="21.975" r="3.497"></circle><circle cx="28.134" cy="40.453" r="3.497"></circle><circle cx="23.735" cy="58.931" r="3.497"></circle><circle cx="57.171" cy="3.497" r="3.497"></circle><circle cx="52.772" cy="21.975" r="3.497"></circle><circle cx="48.372" cy="40.453" r="3.497"></circle><circle cx="43.973" cy="58.931" r="3.497"></circle><circle cx="77.409" cy="3.497" r="3.497"></circle><circle cx="73.01" cy="21.975" r="3.497"></circle><circle cx="68.61" cy="40.453" r="3.497"></circle><circle cx="64.211" cy="58.931" r="3.497"></circle></svg>
       <svg class="shape-2 move-2" viewBox="0 0 81 63" xmlns="http://www.w3.org/2000/svg" width="81" height="63"  fill="var(--secondary)" xmlns:v="https://vecta.io/nano"><circle cx="11.261" cy="2.559" r="2.559"></circle><ellipse cx="8.19" cy="15.1" rx="2.559" ry="2.303"></ellipse><circle cx="5.375" cy="27.897" r="2.303"></circle><circle cx="2.559" cy="40.438" r="2.559"></circle><ellipse cx="25.85" cy="2.559" rx="2.303" ry="2.559"></ellipse><ellipse cx="23.035" cy="15.1" rx="2.559" ry="2.303"></ellipse><ellipse cx="19.963" cy="27.897" rx="2.559" ry="2.303"></ellipse><ellipse cx="16.124" cy="40.438" rx="2.303" ry="2.559"></ellipse><ellipse cx="39.67" cy="2.559" rx="2.303" ry="2.559"></ellipse><circle cx="36.599" cy="15.1" r="2.303"></circle><ellipse cx="33.784" cy="27.897" rx="2.559" ry="2.303"></ellipse><circle cx="30.713" cy="40.438" r="2.559"></circle><circle cx="54.259" cy="2.559" r="2.559"></circle><circle cx="50.42" cy="15.1" r="2.303"></circle><circle cx="47.349" cy="27.897" r="2.303"></circle><circle cx="44.533" cy="40.438" r="2.559"></circle></svg>
       <svg class="shape-3 move-1" xmlns="http://www.w3.org/2000/svg" width="81" height="48" viewBox="0 0 81 48" fill="none">
@@ -494,8 +494,8 @@ export class SVGImageService {
         </g>
       </svg>
     `),
-    underMaintenanceSVG:this.sanitizer.bypassSecurityTrustHtml
-    (`
+    underMaintenanceSVG: this.sanitizer.bypassSecurityTrustHtml
+      (`
     <svg class="shape-1" width="117" height="393" viewBox="0 0 117 393" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M96 172.397C35.6201 157.853 -49.825 103.406 -85 78V348.604C52.532 374.895 92.9717 242.087 96 172.397Z" fill="var(--secondary)"></path>
       <path d="M-94 2C-23.1762 133.668 190.47 -8.46584 85.5137 169.386C23.1047 275.141 50.4525 371.09 -84.8841 390" stroke="var(--primary)" stroke-width="6"></path>
@@ -554,8 +554,8 @@ export class SVGImageService {
       <path d="M149.051 191.224C254.709 196.4 260.293 238.092 289 276H10V77C29.4832 158.161 62.3188 186.975 149.051 191.224Z" fill="var(--primary)"/>
     </svg>
     `),
-    contact_Us_SVG:this.sanitizer.bypassSecurityTrustHtml
-    (`
+    contact_Us_SVG: this.sanitizer.bypassSecurityTrustHtml
+      (`
       <svg class="shape-1 move-1" xmlns="http://www.w3.org/2000/svg" width="81" height="63" fill="var(--primary)" xmlns:v="https://vecta.io/nano"><circle cx="16.695" cy="3.497" r="3.497"></circle><circle cx="12.296" cy="21.975" r="3.497"></circle><circle cx="7.896" cy="40.453" r="3.497"></circle><circle cx="3.497" cy="58.931" r="3.497"></circle><circle cx="36.933" cy="3.497" r="3.497"></circle><circle cx="32.534" cy="21.975" r="3.497"></circle><circle cx="28.134" cy="40.453" r="3.497"></circle><circle cx="23.735" cy="58.931" r="3.497"></circle><circle cx="57.171" cy="3.497" r="3.497"></circle><circle cx="52.772" cy="21.975" r="3.497"></circle><circle cx="48.372" cy="40.453" r="3.497"></circle><circle cx="43.973" cy="58.931" r="3.497"></circle><circle cx="77.409" cy="3.497" r="3.497"></circle><circle cx="73.01" cy="21.975" r="3.497"></circle><circle cx="68.61" cy="40.453" r="3.497"></circle><circle cx="64.211" cy="58.931" r="3.497"></circle></svg>
       <svg class="shape-3 move-1" xmlns="http://www.w3.org/2000/svg" width="81" height="48" viewBox="0 0 81 48" fill="none">
         <path d="M2 19L15.744 6.73604C18.6614 4.1328 23.1457 4.42415 25.7017 7.383L30.3669 12.7835C33.1839 16.0444 38.2501 16.0101 41.0227 12.7114L44.878 8.12464C47.6031 4.88238 52.5608 4.78406 55.4124 7.91574L59.9639 12.9144C62.8687 16.1045 67.9399 15.9329 70.6223 12.5537L79 2" stroke="var(--primary)" stroke-width="5"></path>

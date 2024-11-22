@@ -1,0 +1,6 @@
+.myImage {
+    height: 400px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+}
