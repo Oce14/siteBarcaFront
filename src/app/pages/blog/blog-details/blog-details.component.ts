@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Footer1Component } from '../../../elements/footers/footer-1/footer-1.component';
 import { Header1Component } from '../../../elements/headers/header-1/header-1.component';
@@ -44,6 +44,27 @@ export class BlogDetailsComponent implements OnInit {
   constructor(private dataService: DataService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    // subscribe to the route params and change the step based on the id
+    this.route.params.subscribe(params => {
+      console.log('params', params);
+      this.dataService.getStepById(params['id']).subscribe(data => {
+        this.step = data;
+        if (this.step) {
+          this.stepType = this.step.type;
+        }
+      });
+
+      this.dataService.getSteps().subscribe(data => {
+        this.steps = data;
+        this.filteredSteps = this.getStepsByType(this.stepType);
+      });
+    }
+    );
+
+
+
+
+    console.log('route', this.route.snapshot.paramMap.get('id'));
     const stepId = Number(this.route.snapshot.paramMap.get('id'));
     this.dataService.getStepById(stepId).subscribe(data => {
       this.step = data;
@@ -56,6 +77,10 @@ export class BlogDetailsComponent implements OnInit {
       this.filteredSteps = this.getStepsByType(this.stepType);
       console.log(this.filteredSteps);
     });
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('changes', changes);
   }
 
   listData: typeofList[] = [

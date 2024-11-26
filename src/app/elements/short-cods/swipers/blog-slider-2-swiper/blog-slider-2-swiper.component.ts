@@ -40,17 +40,45 @@ export class BlogSlider2SwiperComponent {
         nextEl: '.swiper-button-next',
       },
       breakpoints: {
-				1200: {
-					slidesPerView: 3,
-				},
-				768: {
-					slidesPerView: 2,
-				},
-				320: {
-					slidesPerView: 1,
-				},
-			}
+        1200: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        320: {
+          slidesPerView: 1,
+        },
+      }
     })
+    if (this.data.length < 3) {
+      swiper = new Swiper('.blog-slider-full', {
+
+        speed: 0,
+        parallax: true,
+        slidesPerView: this.changeItemBoxed(),
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+        },
+        navigation: {
+          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
+        },
+        breakpoints: {
+          1200: {
+            slidesPerView: this.data.length,
+          },
+          768: {
+            slidesPerView: this.data.length,
+          },
+          320: {
+            slidesPerView: 1,
+          },
+        }
+      })
+    }
   }
 
   changeItemBoxed() {
