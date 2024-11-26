@@ -1,4 +1,4 @@
-<div class="page-wraper">
+<div *ngIf="loaded" class="page-wraper">
 
 	<!-- Header -->
 	<app-header-1></app-header-1>
@@ -12,7 +12,7 @@
 					<div class="col-xl-8 col-lg-8 m-b30">
 						<div class="dz-card blog-single sidebar">
 							<div class="dz-media">
-								<img src="{{ step.blogImage }}" alt="">
+								<img src="{{ step.blogPostImage }}" alt="">
 							</div>
 							<div class="dz-info">
 								<div class="dz-meta">

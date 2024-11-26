@@ -22,7 +22,8 @@
                         <span>Donate</span>
                         <i class="flaticon-heart ms-3"></i>
                       </a>
-                      <a [routerLink]="['/about-us']" class="btn btn-light btnhover2">Learn More <i class="flaticon-right-arrow ms-3"></i></a>
+                      <a [routerLink]="['/about-us']" class="btn btn-light btnhover2">Learn More <i
+                          class="flaticon-right-arrow ms-3"></i></a>
                     </div>
                   </div>
                 </div>
@@ -45,16 +46,18 @@
 <ng-template #content let-modal>
   <div class="modal-header ">
     <h5 class="modal-title">Choose a donation amount</h5>
-    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"> <i class="flaticon-close"></i></button>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"> <i
+        class="flaticon-close"></i></button>
   </div>
   <div class="modal-body">
-    <form >
+    <form>
       <div class="row">
         <div class="col-lg-12">
           <div class="tag-donate style-1">
             <div class="donate-categories">
               <div class="form-check">
-                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault" name="flexRadioDefault" value="500" id="flexRadioDefault11">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault"
+                  name="flexRadioDefault" value="500" id="flexRadioDefault11">
                 <label class="form-check-label" for="flexRadioDefault11">
                   $500
                 </label>
@@ -62,7 +65,8 @@
             </div>
             <div class="donate-categories">
               <div class="form-check">
-                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault" value="1000"  name="flexRadioDefault2" id="flexRadioDefault22">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault"
+                  value="1000" name="flexRadioDefault2" id="flexRadioDefault22">
                 <label class="form-check-label" for="flexRadioDefault22">
                   $1000
                 </label>
@@ -70,7 +74,8 @@
             </div>
             <div class="donate-categories">
               <div class="form-check">
-                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault" value="2000"  name="flexRadioDefault3" id="flexRadioDefault33">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault"
+                  value="2000" name="flexRadioDefault3" id="flexRadioDefault33">
                 <label class="form-check-label" for="flexRadioDefault33">
                   $2000
                 </label>
@@ -78,7 +83,8 @@
             </div>
             <div class="donate-categories">
               <div class="form-check">
-                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault" value="5000"  name="flexRadioDefault4" id="flexRadioDefault44">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault"
+                  value="5000" name="flexRadioDefault4" id="flexRadioDefault44">
                 <label class="form-check-label" for="flexRadioDefault44">
                   $5000
                 </label>

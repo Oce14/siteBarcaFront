@@ -13,6 +13,7 @@ export class DataService {
             map(data => data.step.find((step: any) => step.id === id))
         );
     }
+
     getSteps(): Observable<any[]> {
         return this.http.get<any>('assets/data/steps.json').pipe(
             map(response => response.step)
