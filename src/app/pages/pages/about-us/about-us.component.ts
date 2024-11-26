@@ -9,6 +9,10 @@ import { Team1Component } from '../../../elements/team/team-1/team-1.component';
 import { CallToAction1Component } from '../../../elements/call-to-action/call-to-action1/call-to-action1.component';
 import { Footer1Component } from '../../../elements/footers/footer-1/footer-1.component';
 import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
+import { AboutUs5Component } from "../../../elements/about-us/about-us-5/about-us-5.component";
+import { AboutUs6Component } from "../../../elements/about-us/about-us-6/about-us-6.component";
+import { AboutUs7Component } from "../../../elements/about-us/about-us-7/about-us-7.component";
+import { Category1Component } from '../../../elements/category/category-1/category-1.component';
 
 interface teamType {
   section_subtitle: string,
@@ -25,6 +29,17 @@ interface iconBoxType {
   title: string,
   desc: string,
 }
+
+interface categoriesType {
+  section_subtitle: string,
+  section_title: string,
+  section_description: string,
+  category: {
+    dz_title: string,
+    icon: string,
+    url: string
+  }[]
+}
 @Component({
   selector: 'app-about-us',
   standalone: true,
@@ -38,19 +53,23 @@ interface iconBoxType {
     Team1Component,
     CallToAction1Component,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    AboutUs5Component,
+    AboutUs6Component,
+    Category1Component,
+    AboutUs7Component
   ],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.css'
 })
 export class AboutUsComponent {
   bennre = {
-    bgImage:'assets/images/banner/bnr1.jpg',
+    bgImage: 'assets/images/banner/bnr1.jpg',
     title: 'About Us',
     classAdd: 'dz-bnr-inr-sm'
   }
 
-  teamList:teamType[] = [
+  teamList: teamType[] = [
     {
       section_subtitle: "TEAM MEMBER",
       section_title: "Meet Our Great Member",
@@ -95,26 +114,75 @@ export class AboutUsComponent {
     }
   ]
 
-  iconBox:iconBoxType[] = [
+  iconBox: iconBoxType[] = [
     {
       icon: 'flaticon-vr-glasses',
-      title: 'Quo maxime qui impedit odio soluta',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do labore et dolore magna aliqua.',
+      title: 'Éducation pour tous',
+      desc: 'Offrir des outils pour réussir.',
     },
     {
       icon: 'flaticon-transformation',
-      title: 'Ut nisi ea vero itaque error magnam',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do labore et dolore magna aliqua.',
+      title: 'Solidarité locale et internationale',
+      desc: 'Travailler main dans la main.',
     },
     {
       icon: 'flaticon-doctor-bag',
-      title: 'Quaerat nobis est',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do labore et dolore magna aliqua.',
+      title: 'Durabilité',
+      desc: 'Pratiques agricoles respectueuses de l’environnement.',
     },
     {
       icon: 'flaticon-open-book',
-      title: 'Deleniti iure ipsa eos eaque under',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do labore et dolore magna aliqua.',
+      title: 'Autonomisation',
+      desc: 'Former et créer des emplois.',
+    }
+  ]
+  categoryList: categoriesType[] = [
+    {
+      section_subtitle: "Notre projet",
+      section_title: "Ce Que Nous Proposons",
+      section_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      category: [
+        {
+          dz_title: 'Aide aux devoirs et passages d\'examens',
+          icon: 'flaticon-raw-food',
+          url: '/project-categories'
+        },
+        {
+          dz_title: 'Formation en langues (français et anglais)',
+          icon: 'flaticon-responsibility',
+          url: '/project-categories'
+        },
+        {
+          dz_title: 'Ateliers pratiques : gestes de secours, jardinage, etc',
+          icon: 'flaticon-vr-glasses',
+          url: '/project-categories'
+        },
+        {
+          dz_title: 'Sensibilisation à la biodiversité et à l’autosuffisance alimentaire',
+          icon: 'flaticon-open-book',
+          url: '/project-categories'
+        },
+        {
+          dz_title: 'Lieu de convivialité pour renforcer le lien social',
+          icon: 'flaticon-video',
+          url: '/project-categories'
+        },
+        // {
+        //   dz_title: 'Fashion',
+        //   icon: 'flaticon-like-1',
+        //   url: '/project-categories'
+        // },
+        // {
+        //   dz_title: 'Design',
+        //   icon: 'flaticon-transformation',
+        //   url: '/project-categories'
+        // },
+        // {
+        //   dz_title: 'Medical',
+        //   icon: 'flaticon-doctor-bag',
+        //   url: '/project-categories'
+        // }
+      ]
     }
   ]
 }

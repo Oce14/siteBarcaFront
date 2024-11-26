@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Banner4Component } from '../../../../elements/banners/banner-4/banner-4.component';
 import { Category2Component } from '../../../../elements/category/category-2/category-2.component';
 import { Counter4Component } from '../../../../elements/counter/counter4/counter4.component';
@@ -8,6 +8,7 @@ import { Header1Component } from '../../../../elements/headers/header-1/header-1
 import { ScrollTopButtonComponent } from '../../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
 import { Counter2Component } from '../../../../elements/counter/counter2/counter2.component';
 import { Form4Component } from '../../../../elements/form/form-4/form-4.component';
+import { SVGImageService } from '../../../../constent/SVGImage/svgimage.service';
 
 interface typeofIcone {
   section_category: string,
@@ -38,10 +39,41 @@ interface typeofIcone {
   styleUrl: './become-a-volunteer.component.css'
 })
 export class BecomeAVolunteerComponent {
+  SvgImage: any;
+
+  constructor(private svgIcons: SVGImageService) { }
+  ngOnInit() {
+    this.SvgImage = this.svgIcons.content_svgImage.aboutus_6_SVG;
+  }
   bennre = {
     bgImage: 'assets/images/banner/bnr3.jpg',
     title: 'Become A Volunteer',
     classAdd: ''
+  }
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    this.checkScroll();
+  }
+
+  isScrolledIntoView(elem: HTMLElement): boolean {
+    const rect = elem.getBoundingClientRect();
+    const viewHeight = window.innerHeight || document.documentElement.clientHeight;
+    const viewTop = window.scrollY || document.documentElement.scrollTop;
+    const viewBottom = viewTop + viewHeight;
+
+    const elemTop = rect.top + viewTop;
+    const elemBottom = elemTop + rect.height;
+
+    return (elemBottom <= viewBottom) && (elemTop >= viewTop);
+  }
+
+  checkScroll(): void {
+    const splitBoxes = document.querySelectorAll('.split-box');
+    splitBoxes.forEach((box) => {
+      if (this.isScrolledIntoView(box as HTMLElement)) {
+        box.classList.add('split-active');
+      }
+    });
   }
 
   counterArrya = [
@@ -71,30 +103,30 @@ export class BecomeAVolunteerComponent {
 
   iconList: typeofIcone[] = [
     {
-      section_category: "CATEGORIES",
-      section_title: "Explore Our Crowdfunding <br> Featured Categories ",
+      section_category: "Devenir Bénévole",
+      section_title: "Pourquoi Devenir Bénévole ?",
       section_custom_class: "pb-0",
-      section_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      section_description: "Rejoindre l’association BARCA, c’est bien plus qu’un simple engagement. C’est une opportunité de :",
       list: [
         {
           icon: 'flaticon-like-1',
-          title: 'Giving Love',
-          desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+          title: 'Contribuer',
+          desc: 'Contribuer à un impact direct sur les communautés locales au Burkina Faso.'
         },
         {
           icon: 'flaticon-open-book',
-          title: 'Education',
-          desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+          title: 'Participer',
+          desc: 'Participer à des projets durables et significatifs, qu’il s’agisse d’éducation, d’agriculture ou d’écologie.'
         },
         {
           icon: 'flaticon-raw-food',
-          title: 'Healthy Food',
-          desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+          title: 'Partager',
+          desc: 'Partager vos compétences tout en acquérant de nouvelles expériences enrichissantes.'
         },
         {
           icon: 'flaticon-doctor-bag',
-          title: 'Medical',
-          desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+          title: 'Communauté ',
+          desc: 'Faire partie d’une communauté solidaire et engagée pour un monde meilleur.'
         }
       ]
     }

@@ -56,21 +56,21 @@
 				<div class="row">
 					<div class="col-xl-7 col-lg-12">
 						<div class="section-head wow fadeInUp" data-wow-delay="0.2s">
-							<h5 class="sub-title">FROM OUR BLOG</h5>
-							<h2 class="title">Recent News & Updates</h2>
+							<h5 class="sub-title">Nos Avancées</h5>
+							<h2 class="title">Nos Récentes Réalisations</h2>
 						</div>
 						@for(item of blogList; track item){
 						<div class="dz-card style-6 blog-half wow fadeInUp" data-wow-delay="0.2s">
 							<div class="dz-media">
-								<a [routerLink]="['/blog-details']"><img src="{{ item.image }}" alt=""></a>
+								<a [routerLink]="['/step', item.id]"><img src="{{ item.blogImage }}" alt=""></a>
 								<ul class="dz-badge-list">
 									<li><a href="javascript:void(0);" class="dz-badge">{{ item.date }}</a></li>
 								</ul>
-								<a [routerLink]="['/blog-details']" class="btn btn-secondary">Read More</a>
+								<a [routerLink]="['/step', item.id]" class="btn btn-secondary">En savoir plus</a>
 							</div>
 							<div class="dz-info">
-								<h4 class="dz-title"><a [routerLink]="['/blog-details']">{{ item.title }}</a></h4>
-								<div class="dz-meta">
+								<h4 class="dz-title"><a [routerLink]="['/step', item.id]">{{ item.title }}</a></h4>
+								<!-- <div class="dz-meta">
 									<ul>
 										<li class="dz-user">
 											<i class="fa-solid fa-user"></i>
@@ -81,33 +81,36 @@
 											{{ item.comment }} Comments
 										</li>
 									</ul>
-								</div>
-								<p>{{ item.desc }}</p>
+								</div> -->
+								<p>{{ item.abstract }}</p>
 							</div>
 						</div>
 						}
 					</div>
 					<div class="col-xl-5 col-lg-12 m-b30 wow fadeInUp" data-wow-delay="0.6s">
 						<div class="dz-card style-7"
-							style="background-image: url(assets/images/blog/blog-grid-2/pic1.jpg)">
+							[style.backgroundImage]="'url(' + secondMostRecentStep.blogImage + ')'">
 							<div class="dz-category">
 								<ul class="dz-badge-list">
-									<li><a href="javascript:void(0);" class="dz-badge">14 Fan 2022</a></li>
+									<li><a href="javascript:void(0);" class="dz-badge">{{ secondMostRecentStep.date
+											}}</a></li>
 								</ul>
 							</div>
 							<div class="dz-info">
-								<h2 class="dz-title"><a [routerLink]="['/blog-details']" class="text-white">Directly
-										support individuals Charity</a></h2>
+								<h2 class="dz-title"><a [routerLink]="['/step', secondMostRecentStep.id]"
+										class="text-white">{{
+										secondMostRecentStep.title }}</a></h2>
 								<div class="dz-meta">
+									<p class="text-white">{{ secondMostRecentStep.abstract }}</p>
 									<ul>
-										<li class="dz-user">
+										<!-- <li class="dz-user">
 											<i class="fa-solid fa-user"></i>
-											By <span>KK Sharma</span>
-										</li>
-										<li class="dz-date ms-1">
+											Le <span></span>
+										</li> -->
+										<!-- <li class="dz-date ms-1">
 											<i class="fa-solid fa-message"></i>
 											24 Comments
-										</li>
+										</li> -->
 									</ul>
 								</div>
 							</div>
@@ -119,12 +122,26 @@
 		<!-- Our Blog End  -->
 
 		<!-- Client Logo -->
-		<div class="clients-wrapper">
+		<!-- <div class="clients-wrapper">
 			<div class="container">
 				<app-clients-swiper></app-clients-swiper>
 			</div>
-		</div>
+		</div> -->
 		<!-- Client Logo -->
+
+		<!-- Faq -->
+		<div class="m-b100 bg-white">
+			<app-faq-accordion [dataList]="faqSection"></app-faq-accordion>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<a [routerLink]="['/faq']" class="btn btn-primary">En savoir plus</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Faq End -->
+
 
 		<!-- Call Action -->
 		<div class="footer-feature-wrapper">

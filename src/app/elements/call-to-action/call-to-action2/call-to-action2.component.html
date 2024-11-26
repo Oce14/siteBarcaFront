@@ -3,14 +3,17 @@
     <div class="content-bx style-1 bg-primary text-center">
       <div class="inner-content">
         <h2 class="title text-white">Newsletter</h2>
-        <p class="text-white">Sign up for our monthly newsletter to get the latest news, volunteer opportunities.</p>
+        <p class="text-white">Inscrivez-vous à notre lettre d'information mensuelle pour recevoir les dernières
+          nouvelles, les opportunités de bénévolat.</p>
         @if(message){
-          <p [ngClass]="{ 'text-success': success, 'text-danger': !success }">{{ message }}</p>
+        <p [ngClass]="{ 'text-success': success, 'text-danger': !success }">{{ message }}</p>
         }
         <form class="dzSubscribe" [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
           <div class="dzSubscribeMsg text-white"></div>
-          <input name="email" formControlName="email" type="email" class="form-control transparent m-b15" placeholder="Enter your email address">
-          <button name="submit" value="Submit" type="submit" class="btn btn-rounded btn-block {{ extractClass?'btn-light':'btn-secondary' }}">Subscribe Now</button>
+          <input name="email" formControlName="email" type="email" class="form-control transparent m-b15"
+            placeholder="Entrez votre adresse mail">
+          <button name="submit" value="Submit" type="submit"
+            class="btn btn-rounded btn-block {{ extractClass?'btn-light':'btn-secondary' }}">S'abonner</button>
         </form>
       </div>
     </div>
@@ -21,20 +24,22 @@
         <div class="icon-lg m-b20">
           <a [routerLink]="['/project-categories']" class="icon-cell" [innerHTML]="SvgImage"></a>
         </div>
-        <h3 class="title">Want To Help?</h3>
-        <p class="m-b30 text-{{ extractClass?'white':'dark' }}">Your financial support is very important for our global projects.</p>
+        <h3 class="title">Vous voulez aider ?</h3>
+        <p class="m-b30 text-{{ extractClass?'white':'dark' }}">Votre soutien financier est très important pour nos
+          projets.</p>
         @if(extractClass){
-        <a class="btn btn-primary" [routerLink]="['/browse-fundraiser']">Online Voter</a>
+        <a class="btn btn-primary" [routerLink]="['/browse-fundraiser']">Faire un don</a>
         } @else{
-        <a class="btn btn-primary" [routerLink]="['/browse-fundraiser']">Online Fundraiser</a>
+        <a class="btn btn-primary" [routerLink]="['/browse-fundraiser']">Faire un don</a>
         }
       </div>
     </div>
   </div>
-  <div class="col-lg-4 col-md-6 wow fadeInUp {{ extractClass?'m-t30':'m-b30' }}" data-wow-delay="0.6s">
+  <!-- <div class="col-lg-4 col-md-6 wow fadeInUp {{ extractClass?'m-t30':'m-b30' }}" data-wow-delay="0.6s">
     <div class="content-bx style-1 bg-dark text-center">
       <div class="inner-content">
-        <h2 class="title text-white {{ extractClass?'':'m-b15 display-4 font-weight-700' }} "><span class="counter" [countUp]="33986" [options]="opts"></span><span>+</span></h2>
+        <h2 class="title text-white {{ extractClass?'':'m-b15 display-4 font-weight-700' }} "><span class="counter"
+            [countUp]="33986" [options]="opts"></span><span>+</span></h2>
         <p class="m-b30 text-white">Our campaign is powered by contributions from supporters like you</p>
         @if(extractClass){
         <a class="btn btn-primary" [routerLink]="['/browse-fundraiser']">Online Voter</a>
@@ -43,5 +48,5 @@
         }
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

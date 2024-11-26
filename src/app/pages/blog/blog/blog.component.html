@@ -1,13 +1,13 @@
 <div class="page-wraper">
 
 	<!-- Header -->
-  <app-header-1></app-header-1>
+	<app-header-1></app-header-1>
 	<!-- Header End -->
 
 	<div class="page-content bg-white">
 
 		<!-- Banner  -->
-    <app-banner-4 [data]="bennre"></app-banner-4>
+		<app-banner-4 [data]="bennre"></app-banner-4>
 		<!-- Banner End -->
 
 		<section class="content-inner-2">
@@ -18,13 +18,24 @@
 							<div class="dz-media">
 								<img src="assets/images/blog/blog-grid/pic2.jpg" alt="">
 							</div>
-							<div class="dz-info">
-								<div class="dz-category">
-									<ul>
-										<li><a href="javascript:void(0);">BUSSINESS STRATEGY</a></li>
-									</ul>
+							<div *ngIf="secondMostRecentStep">
+								<div class="dz-info">
+									<div class="dz-category">
+										<ul>
+											<li><a href="javascript:void(0);">{{ secondMostRecentStep.type }}</a></li>
+										</ul>
+									</div>
+
+									<h5 class="dz-title">
+										<a [routerLink]="['/step', secondMostRecentStep.id]" class="text-white">
+											{{ secondMostRecentStep.title }}
+										</a>
+									</h5>
 								</div>
-								<h5 class="dz-title"><a [routerLink]="['/blog-details']" class="text-white">How to increase your business skill while pandemic</a></h5>
+								<div *ngIf="!secondMostRecentStep">
+									<p>Aucun post disponible.</p>
+									console.log("Aucun post disponible.");
+								</div>
 							</div>
 						</div>
 					</div>
@@ -33,13 +44,24 @@
 							<div class="dz-media">
 								<img src="assets/images/blog/blog-grid/pic6.jpg" alt="">
 							</div>
-							<div class="dz-info">
-								<div class="dz-category">
-									<ul>
-										<li><a href="javascript:void(0);">BUSSINESS STRATEGY</a></li>
-									</ul>
+							<div *ngIf="mostRecentStep">
+								<div class="dz-info">
+									<div class="dz-category">
+										<ul>
+											<li><a href="javascript:void(0);">{{ mostRecentStep.type }}</a></li>
+										</ul>
+									</div>
+
+									<h5 class="dz-title">
+										<a [routerLink]="['/step', mostRecentStep.id]" class="text-white">
+											{{ mostRecentStep.title }}
+										</a>
+									</h5>
 								</div>
-								<h5 class="dz-title"><a [routerLink]="['/blog-details']" class="text-white">Akcel Academy 2021 Grand Opening at Jakarta</a></h5>
+								<div *ngIf="!mostRecentStep">
+									<p>Aucun post disponible.</p>
+									console.log("Aucun post disponible.");
+								</div>
 							</div>
 						</div>
 					</div>
@@ -49,7 +71,7 @@
 
 		<section class="content-inner-1">
 			<div class="container">
-				<div class="row">
+				<!-- <div class="row">
 					<div class="col-lg-5 search-bx style-2">
 						<div class="input-group  m-b0 m-md-b10">
 							<input type="text" class="form-control" placeholder="Search Articles">
@@ -61,20 +83,20 @@
 					<div class="col-lg-7">
 						<div class="row g-3 justify-content-end m-b30">
 							<div class="col-sm-4">
-                <app-dropdown [dropdown]="dropdown_1"></app-dropdown>
+								<app-dropdown [dropdown]="dropdown_1"></app-dropdown>
 							</div>
 							<div class="col-sm-4">
-                <app-dropdown [dropdown]="dropdown_2"></app-dropdown>
+								<app-dropdown [dropdown]="dropdown_2"></app-dropdown>
 							</div>
 							<div class="col-sm-4">
-                <app-dropdown [dropdown]="dropdown_3"></app-dropdown>
+								<app-dropdown [dropdown]="dropdown_3"></app-dropdown>
 							</div>
 						</div>
 					</div>
-				</div>
-        <!-- list -->
-        <app-listing-2 class="row" [data]="listData" [listStyle]="'style-2'"></app-listing-2>
-        <!-- list -->
+				</div> -->
+				<!-- list -->
+				<app-listing-2 class="row " [data]="listData" [listStyle]="'style-2'"></app-listing-2>
+				<!-- list -->
 				<div class="row">
 					<div class="col-12 m-sm-t0 m-t30">
 						<app-pagination></app-pagination>
@@ -85,7 +107,7 @@
 
 	</div>
 	<!-- Footer -->
-  <app-footer-1> </app-footer-1>
-  <!-- Footer End -->
-  <app-scroll-top-button></app-scroll-top-button>
+	<app-footer-1> </app-footer-1>
+	<!-- Footer End -->
+	<app-scroll-top-button></app-scroll-top-button>
 </div>

@@ -40,68 +40,68 @@ export class FaqComponent {
 
   faqSection: typeofList[] = [
     {
-      section_title: `What Is Akcel ?`,
+      section_title: `Qui sommes-nous ?`,
       section_image: `assets/images/project/pic3.jpg`,
       activeTab: 0,
       section_custom_class: "",
-      section_description: "Lorem ipsum dolor sit amet, consectetur adipiscing do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      section_description: "Découvrez la mission et les valeurs de l'association Barca, engagée pour un impact durable dans les communautés locales.",
       faqList: [
         {
-          title: 'Cras turpis felis, elementum sed mi at arcu ?',
-          desc: 'Vestibulum nibh risus, lobortis in neque eleifend, varius vulputate sem. Donec maximus, sapien id auctor ornare, odio mi luctus massa, id rhoncus velit purus eu turpis onec aliquet mauris est.'
+          title: 'Quelle est la mission principale de l’association ?',
+          desc: 'Notre mission est de créer un impact positif et durable en soutenant des projets liés à l’éducation, à l’accès aux ressources essentielles, et au développement communautaire. Nous nous concentrons sur des initiatives concrètes telles que l’installation de toilettes sèches, la construction de salles de classe, et la mise en place de cultures durables.'
         },
         {
-          title: 'Vestibulum nibh risus, in neque eleifendulputate ?',
-          desc: 'Vestibulum nibh risus, lobortis in neque eleifend, varius vulputate sem. Donec maximus, sapien id auctor ornare, odio mi luctus massa, id rhoncus velit purus eu turpis onec aliquet mauris est.'
+          title: 'Où se trouvent les projets de l’association ?',
+          desc: 'Nos projets actuels se déroulent dans [lieu/zone géographique spécifique]. Nous travaillons en étroite collaboration avec les communautés locales pour répondre à leurs besoins spécifiques.'
         },
         {
-          title: 'Donec maximus, sapien id auctor ornare ?',
-          desc: 'Vestibulum nibh risus, lobortis in neque eleifend, varius vulputate sem. Donec maximus, sapien id auctor ornare, odio mi luctus massa, id rhoncus velit purus eu turpis onec aliquet mauris est.'
+          title: 'Qui bénéficie des actions de l’association ?',
+          desc: 'Nos actions bénéficient principalement aux populations locales, en particulier aux enfants, aux familles, et aux membres de la communauté qui ont un accès limité à des ressources essentielles comme l’eau, l’éducation ou la nourriture.'
         }
       ]
     },
     {
-      section_title: `My donation secure?`,
+      section_title: `Soutenir l'association`,
       section_image: `assets/images/project/pic2.jpg`,
       activeTab: 0,
       section_custom_class: "",
-      section_description: "Lorem ipsum dolor sit amet, consectetur adipiscing do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      section_description: "Apprenez comment vous pouvez aider l'association Barca à atteindre ses objectifs.",
       faqList: [
         {
-          title: 'Vestibulum nibh risus, in neque eleifendulputate ?',
-          desc: 'Vestibulum nibh risus, lobortis in neque eleifend, varius vulputate sem. Donec maximus, sapien id auctor ornare, odio mi luctus massa, id rhoncus velit purus eu turpis onec aliquet mauris est.'
+          title: 'Comment puis-je soutenir l’association ?',
+          desc: 'Vous pouvez nous soutenir de plusieurs manières :\n- Faire un don : Chaque contribution, même petite, fait une grande différence.\n- Devenir bénévole : Rejoignez nos équipes sur le terrain ou aidez-nous dans l’organisation.\n- Partager notre projet : Parlez de nous autour de vous et sur les réseaux sociaux !'
         },
         {
-          title: 'Donec maximus, sapien id auctor ornare ?',
-          desc: 'Vestibulum nibh risus, lobortis in neque eleifend, varius vulputate sem. Donec maximus, sapien id auctor ornare, odio mi luctus massa, id rhoncus velit purus eu turpis onec aliquet mauris est.'
+          title: 'Comment puis-je devenir bénévole ?',
+          desc: 'Pour devenir bénévole, vous pouvez nous contacter via notre formulaire en ligne ou nous envoyer un email. Nous recherchons des personnes motivées, prêtes à donner un peu de leur temps et de leurs compétences pour faire une différence.'
         },
         {
-          title: 'Vestibulum nibh risus, in neque eleifendulputate ?',
-          desc: 'Vestibulum nibh risus, lobortis in neque eleifend, varius vulputate sem. Donec maximus, sapien id auctor ornare, odio mi luctus massa, id rhoncus velit purus eu turpis onec aliquet mauris est.'
+          title: 'Quels types de partenariats acceptez-vous ?',
+          desc: 'Nous collaborons avec des entreprises, des institutions éducatives, des associations partenaires, et des particuliers pour financer, coorganiser ou promouvoir nos actions. Si vous souhaitez devenir partenaire, contactez-nous !'
         }
       ]
     },
     {
-      section_title: `Most Frequent Question`,
+      section_title: `Questions fréquentes`,
       section_image: `assets/images/project/pic6.jpg`,
       activeTab: 0,
       section_custom_class: "content-inner-2",
-      section_description: "Lorem ipsum dolor sit amet, consectetur adipiscing do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      section_description: "Vous avez des questions ? Voici les réponses aux interrogations les plus fréquentes.",
       faqList: [
         {
-          title: 'Cras turpis felis, elementum sed mi at arcu ?',
-          desc: 'Vestibulum nibh risus, lobortis in neque eleifend, varius vulputate sem. Donec maximus, sapien id auctor ornare, odio mi luctus massa, id rhoncus velit purus eu turpis onec aliquet mauris est.'
+          title: 'Comment sont financés vos projets ?',
+          desc: 'Nos projets sont financés grâce à la générosité de nos donateurs, aux subventions publiques ou privées, et à nos partenaires. Nous assurons une transparence totale sur l’utilisation des fonds pour garantir que chaque euro contribue directement à nos actions sur le terrain.'
         },
         {
-          title: 'Vestibulum nibh risus, in neque eleifendulputate ?',
-          desc: 'Vestibulum nibh risus, lobortis in neque eleifend, varius vulputate sem. Donec maximus, sapien id auctor ornare, odio mi luctus massa, id rhoncus velit purus eu turpis onec aliquet mauris est.'
+          title: 'Puis-je visiter les sites de vos projets ?',
+          desc: 'Oui, nous organisons parfois des visites pour nos partenaires et donateurs, selon la disponibilité et la situation locale. Contactez-nous pour en savoir plus et organiser une visite.'
         },
         {
-          title: 'Donec maximus, sapien id auctor ornare ?',
-          desc: 'Vestibulum nibh risus, lobortis in neque eleifend, varius vulputate sem. Donec maximus, sapien id auctor ornare, odio mi luctus massa, id rhoncus velit purus eu turpis onec aliquet mauris est.'
+          title: 'Vos actions respectent-elles l’environnement ?',
+          desc: 'Absolument. Nous intégrons des pratiques durables dans tous nos projets, comme l’utilisation de toilettes sèches, l’installation de cultures respectueuses des sols, et la gestion éthique des ressources naturelles.'
         }
       ]
     }
-  ]
+  ];
 
 }

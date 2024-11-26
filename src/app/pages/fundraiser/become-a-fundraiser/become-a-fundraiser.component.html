@@ -1,24 +1,140 @@
 <div class="page-wraper">
 
 	<!-- Header -->
-  <app-header-1></app-header-1>
+	<app-header-1></app-header-1>
 	<!-- Header End -->
 
 	<div class="page-content bg-white">
 
 		<!-- Banner  -->
-    <app-banner-4 [data]="bennre"></app-banner-4>
+		<app-banner-4 [data]="bennre"></app-banner-4>
 		<!-- Banner End -->
 
+		<section class="content-inner-3 pb-0">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+						<div class="section-head">
+							<h5 class="sub-title">Faire un Don</h5>
+							<h2 class="title">Soutenez Nos Actions</h2>
+							<p>Votre don est un acte de générosité qui nous permet de concrétiser nos projets et de
+								transformer des
+								vies. Ensemble, nous pouvons construire un avenir meilleur en offrant l'accès à
+								l'éducation, à l'eau
+								potable, et à des solutions durables pour les communautés du Burkina Faso.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<!-- Form Contant -->
-    <app-form-6></app-form-6>
+		<app-form-6></app-form-6>
 		<!-- Form Contant -->
+
+		<!-- categories -->
+		<app-category-2 [data]="iconList"></app-category-2>
+		<!-- categories -->
+
+		<!-- don -->
+		<section class="content-inner">
+			<div class="container">
+				<div class="row align-items-center project-bx left m-b30">
+					<div class="col-lg-6 col-md-12">
+						<div class="dz-media split-box">
+							<div>
+								<img src="assets/images/project/large/pic1.jpg" alt="" class="app-1">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12">
+						<div class="dz-content">
+							<h2 class="title m-b15">Comment Faire un Don</h2>
+							<!-- <p class="m-b0">Nous proposons une variété de missions adaptées à vos compétences et à vos
+								disponibilités :</p> -->
+							<div class="dz-about-info">
+								<div class="row">
+									<div class="col-lg-12 col-sm-6">
+										<ul class="list-check-3">
+											<li> Accédez à notre formulaire sécurisé via le bouton ci-dessous.</li>
+											<li> Choisissez un montant et une fréquence (ponctuel ou mensuel).</li>
+											<li> Recevez une attestation fiscale pour bénéficier d’une réduction
+												d’impôt.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- don -->
+
+		<!-- Avantage-->
+		<section class="content-inner bg-light section-pattren1">
+			<div class="container">
+				<div class="row align-items-center project-bx right">
+					<div class="col-lg-6 col-md-12 m-b30">
+						<div class="dz-content">
+							<h2 class="title m-b15">Recevez une attestation fiscale pour bénéficier d’une réduction
+								d’impôt.</h2>
+							<p class="m-b0">En tant qu’association reconnue d’utilité publique, vos dons donnent droit à
+								des avantages fiscaux :</p>
+							<div class="dz-about-info">
+								<div class="row">
+									<div class="col-lg-12 col-sm-6">
+										<ul class="list-check-3">
+											<ol>- <strong>66% du montant de votre don</strong> est déductible de vos
+												impôts, dans la limite de 20% de votre revenu imposable.
+											</ol>
+											<ol>- Exemple : Un don de 100 € ne vous coûtera que 34 € après réduction
+												fiscale.
+											</ol>
+											<p>Nous vous enverrons une attestation fiscale pour vos démarches.</p>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- <a [routerLink]="['/project-story']" class="btn btn-primary m-t30">View More <i
+						class="fa-solid fa-angle-right ms-2"></i></a> -->
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 m-b30">
+						<div class="dz-media split-box">
+							<div>
+								<img src="assets/images/project/large/pic2.jpg" alt="" class="app-1">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<span [innerHTML]="SvgImage"></span>
+		</section>
+		<!-- avantage -->
+
+		<section class="content-inner-3 pb-0">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+						<div class="section-head">
+							<h5 class="sub-title">Contact</h5>
+							<h2 class="title">Nous Contacter</h2>
+							<p>Pour toute question concernant vos dons ou pour obtenir une attestation fiscale,
+								n’hésitez pas à nous contacter :</p>
+							<ul>
+								<ol> - <strong>Email: </strong>association.barca&#64;gmail.com</ol>
+								<ol> - <strong>Téléphone: </strong> +33 6 22 69 70 21</ol>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<app-footer-1> </app-footer-1>
+		<!-- Footer End -->
+		<app-scroll-top-button></app-scroll-top-button>
 
 	</div>
-
-	<!-- Footer -->
-  <app-footer-1> </app-footer-1>
-  <!-- Footer End -->
-  <app-scroll-top-button></app-scroll-top-button>
-
-</div>

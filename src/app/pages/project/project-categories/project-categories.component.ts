@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Banner4Component } from '../../../elements/banners/banner-4/banner-4.component';
 import { CallToAction1Component } from '../../../elements/call-to-action/call-to-action1/call-to-action1.component';
@@ -6,6 +6,10 @@ import { Footer1Component } from '../../../elements/footers/footer-1/footer-1.co
 import { Header1Component } from '../../../elements/headers/header-1/header-1.component';
 import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
 import { RecentBlogSiwper1Component } from '../../../elements/short-cods/swipers/recent-blog-siwper-1/recent-blog-siwper-1.component';
+import { AboutUs5Component } from "../../../elements/about-us/about-us-5/about-us-5.component";
+import { AboutUs6Component } from "../../../elements/about-us/about-us-6/about-us-6.component";
+import { AboutUs7Component } from "../../../elements/about-us/about-us-7/about-us-7.component";
+import { SVGImageService } from '../../../constent/SVGImage/svgimage.service';
 
 interface typeofcategory {
   icon: string,
@@ -34,79 +38,114 @@ interface blogType {
     RecentBlogSiwper1Component,
     CallToAction1Component,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    AboutUs5Component,
+    AboutUs6Component,
+    AboutUs7Component
   ],
   templateUrl: './project-categories.component.html',
   styleUrl: './project-categories.component.css'
 })
 export class ProjectCategoriesComponent {
+  SvgImage: any;
+
+  constructor(private svgIcons: SVGImageService) { }
+  ngOnInit() {
+    this.SvgImage = this.svgIcons.content_svgImage.aboutus_6_SVG;
+  }
+
   bennre = {
     bgImage: 'assets/images/banner/bnr1.jpg',
     title: 'Project Categories',
     classAdd: 'dz-bnr-inr-sm'
   }
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    this.checkScroll();
+  }
+
+  isScrolledIntoView(elem: HTMLElement): boolean {
+    const rect = elem.getBoundingClientRect();
+    const viewHeight = window.innerHeight || document.documentElement.clientHeight;
+    const viewTop = window.scrollY || document.documentElement.scrollTop;
+    const viewBottom = viewTop + viewHeight;
+
+    const elemTop = rect.top + viewTop;
+    const elemBottom = elemTop + rect.height;
+
+    return (elemBottom <= viewBottom) && (elemTop >= viewTop);
+  }
+
+  checkScroll(): void {
+    const splitBoxes = document.querySelectorAll('.split-box');
+    splitBoxes.forEach((box) => {
+      if (this.isScrolledIntoView(box as HTMLElement)) {
+        box.classList.add('split-active');
+      }
+    });
+  }
 
   categoryList: typeofcategory[] = [
     {
       icon: 'flaticon-vr-glasses',
-      title: 'Technology',
+      title: 'Aide aux devoirs et passages d\'examens',
       desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
     },
     {
       icon: 'flaticon-open-book',
-      title: 'Education',
+      title: 'Formation en langues (français et anglais)',
       desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
     },
     {
       icon: 'flaticon-video',
-      title: 'Videos',
+      title: 'Ateliers pratiques : gestes de secours, jardinage, etc',
       desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
     },
     {
       icon: 'flaticon-doctor-bag',
-      title: 'Medical',
+      title: 'Sensibilisation à la biodiversité et à l’autosuffisance alimentaire',
       desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
     },
     {
       icon: 'flaticon-like-1',
-      title: 'Love',
+      title: 'Lieu de convivialité pour renforcer le lien social',
       desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
     },
-    {
-      icon: 'flaticon-transformation',
-      title: 'Design',
-      desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
-    },
-    {
-      icon: 'flaticon-raw-food',
-      title: 'Health',
-      desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
-    },
-    {
-      icon: 'flaticon-coins-1',
-      title: 'Sports',
-      desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
-    },
-    {
-      icon: 'flaticon-responsibility',
-      title: 'Care',
-      desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
-    },
-    {
-      icon: 'flaticon-handshake',
-      title: 'Support',
-      desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
-    },
-    {
-      icon: 'flaticon-coin-stack',
-      title: 'Fashion',
-      desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
-    },
-    {
-      icon: 'flaticon-calendar',
-      title: 'Events',
-      desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
-    }
+    // {
+    //   icon: 'flaticon-transformation',
+    //   title: 'Design',
+    //   desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+    // },
+    // {
+    //   icon: 'flaticon-raw-food',
+    //   title: 'Health',
+    //   desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+    // },
+    // {
+    //   icon: 'flaticon-coins-1',
+    //   title: 'Sports',
+    //   desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+    // },
+    // {
+    //   icon: 'flaticon-responsibility',
+    //   title: 'Care',
+    //   desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+    // },
+    // {
+    //   icon: 'flaticon-handshake',
+    //   title: 'Support',
+    //   desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+    // },
+    // {
+    //   icon: 'flaticon-coin-stack',
+    //   title: 'Fashion',
+    //   desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+    // },
+    // {
+    //   icon: 'flaticon-calendar',
+    //   title: 'Events',
+    //   desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem'
+    // }
   ]
 
   recentBlog: blogType[] = [

@@ -62,7 +62,7 @@ export const routes: Routes = [
   { path: 'blog', component: BlogComponent },
   { path: 'blog-grid', component: BlogGridComponent },
   { path: 'blog-list', component: BlogListComponent },
-  { path: 'blog-details', component: BlogDetailsComponent },
+  { path: 'step/:id', component: BlogDetailsComponent },
   // Contact --
   { path: 'contact-us', component: ContactUsComponent },
 

@@ -1,44 +1,251 @@
 <div class="page-wraper">
 
 	<!-- Header -->
-  <app-header-1></app-header-1>
+	<app-header-1></app-header-1>
 	<!-- Header End -->
 
 	<div class="page-content bg-white">
 
 		<!-- Banner  -->
-    <app-banner-4 [data]="bennre"></app-banner-4>
+		<app-banner-4 [data]="bennre"></app-banner-4>
 		<!-- Banner End -->
-
-		<div class="content-inner-2">
+		<!-- About Us -->
+		<section class="content-inner">
 			<div class="container">
-				<div class="row">
-          @for(item of categoryList; track item){
-					<div class="col-xl-3 col-lg-4 col-sm-6">
-						<div class="icon-bx-wraper style-1 m-b30">
-							<div class="icon-lg m-b30">
-                <a [routerLink]="['/project-categories']" class="icon-cell">
-								<i class="{{ item.icon }}"></i>
-							</a> </div>
-							<div class="icon-content">
-								<h5 class="dz-tilte text-capitalize"><a [routerLink]="['/project-categories']">{{ item.title }}</a></h5>
-								<p>{{ item.desc }}</p>
+				<div class="row align-items-center project-bx left m-b30">
+					<div class="col-lg-6 col-md-12">
+						<div class="dz-media split-box">
+							<div>
+								<img src="assets/images/project/large/pic1.jpg" alt="" class="app-1">
 							</div>
 						</div>
 					</div>
-          }
+					<div class="col-lg-6 col-md-12">
+						<div class="dz-content">
+							<h2 class="title m-b15">Construction d'un Centre d’Enseignement Participatif</h2>
+							<ul class="dz-meta">
+								<li class="author-wrappper author-wrappper-sm mt-0">
+									<div class="author-media">
+										<img src="assets/images/avatar/emplacement.png" alt="" class="myImage">
+									</div>
+									<span>Zagtouli, Burkina Faso</span>
+								</li>
+							</ul>
+							<p class="m-b0">Le cœur de notre engagement est la construction d'un centre d'enseignement
+								participatif à Zagtouli, un village péri-urbain situé à 7 km de Ouagadougou. Ce centre
+								sera un lieu d'apprentissage et d'échanges pour les enfants et les adultes de la
+								communauté.</p>
+							<h5 class="font-weight-500 m-b10 m-t10">Avancements :</h5>
+							<div class="dz-about-info">
+								<div class="row">
+									<div class="col-lg-12 col-sm-6">
+										<ul class="list-check-3">
+											<li>Terrain délimité et sécurisé par un grillage.</li>
+											<li>Forage d'eau réalisé avec une pompe solaire fonctionnelle. </li>
+											<li>Forage d'eau réalisé avec une pompe solaire fonctionnelle. </li>
+											<li>Plantation de bougainvilliers pour embellir et protéger le site.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
+		<!-- About Us -->
+
+		<!-- About Us -->
+		<section class="content-inner bg-light section-pattren1">
+			<div class="container">
+				<div class="row align-items-center project-bx right">
+					<div class="col-lg-6 col-md-12 m-b30">
+						<div class="dz-content">
+							<h2 class="title m-b15">Accès à l’Eau Potable</h2>
+							<p class="m-b0">Le Burkina Faso, situé dans une région aride, fait face à des défis majeurs
+								en matière d'accès à l'eau potable. L'eau est essentielle non seulement pour la
+								consommation, mais également pour l'agriculture, un secteur vital dans la région.</p>
+							<h5 class="font-weight-500 m-b10 m-t10">Actions menées :</h5>
+							<div class="dz-about-info">
+								<div class="row">
+									<div class="col-lg-12 col-sm-6">
+										<ul class="list-check-3">
+											<li>Construction d'un forage pour fournir de l'eau à la communauté locale.
+											</li>
+											<li>Installation d'un château d'eau pour une distribution plus efficace.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- <a [routerLink]="['/project-story']" class="btn btn-primary m-t30">View More <i
+						class="fa-solid fa-angle-right ms-2"></i></a> -->
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 m-b30">
+						<div class="dz-media split-box">
+							<div>
+								<img src="assets/images/project/large/pic2.jpg" alt="" class="app-1">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<span [innerHTML]="SvgImage"></span>
+		</section>
+		<!-- About Us -->
+
+		<!-- About Us -->
+		<section class="content-inner">
+			<div class="container">
+				<div class="row align-items-center project-bx left m-b30">
+					<div class="col-lg-6 col-md-12">
+						<div class="dz-media split-box">
+							<div>
+								<img src="assets/images/project/large/pic1.jpg" alt="" class="app-1">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12">
+						<div class="dz-content">
+							<h2 class="title m-b15">Initiatives Agricoles et Potagers</h2>
+							<p class="m-b0">Nous visons à promouvoir l’autosuffisance alimentaire et à sensibiliser les
+								habitants à la biodiversité et aux pratiques agricoles durables. Ces initiatives
+								permettent d’améliorer l’alimentation locale tout en créant des revenus supplémentaires
+								pour les familles.</p>
+							<h5 class="font-weight-500 m-b10 m-t10">Avancements :</h5>
+							<div class="dz-about-info">
+								<div class="row">
+									<div class="col-lg-12 col-sm-6">
+										<ul class="list-check-3">
+											<li>Création de potagers communautaires.</li>
+											<li>Formation aux techniques de jardinage. </li>
+											<li>Plantation d’arbres fruitiers pour éduquer les enfants à l’importance de
+												l’écologie. </li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- About Us -->
+
+		<!-- About Us -->
+		<section class="content-inner bg-light section-pattren1">
+			<div class="container">
+				<div class="row align-items-center project-bx right">
+					<div class="col-lg-6 col-md-12 m-b30">
+						<div class="dz-content">
+							<h2 class="title m-b15">Accès à l’Éducation et Formation</h2>
+							<p class="m-b0">
+							<p class="m-b0">Le centre d’enseignement participatif à Zagtouli sera un lieu de
+								convivialité où les enfants et les adultes pourront apprendre, partager et grandir
+								ensemble. Nous voulons offrir des services éducatifs accessibles à tous.</p>
+							<h5 class="font-weight-500 m-b10 m-t10">Services proposés :</h5>
+							<div class="dz-about-info">
+								<div class="row">
+									<div class="col-lg-12 col-sm-6">
+										<ul class="list-check-3">
+											<li>Aide aux devoirs et préparation aux examens.
+											</li>
+											<li>Formation en langues française et anglaise.
+											</li>
+											<li>Ateliers pratiques : gestes de secours, sensibilisation à la
+												biodiversité.</li>
+											<li>Organisation de sorties pédagogiques et culturelles.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- <a [routerLink]="['/project-story']" class="btn btn-primary m-t30">View More <i
+						class="fa-solid fa-angle-right ms-2"></i></a> -->
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 m-b30">
+						<div class="dz-media split-box">
+							<div>
+								<img src="assets/images/project/large/pic2.jpg" alt="" class="app-1">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<span [innerHTML]="SvgImage"></span>
+		</section>
+		<!-- About Us -->
+
+		<!-- About Us -->
+		<section class="content-inner">
+			<div class="container">
+				<div class="row align-items-center project-bx left m-b30">
+					<div class="col-lg-6 col-md-12">
+						<div class="dz-media split-box">
+							<div>
+								<img src="assets/images/project/large/pic1.jpg" alt="" class="app-1">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12">
+						<div class="dz-content">
+							<h2 class="title m-b15">Construction de Toilettes Sèches</h2>
+							<p class="m-b0">Les toilettes sèches offrent une solution durable et écologique adaptée aux
+								besoins locaux. Elles permettent de réduire les risques sanitaires tout en transformant
+								les excréments et l’urine en engrais pour l’agriculture.</p>
+							<h5 class="font-weight-500 m-b10 m-t10">Impact :</h5>
+							<div class="dz-about-info">
+								<div class="row">
+									<div class="col-lg-12 col-sm-6">
+										<ul class="list-check-3">
+											<li>Amélioration de l’hygiène communautaire.</li>
+											<li>Promotion de pratiques écologiques durables.</li>
+											<li>Soutien à la gestion des ressources naturelles.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- About Us -->
+
+
+		<!-- <div class="content-inner-2">
+			<div class="container">
+				<div class="row">
+					@for(item of categoryList; track item){
+					<div class="col-xl-6 col-lg-12 col-sm-12">
+						<div class="icon-bx-wraper style-1 m-b30">
+							<div class="icon-lg m-b30">
+								<a [routerLink]="['/project-categories']" class="icon-cell">
+									<i class="{{ item.icon }} myIcon"></i>
+								</a>
+							</div>
+							<div class="icon-content">
+								<h5 class="dz-tilte text-capitalize"><a [routerLink]="['/project-categories']">{{
+										item.title }}</a></h5>
+								<p>{{ item.desc }}</p> 
+							</div>
+						</div>
+					</div>
+					}
+				</div>
+			</div>
+		</div> -->
 
 		<!-- Online Courses -->
 		<section class="content-inner-2 overflow-hidden">
 			<div class="container">
 				<div class="section-head text-center">
 					<h2>Recent Projects</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 				</div>
-        <app-recent-blog-siwper-1 [data]="recentBlog"></app-recent-blog-siwper-1>
+				<app-recent-blog-siwper-1 [data]="recentBlog"></app-recent-blog-siwper-1>
 			</div>
 		</section>
 		<!-- Online Courses -->
@@ -49,9 +256,9 @@
 
 	</div>
 
-  <!-- Footer -->
-  <app-footer-1></app-footer-1>
-  <!-- Footer End -->
+	<!-- Footer -->
+	<app-footer-1></app-footer-1>
+	<!-- Footer End -->
 
-  <app-scroll-top-button></app-scroll-top-button>
+	<app-scroll-top-button></app-scroll-top-button>
 </div>
