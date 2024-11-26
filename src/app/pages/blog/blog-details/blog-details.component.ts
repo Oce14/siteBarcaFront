@@ -37,6 +37,9 @@ interface typeofList {
 export class BlogDetailsComponent implements OnInit {
 
   step: any;
+  stepType: string = '';
+  steps: any[] = [];
+  filteredSteps: any[] = [];
 
   constructor(private dataService: DataService, private route: ActivatedRoute) { }
 
@@ -44,36 +47,47 @@ export class BlogDetailsComponent implements OnInit {
     const stepId = Number(this.route.snapshot.paramMap.get('id'));
     this.dataService.getStepById(stepId).subscribe(data => {
       this.step = data;
+      if (this.step) {
+        this.stepType = this.step.type;
+      }
+    });
+    this.dataService.getSteps().subscribe(data => {
+      this.steps = data;
+      this.filteredSteps = this.getStepsByType(this.stepType);
+      console.log(this.filteredSteps);
     });
   }
 
-  // listData: typeofList[] = [
-  //   {
-  //     blogImage: 'assets/images/blog/blog-grid/pic4.jpg',
-  //     category: 'HEALTH',
-  //     title: 'New vaccine for cattle calf loss learned ',
-  //     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.',
-  //     userImage: 'assets/images/avatar/avatar2.jpg',
-  //     name: 'Hawkins Junior',
-  //     date: 'June 11th, 2024'
-  //   },
-  //   {
-  //     blogImage: 'assets/images/blog/blog-grid/pic3.jpg',
-  //     category: 'TECHNOLOGY',
-  //     title: '4 Things parents learned for they jids in 2020',
-  //     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.',
-  //     userImage: 'assets/images/avatar/avatar3.jpg',
-  //     name: 'Tom wilson',
-  //     date: 'June 21th, 2024'
-  //   },
-  //   {
-  //     blogImage: 'assets/images/blog/blog-grid/pic2.jpg',
-  //     category: 'EDUCATION',
-  //     title: 'He Created the Web. Now He’s Out to Remake ',
-  //     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.',
-  //     userImage: 'assets/images/avatar/avatar4.jpg',
-  //     name: 'Adam Jordon',
-  //     date: 'June 20th, 2022'
-  //   },
-  // ]
+  listData: typeofList[] = [
+    {
+      blogImage: 'assets/images/blog/blog-grid/pic4.jpg',
+      category: 'HEALTH',
+      title: 'New vaccine for cattle calf loss learned ',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.',
+      userImage: 'assets/images/avatar/avatar2.jpg',
+      name: 'Hawkins Junior',
+      date: 'June 11th, 2024'
+    },
+    {
+      blogImage: 'assets/images/blog/blog-grid/pic3.jpg',
+      category: 'TECHNOLOGY',
+      title: '4 Things parents learned for they jids in 2020',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.',
+      userImage: 'assets/images/avatar/avatar3.jpg',
+      name: 'Tom wilson',
+      date: 'June 21th, 2024'
+    },
+    {
+      blogImage: 'assets/images/blog/blog-grid/pic2.jpg',
+      category: 'EDUCATION',
+      title: 'He Created the Web. Now He’s Out to Remake ',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.',
+      userImage: 'assets/images/avatar/avatar4.jpg',
+      name: 'Adam Jordon',
+      date: 'June 20th, 2022'
+    },
+  ]
+  getStepsByType(type: string): any[] {
+    return this.steps.filter(steps => steps.type === type);
+  }
 }

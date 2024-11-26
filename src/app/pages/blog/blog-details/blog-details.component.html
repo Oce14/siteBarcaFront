@@ -12,28 +12,23 @@
 					<div class="col-xl-8 col-lg-8 m-b30">
 						<div class="dz-card blog-single sidebar">
 							<div class="dz-media">
-								<img src="assets/images/blog/large/pic1.jpg" alt="">
+								<img src="{{ step.blogImage }}" alt="">
 							</div>
 							<div class="dz-info">
 								<div class="dz-meta">
 									<ul>
-										<li class="post-date"><i class="fa-solid fa-calendar-days"></i> 7 March, 2024
+										<li class="post-date"><i class="fa-solid fa-calendar-days"></i> {{ step.date }}
 										</li>
-										<li class="post-author ms-1"><a href="javascript:void(0);"><i
-													class="fa-solid fa-user"></i> By Johne Doe</a></li>
+										<!-- <li class="post-author ms-1"><a href="javascript:void(0);"><i
+													class="fa-solid fa-user"></i> By Johne Doe</a></li> -->
 									</ul>
 								</div>
 								<div class="dz-post-text">
 
 									<h1 class="dz-title">{{ step.title }}</h1>
 
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis, tortor
-										in varius lobortis, sapien arcu ornare nisi, ut volutpat ante augue quis arcu.
-										Phasellus lacinia magna elit, at maximus leo tristique non. Phasellus laoreet,
-										nisi quis fermentum blandit, leo dolor bibendum arcu, vel dignissim diam odio a
-										elit. In dapibus congue urna vitae porta. Quisque tincidunt velit sed
-										ullamcorper pretium. Nullam vitae luctus libero.</p>
-									<ul class="wp-block-gallery columns-3">
+									<p>{{ step.description }}</p>
+									<!-- <ul class="wp-block-gallery columns-3">
 										<li class="blocks-gallery-item"><img alt=""
 												src="assets/images/blog/blog-grid/pic2.jpg"></li>
 										<li class="blocks-gallery-item"><img alt=""
@@ -68,7 +63,7 @@
 										vitae. Proin non dui eros. Mauris lobortis arcu a quam tincidunt, at consectetur
 										urna dapibus. Curabitur sagittis nisl vel dolor porta, eu fringilla est
 										accumsan. Donec eleifend dignissim risus a tempor. Sed suscipit ultrices
-										viverra.</p>
+										viverra.</p> -->
 								</div>
 							</div>
 							<!-- dz-share-post -->
@@ -82,16 +77,16 @@
 									</ul>
 								</div>
 								<div class="post-tags">
-									<a href="javascript:void(0);">#Mobile</a>
-									<a href="javascript:void(0);">#Software</a>
-									<a href="javascript:void(0);">#Technology</a>
+									<a href="javascript:void(0);">#{{ step.type }}</a>
+									<!-- <a href="javascript:void(0);">#Software</a>
+									<a href="javascript:void(0);">#Technology</a> -->
 								</div>
 							</div>
 							<!-- dz-share-post End-->
 						</div>
 
 						<!-- Author Box -->
-						<div class="author-box blog-user m-b60">
+						<!-- <div class="author-box blog-user m-b60">
 							<div class="author-profile-info">
 								<div class="author-profile-pic">
 									<img src="assets/images/testimonials/pic2.jpg" alt="Profile Pic">
@@ -124,10 +119,10 @@
 									</ul>
 								</div>
 							</div>
-						</div>
+						</div> -->
 
 						<!-- Comment List -->
-						<app-blog-comments></app-blog-comments>
+						<!-- <app-blog-comments></app-blog-comments> -->
 
 					</div>
 					<div class="col-xl-4 col-lg-4">
@@ -141,9 +136,9 @@
 		<section class="content-inner-3">
 			<div class="container">
 				<div class="section-head">
-					<h2 class="title">Related Articles</h2>
+					<h2 class="title">Réalisations en lien avec {{ step.type }}</h2>
 				</div>
-				<!-- <app-blog-slider-2-swiper [data]="listData"></app-blog-slider-2-swiper> -->
+				<app-blog-slider-2-swiper [data]="filteredSteps"></app-blog-slider-2-swiper>
 			</div>
 		</section>
 		<!-- Our Blog  -->
