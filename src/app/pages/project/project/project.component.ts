@@ -13,6 +13,7 @@ import { PaginationComponent } from '../../../elements/short-cods/pagination/pag
 import Isotope from 'isotope-layout';
 import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
 import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
+import { DataService } from '../../../../shared/service/data';
 
 
 interface blogType {
@@ -53,9 +54,18 @@ interface blogType {
   styleUrl: './project.component.css'
 })
 export class ProjectComponent {
+  projects: any[] = [];
+
+  constructor(private dataService: DataService) { }
+  ngOnInit() {
+    this.dataService.getProjects().subscribe(data => {
+      this.projects = data;
+
+    });
+  }
   bennre = {
     bgImage: 'assets/images/banner/bnr5.jpg',
-    title: 'Nos Project En Cours',
+    title: 'Nos Projects En Cours',
     classAdd: 'dz-bnr-inr-sm'
   }
 
@@ -86,162 +96,5 @@ export class ProjectComponent {
     this.iso.arrange({ filter: filter });
   }
 
-  recentBlog: blogType[] = [
-    {
-      projectImg: 'assets/images/project/pic1.jpg',
-      category: 'EDUCATION',
-      title: 'New vaccine for cattle calf loss learned',
-      totalRaised: 5345,
-      left_day: 30,
-      image: 'assets/images/avatar/avatar1.jpg',
-      name: 'Cheyenne Curtis',
-      rating: 4,
-      progress: 85,
-      location: 'New York, London',
-      filterClass: 'fashion grid-item'
-    },
-    {
-      projectImg: 'assets/images/project/pic2.jpg',
-      category: 'TECHNOLOGY',
-      title: 'He Created the Web. Now He’s Out to Remake',
-      totalRaised: 5345,
-      left_day: 24,
-      image: 'assets/images/avatar/avatar2.jpg',
-      name: 'Kaylynn Donin',
-      rating: 2,
-      progress: 65,
-      location: 'New York, London',
-      filterClass: 'medical grid-item'
-    },
-    {
-      projectImg: 'assets/images/project/pic3.jpg',
-      category: 'HEALTH',
-      title: '4 Things parents learned for they jids in 2020',
-      totalRaised: 3570,
-      left_day: 30,
-      image: 'assets/images/avatar/avatar3.jpg',
-      name: 'Adam Jordon',
-      rating: 3,
-      progress: 90,
-      location: 'New York, London',
-      filterClass: 'technology grid-item'
-    },
-    {
-      projectImg: 'assets/images/project/pic4.jpg',
-      category: 'HEALTH',
-      title: 'Partnering to create a community',
-      totalRaised: 5345,
-      left_day: 14,
-      image: 'assets/images/avatar/avatar4.jpg',
-      name: 'Cheyenne Curtis',
-      rating: 5,
-      progress: 70,
-      location: 'New York, London',
-      filterClass: 'technology grid-item'
-    },
-    {
-      projectImg: 'assets/images/project/pic5.jpg',
-      category: 'HEALTH',
-      title: 'Primary School Build for Children',
-      totalRaised: 3570,
-      left_day: 30,
-      image: 'assets/images/avatar/avatar5.jpg',
-      name: 'Adam Jordon',
-      rating: 1,
-      progress: 20,
-      location: 'New York, London',
-      filterClass: 'technology grid-item'
-    },
-    {
-      projectImg: 'assets/images/project/pic6.jpg',
-      category: 'EDUCATION',
-      title: 'New vaccine for cattle calf loss learned',
-      totalRaised: 3570,
-      left_day: 7,
-      image: 'assets/images/avatar/avatar6.jpg',
-      name: 'Cheyenne Curtis',
-      rating: 4,
-      progress: 85,
-      location: 'New York, London',
-      filterClass: 'business grid-item'
-    },
-    {
-      projectImg: 'assets/images/project/pic7.jpg',
-      category: 'TECHNOLOGY',
-      title: 'Smallest of donations can help change a life',
-      totalRaised: 5345,
-      left_day: 30,
-      image: 'assets/images/avatar/avatar7.jpg',
-      name: 'Kaylynn Donin',
-      rating: 5,
-      progress: 95,
-      location: 'New York, London',
-      filterClass: 'business grid-item'
-    },
-    {
-      projectImg: 'assets/images/project/pic8.jpg',
-      category: 'HEALTH',
-      title: 'It is a long established fact that a reader',
-      totalRaised: 3570,
-      left_day: 30,
-      image: 'assets/images/avatar/avatar8.jpg',
-      name: 'Adam Jordon',
-      rating: 3,
-      progress: 75,
-      location: 'New York, London',
-      filterClass: 'technology grid-item'
-    },
-    {
-      projectImg: 'assets/images/project/pic9.jpg',
-      category: 'HEALTH',
-      title: 'Charity can help make smile of poor people',
-      totalRaised: 5789,
-      left_day: 25,
-      image: 'assets/images/avatar/avatar9.jpg',
-      name: 'Cheyenne Curtis',
-      rating: 4,
-      progress: 45,
-      location: 'New York, London',
-      filterClass: 'fashion grid-item '
-    },
-    {
-      projectImg: 'assets/images/project/pic10.jpg',
-      category: 'HEALTH',
-      title: 'Benefits Earned From Charity Donations',
-      totalRaised: 3570,
-      left_day: 30,
-      image: 'assets/images/avatar/avatar1.jpg',
-      name: 'Adam Jordon',
-      rating: 1,
-      progress: 85,
-      location: 'New York, London',
-      filterClass: 'business grid-item'
-    },
-    {
-      projectImg: 'assets/images/project/pic11.jpg',
-      category: 'HEALTH',
-      title: 'Primary School Build for Children',
-      totalRaised: 5345,
-      left_day: 30,
-      image: 'assets/images/avatar/avatar7.jpg',
-      name: 'Adam Jordon',
-      rating: 5,
-      progress: 80,
-      location: 'New York, London',
-      filterClass: 'fashion grid-item'
-    },
-    {
-      projectImg: 'assets/images/project/pic12.jpg',
-      category: 'EDUCATION',
-      title: 'New vaccine for cattle calf loss learned',
-      totalRaised: 3570,
-      left_day: 30,
-      image: 'assets/images/avatar/avatar3.jpg',
-      name: 'Cheyenne Curtis',
-      rating: 4,
-      progress: 60,
-      location: 'New York, London',
-      filterClass: 'fashion grid-item'
-    }
-  ]
+
 }

@@ -9,6 +9,7 @@ import { PaginationComponent } from '../../../elements/short-cods/pagination/pag
 import { CallToAction1Component } from '../../../elements/call-to-action/call-to-action1/call-to-action1.component';
 import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
 import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 interface typeofList {
   blogImage: string,
   category: string,
@@ -32,7 +33,8 @@ interface typeofList {
     CallToAction1Component,
     Footer1Component,
     ScrollTopButtonComponent,
-    Header2Component
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './blog-list.component.html',
   styleUrl: './blog-list.component.css'

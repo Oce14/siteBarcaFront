@@ -9,6 +9,8 @@ import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-to
 import { BlogSidebarComponent } from '../../../elements/blog-sidebar/blog-sidebar.component';
 import { PaginationComponent } from '../../../elements/short-cods/pagination/pagination.component';
 import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
+import { DataService } from '../../../../shared/service/data';
 interface blogType {
   projectImg: string,
   category: string,
@@ -34,12 +36,22 @@ interface blogType {
     CallToAction1Component,
     Footer1Component,
     ScrollTopButtonComponent,
-    Header2Component
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './browse-fundraiser.component.html',
   styleUrl: './browse-fundraiser.component.css'
 })
 export class BrowseFundraiserComponent {
+  events: any[] = [];
+
+  constructor(private dataService: DataService) { }
+  ngOnInit() {
+    this.dataService.getEvents().subscribe(data => {
+      this.events = data;
+
+    });
+  }
   bennre = {
     bgImage: 'assets/images/banner/bnr2.jpg',
     title: 'Nos Evénements',
@@ -50,78 +62,5 @@ export class BrowseFundraiserComponent {
     styleType: 'style-1',
     value: ['Newest', 'Oldest']
   }
-  recentBlog: blogType[] = [
-    {
-      projectImg: 'assets/images/project/pic1.jpg',
-      category: 'EDUCATION',
-      title: 'New vaccine for cattle calf loss learned',
-      totalRaised: 5345,
-      left_day: 30,
-      image: 'assets/images/avatar/avatar1.jpg',
-      name: 'Cheyenne Curtis',
-      rating: 4,
-      progress: 85,
-      location: 'New York, London',
-    },
-    {
-      projectImg: 'assets/images/project/pic2.jpg',
-      category: 'TECHNOLOGY',
-      title: 'He Created the Web. Now He’s Out to Remake',
-      totalRaised: 5345,
-      left_day: 24,
-      image: 'assets/images/avatar/avatar2.jpg',
-      name: 'Kaylynn Donin',
-      rating: 2,
-      progress: 65,
-      location: 'New York, London',
-    },
-    {
-      projectImg: 'assets/images/project/pic3.jpg',
-      category: 'HEALTH',
-      title: '4 Things parents learned for they jids in 2020',
-      totalRaised: 3570,
-      left_day: 30,
-      image: 'assets/images/avatar/avatar3.jpg',
-      name: 'Adam Jordon',
-      rating: 3,
-      progress: 90,
-      location: 'New York, London',
-    },
-    {
-      projectImg: 'assets/images/project/pic4.jpg',
-      category: 'HEALTH',
-      title: 'Partnering to create a community',
-      totalRaised: 5345,
-      left_day: 14,
-      image: 'assets/images/avatar/avatar4.jpg',
-      name: 'Cheyenne Curtis',
-      rating: 5,
-      progress: 70,
-      location: 'New York, London',
-    },
-    {
-      projectImg: 'assets/images/project/pic5.jpg',
-      category: 'HEALTH',
-      title: 'Primary School Build for Children',
-      totalRaised: 3570,
-      left_day: 30,
-      image: 'assets/images/avatar/avatar5.jpg',
-      name: 'Adam Jordon',
-      rating: 1,
-      progress: 20,
-      location: 'New York, London',
-    },
-    {
-      projectImg: 'assets/images/project/pic6.jpg',
-      category: 'EDUCATION',
-      title: 'New vaccine for cattle calf loss learned',
-      totalRaised: 3570,
-      left_day: 25,
-      image: 'assets/images/avatar/avatar6.jpg',
-      name: 'Cheyenne Curtis',
-      rating: 4,
-      progress: 85,
-      location: 'New York, London',
-    }
-  ]
+
 }

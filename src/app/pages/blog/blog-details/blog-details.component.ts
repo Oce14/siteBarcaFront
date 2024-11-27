@@ -10,6 +10,7 @@ import { BlogCommentsComponent } from '../../../elements/blog-comments/blog-comm
 import { DataService } from '../../../../shared/service/data';
 import { CommonModule } from '@angular/common';
 import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 
 interface typeofList {
   blogImage: string,
@@ -33,7 +34,8 @@ interface typeofList {
     Footer1Component,
     CommonModule,
     ScrollTopButtonComponent,
-    Header2Component
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './blog-details.component.html',
   styleUrl: './blog-details.component.css'

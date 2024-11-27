@@ -10,6 +10,7 @@ import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-to
 import { BlogCommentsComponent } from '../../../elements/blog-comments/blog-comments.component';
 import { GallerySwiperComponent } from '../../../elements/short-cods/swipers/gallery-swiper/gallery-swiper.component';
 import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 
 @Component({
   selector: 'app-fundraiser-detail',
@@ -25,7 +26,8 @@ import { Header2Component } from "../../../elements/headers/header-2/header-2.co
     CallToAction1Component,
     Footer1Component,
     ScrollTopButtonComponent,
-    Header2Component
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './fundraiser-detail.component.html',
   styleUrl: './fundraiser-detail.component.css'

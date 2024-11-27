@@ -40,22 +40,24 @@
         </div>
         <div class="col-xl-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
           <div class="widget recent-posts-entry">
-            <h4 class="widget-title">Blog Posts</h4>
+            <h4 class="widget-title">Récentes Avancées</h4>
             <div class="separator-2 bg-secondary m-b30"></div>
             <div class="widget-post-bx">
+              @for (item of topTwoSteps; track topTwoSteps) {
               <div class="widget-post clearfix">
                 <div class="dz-info">
-                  <h6 class="title"><a [routerLink]="['/blog-details']">Simple Condition for all Around.</a></h6>
-                  <span class="post-date"> JUNE 18, 2022</span>
+                  <h6 class="title"><a [routerLink]="['/step', item.id]">{{ item.title }}</a></h6>
+                  <span class="post-date">{{ item.date }}</span>
                 </div>
               </div>
               <div class="post-separator"></div>
-              <div class="widget-post clearfix">
+              }
+              <!-- <div class="widget-post clearfix">
                 <div class="dz-info">
                   <h6 class="title"><a [routerLink]="['/blog-details']">Simple Condition for all Around.</a></h6>
                   <span class="post-date"> AUGUST 22, 2022</span>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

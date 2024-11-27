@@ -4,7 +4,7 @@
             "id": 1,
             "image": "assets/images/blog/blog-grid/pic4.jpg",
             "type": "Éducation",
-            "endDate": "2027-06-30",
+            "date": "2027-06-30",
             "title": "Acheter des ordinateurs pour les cours à distance",
             "abstract": "Faciliter l'accès à l'éducation grâce à l'achat d'ordinateurs pour les cours à distance.",
             "description": "Ce projet vise à équiper les salles de classe et les étudiants burkinabés avec des ordinateurs adaptés pour suivre des cours en ligne. Cela permettra de réduire la fracture numérique et d'offrir des opportunités d'apprentissage modernes à des communautés rurales. Les fonds collectés serviront à acheter des appareils neufs ou reconditionnés, ainsi qu'à financer leur installation et maintenance."
@@ -13,7 +13,7 @@
             "id": 2,
             "image": "assets/images/blog/blog-grid/pic4.jpg",
             "type": "Formation",
-            "endDate": "2026-12-31",
+            "date": "2026-12-31",
             "title": "Trouver des enseignants ou professionnels volontaires",
             "abstract": "Recruter des enseignants et experts volontaires pour partager leurs connaissances.",
             "description": "Nous cherchons à mobiliser des enseignants et des professionnels issus de divers domaines pour offrir des formations pratiques et théoriques. Ces volontaires partageront leurs compétences avec des étudiants et des membres de la communauté, renforçant ainsi les opportunités d'emploi et l'autonomie. Ce projet inclut la recherche de profils adaptés, l'organisation de sessions pédagogiques, et la mise en place d'un cadre propice à l'apprentissage."
@@ -22,7 +22,7 @@
             "id": 3,
             "image": "assets/images/blog/blog-grid/pic4.jpg",
             "type": "Infrastructure",
-            "endDate": "2025-03-31",
+            "date": "2025-03-31",
             "title": "Entretenir le terrain",
             "abstract": "Préserver les installations existantes et améliorer le terrain de l'association.",
             "description": "L'entretien régulier du terrain est essentiel pour assurer la durabilité des infrastructures de l'association. Ce projet inclut la réparation des clôtures, la plantation de végétation pour protéger le sol, et l'amélioration des espaces dédiés aux activités éducatives et communautaires. En participant, vous contribuez à maintenir un environnement sûr et accueillant pour les bénéficiaires."
@@ -31,7 +31,7 @@
             "id": 4,
             "image": "assets/images/blog/blog-grid/pic4.jpg",
             "type": "Emploi",
-            "endDate": "2025-09-30",
+            "date": "2025-09-30",
             "title": "Payer les agents travaillant dans l'association au Burkina",
             "abstract": "Assurer des conditions de travail justes pour les agents locaux de l'association.",
             "description": "Ce projet vise à garantir un salaire équitable et régulier pour les agents travaillant au sein de l'association au Burkina Faso. Ces fonds permettent de soutenir les employés locaux qui s'engagent chaque jour à mettre en œuvre les projets éducatifs et sociaux. Il s'agit d'une étape clé pour pérenniser les actions de l'association et renforcer son impact sur le terrain."

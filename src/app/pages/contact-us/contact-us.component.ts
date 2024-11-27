@@ -9,6 +9,7 @@ import { ClientsSwiperComponent } from '../../elements/short-cods/swipers/client
 import { Form5Component } from '../../elements/form/form-5/form-5.component';
 import { SVGImageService } from '../../constent/SVGImage/svgimage.service';
 import { Header2Component } from "../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../elements/footers/footer-2/footer-2.component";
 
 @Component({
   selector: 'app-contact-us',
@@ -22,7 +23,8 @@ import { Header2Component } from "../../elements/headers/header-2/header-2.compo
     CallToAction1Component,
     Footer1Component,
     ScrollTopButtonComponent,
-    Header2Component
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.css'

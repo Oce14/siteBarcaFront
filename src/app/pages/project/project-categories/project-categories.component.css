@@ -4,9 +4,11 @@
     margin-left: 10px;
     margin-top: 10px;
     position: center;
+    object-fit: contain;
 
 }
 
 .myIcon {
     position: center !important;
+    object-fit: contain;
 }

@@ -11,6 +11,7 @@ import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-to
 import { RecentPostsComponent } from "../../../elements/blog-sidebar/recent-posts/recent-posts.component";
 import { DataService } from '../../../../shared/service/data';
 import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 
 
 @Component({
@@ -27,7 +28,8 @@ import { Header2Component } from "../../../elements/headers/header-2/header-2.co
     Footer1Component,
     ScrollTopButtonComponent,
     RecentPostsComponent,
-    Header2Component
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'

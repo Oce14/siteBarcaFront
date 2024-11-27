@@ -7,6 +7,7 @@ import { Form6Component } from '../../../elements/form/form-6/form-6.component';
 import { SVGImageService } from '../../../constent/SVGImage/svgimage.service';
 import { Category2Component } from "../../../elements/category/category-2/category-2.component";
 import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 
 interface typeofIcone {
   section_category: string,
@@ -30,7 +31,8 @@ interface typeofIcone {
     Footer1Component,
     ScrollTopButtonComponent,
     Category2Component,
-    Header2Component
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './become-a-fundraiser.component.html',
   styleUrl: './become-a-fundraiser.component.css'

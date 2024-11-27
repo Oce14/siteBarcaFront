@@ -15,6 +15,7 @@ import { Footer1Component } from '../../../elements/footers/footer-1/footer-1.co
 import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
 import { SVGImageService } from '../../../constent/SVGImage/svgimage.service';
 import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 
 interface teamType {
   section_subtitle: string,
@@ -78,7 +79,8 @@ interface typeofTestimonial {
     CallToAction1Component,
     Footer1Component,
     ScrollTopButtonComponent,
-    Header2Component
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './index-1.component.html',
   styleUrl: './index-1.component.css'
