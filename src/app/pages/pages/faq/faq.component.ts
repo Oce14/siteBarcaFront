@@ -5,6 +5,8 @@ import { CallToAction1Component } from '../../../elements/call-to-action/call-to
 import { Footer1Component } from '../../../elements/footers/footer-1/footer-1.component';
 import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
 import { FaqAccordionComponent } from '../../../elements/faq-accordion/faq-accordion.component';
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 
 interface typeofList {
   section_title: string,
@@ -26,7 +28,9 @@ interface typeofList {
     FaqAccordionComponent,
     CallToAction1Component,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.css'
@@ -34,7 +38,7 @@ interface typeofList {
 export class FaqComponent {
   bennre = {
     bgImage: 'assets/images/banner/bnr4.jpg',
-    title: 'Faq',
+    title: 'FAQ',
     classAdd: 'dz-bnr-inr-sm'
   }
 

@@ -52,7 +52,7 @@ export class Index3Component {
 
   constructor() {
     document.body.setAttribute('class', 'data-typography-2');
-    document.body.setAttribute('data-color', "color_1");
+    document.body.setAttribute('data-color', "color_2");
     this.modalDonateSelect = {
       flexRadioDefault: "1000"
     };

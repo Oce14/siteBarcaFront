@@ -5,6 +5,8 @@ import { CallToAction1Component } from '../../../elements/call-to-action/call-to
 import { Footer1Component } from '../../../elements/footers/footer-1/footer-1.component';
 import { Header1Component } from '../../../elements/headers/header-1/header-1.component';
 import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 
 @Component({
   selector: 'app-terms-and-condition',
@@ -15,7 +17,9 @@ import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-to
     Banner4Component,
     CallToAction1Component,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './terms-and-condition.component.html',
   styleUrl: './terms-and-condition.component.css'

@@ -14,6 +14,7 @@ import { CallToAction1Component } from '../../../elements/call-to-action/call-to
 import { Footer1Component } from '../../../elements/footers/footer-1/footer-1.component';
 import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
 import { SVGImageService } from '../../../constent/SVGImage/svgimage.service';
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
 
 interface teamType {
   section_subtitle: string,
@@ -76,7 +77,8 @@ interface typeofTestimonial {
     BlogSliderFullSwiperComponent,
     CallToAction1Component,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    Header2Component
   ],
   templateUrl: './index-1.component.html',
   styleUrl: './index-1.component.css'
@@ -343,7 +345,7 @@ export class Index1Component {
   newsData = [
     {
       blogImage: 'assets/images/blog/blog-grid/pic4.jpg',
-      category:'HEALTH',
+      category: 'HEALTH',
       title: 'New vaccine for cattle calf loss learned ',
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.',
       name: 'Hawkins Junior',
@@ -352,7 +354,7 @@ export class Index1Component {
     },
     {
       blogImage: 'assets/images/blog/blog-grid/pic3.jpg',
-      category:'TECHNOLOGY',
+      category: 'TECHNOLOGY',
       title: '4 Things parents learned for they jids in 2020 ',
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.',
       name: 'Tom wilson',
@@ -361,7 +363,7 @@ export class Index1Component {
     },
     {
       blogImage: 'assets/images/blog/blog-grid/pic2.jpg',
-      category:'EDUCATION',
+      category: 'EDUCATION',
       title: 'He Created the Web. Now He’s Out to Remake',
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.',
       name: 'Adam Jordon',

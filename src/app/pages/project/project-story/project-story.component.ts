@@ -8,6 +8,8 @@ import { Header1Component } from '../../../elements/headers/header-1/header-1.co
 import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
 import { Testimonial1Component } from '../../../elements/testimonial/testimonial-1/testimonial-1.component';
 import { Counter1Component } from '../../../elements/counter/counter1/counter1.component';
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 
 interface typeofTestimonial {
   section_title: string,
@@ -33,7 +35,9 @@ interface typeofTestimonial {
     Testimonial1Component,
     CallToAction1Component,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './project-story.component.html',
   styleUrl: './project-story.component.css'

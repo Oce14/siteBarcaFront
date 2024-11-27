@@ -23,11 +23,11 @@
         <!-- Extra Nav -->
         <div class="extra-nav">
           <div class="extra-cell d-flex align-items-center">
-            <ul class="nav-link-list">
+            <!-- <ul class="nav-link-list">
               <li><a href="javascript:void(0);" (click)="open(loginContent)" class="btn-login text-primary">Login</a>
               </li>
               <li><a href="javascript:void(0);" (click)="open(loginContent)" class="btn-login">Sign Up</a></li>
-            </ul>
+            </ul> -->
             <a class="btn btn-primary btnhover1" href="javascript:void(0);" (click)="openModal(modalDonate)">
               <span>Faire un don</span>
               <i class="flaticon-heart ms-3 {{ headerClass?'':'text-secondary' }}"></i>
@@ -83,15 +83,17 @@
     </div>
     <div class="m-b50 contact-text">
       <div class="dz-title">
-        <h4>About us</h4>
+        <h4>A propos</h4>
         <div class="dz-separator style-1 text-primary mb-0"></div>
       </div>
-      <p>Aliquam erat massa porttitor vel egestas sit tristique ultricies lorem aliquet venenatis libero a nulla
-        placerat egestas.</p>
-      <a [routerLink]="['/about-us']" class="btn btn-primary btn-sm">READ MORE</a>
+      <p>L’association BARCA (merci en moré) est une association à but
+        non lucratif, reconnue d’utilité publique (délivrance
+        d’attestations fiscales donnant droit à abattement fiscal). Nous
+        agissons entre la France et le Burkina Faso.</p>
+      <a [routerLink]="['/about-us']" class="btn btn-primary btn-sm">EN SAVOIR PLUS</a>
     </div>
     <div class="dz-title">
-      <h4>Contact Info</h4>
+      <h4>Contact</h4>
       <div class="dz-separator style-1 text-primary mb-0"></div>
     </div>
     <div class="icon-bx-wraper left">
@@ -99,8 +101,8 @@
         <span class="icon-cell"><i class="las la-phone-volume"></i></span>
       </div>
       <div class="icon-content">
-        <h5 class="tilte">Call Now</h5>
-        <p class="m-b0">+91 123 456 7890,<br> +91 987 654 3210</p>
+        <h5 class="tilte">Téléphone</h5>
+        <p class="m-b0">+33 6 22 69 70 21</p>
       </div>
     </div>
     <div class="icon-bx-wraper left">
@@ -108,7 +110,7 @@
         <span class="icon-cell"><i class="las la-envelope-open"></i></span>
       </div>
       <div class="icon-content">
-        <h5 class="tilte">Email Now</h5>
+        <h5 class="tilte">Adresse mail</h5>
         <p class="m-b0">{{ email }}</p>
       </div>
     </div>
@@ -117,8 +119,8 @@
         <span class="icon-cell"><i class="las la-map-marker"></i></span>
       </div>
       <div class="icon-content">
-        <h5 class="tilte">Location</h5>
-        <p class="m-b0">15/B Miranda House, New York, US</p>
+        <h5 class="tilte">Adresse</h5>
+        <p class="m-b0">69400 Arnas France , Zagtouli Burkina Faso</p>
       </div>
     </div>
   </div>

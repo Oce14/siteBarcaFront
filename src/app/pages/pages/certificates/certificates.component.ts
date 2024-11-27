@@ -9,6 +9,8 @@ import { Header1Component } from '../../../elements/headers/header-1/header-1.co
 import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
 import { CallToAction1Component } from '../../../elements/call-to-action/call-to-action1/call-to-action1.component';
 import { CallToAction3Component } from '../../../elements/call-to-action/call-to-action3/call-to-action3.component';
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 
 @Component({
   selector: 'app-certificates',
@@ -20,14 +22,16 @@ import { CallToAction3Component } from '../../../elements/call-to-action/call-to
     CallToAction3Component,
     CallToAction1Component,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './certificates.component.html',
   styleUrl: './certificates.component.css'
 })
 export class CertificatesComponent {
   bennre = {
-    bgImage:'assets/images/banner/bnr5.jpg',
+    bgImage: 'assets/images/banner/bnr5.jpg',
     title: 'Our Certificates',
     classAdd: 'dz-bnr-inr-sm'
   }

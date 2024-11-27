@@ -4,22 +4,36 @@
       style="background-image:url('assets/images/background/bg1.jpg'); background-size: cover; background-repeat: no-repeat;">
       <div class="row inner-content justify-content-center">
         <div class="col-xl-6 col-lg-9 wow fadeInUp" data-wow-delay="0.2s">
+
           <div class="section-head text-center">
-            <h2 class="title text-white">Don’t miss our weekly updates about donations</h2>
+            <h2 class="title text-white">Votre soutien financier est très important pour nos
+              projets.</h2>
           </div>
           @if(message){
-            <p [ngClass]="{ 'text-success': success, 'text-danger': !success }">{{ message }}</p>
+          <p [ngClass]="{ 'text-success': success, 'text-danger': !success }">{{ message }}</p>
           }
-          <form class="dzSubscribe" [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
+          <form class="dzSubscribe">
             <div class="dzSubscribeMsg text-white"></div>
             <div class="input-group">
-              <input name="email" formControlName="email" required="required" type="email" class="form-control"
-                placeholder="Enter your email address...">
+              <!-- <input name="email" formControlName="email" required="required" type="email" class="form-control"
+                placeholder="Enter your email address..."> -->
               <div class="input-group-addon">
-                <button name="submit" value="Submit" type="submit" class="btn btn-secondary btn-rounded-lg">
-                  <span>SUBSCRIBE</span>
-                  <i class="fa-solid fa-paper-plane"></i>
-                </button>
+                <div class="extra-nav">
+                  <div class="extra-cell d-flex align-items-center">
+                    <!-- <ul class="nav-link-list">
+                      <li><a href="javascript:void(0);" (click)="open(loginContent)" class="btn-login text-primary">Login</a>
+                      </li>
+                      <li><a href="javascript:void(0);" (click)="open(loginContent)" class="btn-login">Sign Up</a></li>
+                    </ul> -->
+                    <a class="btn btn-secondary  btnhover1 justify-content-center  myButton" href="javascript:void(0);">
+                      <p><span>FAIRE UN DON</span><br>
+                        <img class="myIcon" src="assets/images/logo/logo-barca-full.png" alt="">
+                      </p>
+
+                    </a>
+
+                  </div>
+                </div>
               </div>
             </div>
           </form>

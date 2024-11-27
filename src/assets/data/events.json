@@ -1,0 +1,112 @@
+{
+    "event": [
+        {
+            "id": 1,
+            "image": "assets/images/project/project1/6/pic2.jpg",
+            "category": "VENTE",
+            "title": "Vente de gingembre et de bissap",
+            "locationImg": "assets/images/avatar/emplacement.png",
+            "location": "Ternand",
+            "createDate": "3 juin 2023",
+            "desc": "Vente de gingembre et de bissap à la Rejoinère ...",
+            "abstract": "Un rendez-vous incontournable à La Rejoinère pour découvrir des produits authentiques comme le gingembre et le bissap.",
+            "description": "Le 3 juin 2023, l'association a organisé une vente de gingembre et de bissap à La Rejoinère, un événement qui a rassemblé une communauté enthousiaste. Les visiteurs ont été accueillis dans une ambiance conviviale, avec des stands colorés mettant en avant les produits locaux du Burkina Faso. Les jus rafraîchissants de bissap et de gingembre ont été les stars de la journée, ravissant les papilles des participants tout en leur faisant découvrir les saveurs authentiques de l’Afrique de l’Ouest. Les bénéfices générés lors de cette vente ont été directement réinvestis dans des projets éducatifs et agricoles, renforçant ainsi l’autonomie des communautés locales. Une journée mémorable qui allie plaisir et solidarité."
+        },
+        {
+            "id": 2,
+            "image": "assets/images/project/project1/2/pic2.jpg",
+            "category": "VENTE",
+            "title": "Achat de bissap et gingembre",
+            "locationImg": "assets/images/avatar/emplacement.png",
+            "location": "Rhône",
+            "createDate": "20 aout 2022",
+            "desc": "Achat de bissap et gingembre en ligne ...",
+            "abstract": "Facilitez l'accès aux saveurs burkinabées grâce à notre boutique en ligne dédiée au bissap et au gingembre.",
+            "description": "Depuis le 20 août 2022, nous vendons du bissap et du gingembre. Cette initiative vise à connecter directement les producteurs locaux avec les consommateurs, réduisant ainsi les intermédiaires tout en garantissant un revenu équitable pour les agriculteurs. Le bissap, connu pour ses propriétés antioxydantes, et le gingembre, apprécié pour ses bienfaits revitalisants, ont rapidement séduit un public en quête de produits naturels et authentiques. "
+        },
+        {
+            "id": 3,
+            "image": "assets/images/project/project1/3/pic1.jpg",
+            "category": "Porte ouverte La Rejoinère",
+            "title": "Vente de produits burkinabé",
+            "locationImg": "assets/images/avatar/emplacement.png",
+            "location": "Ternand",
+            "createDate": "4 et 5 juin 2022",
+            "desc": "Vente de jus de gingembre, jus d'hibiscus ...",
+            "abstract": "Un week-end dédié aux saveurs et aux couleurs du Burkina Faso à La Rejoinère.",
+            "description": "Les 4 et 5 juin 2022, La Rejoinère s’est transformée en un véritable marché burkinabé, mettant en lumière la richesse culturelle et gastronomique de ce pays. L’événement a attiré des curieux venus découvrir des produits emblématiques tels que le jus de gingembre, l’hibiscus, et des épices traditionnelles. Les visiteurs ont également pu admirer des objets artisanaux uniques, fabriqués. Au-delà de la vente, cette rencontre a été une opportunité de dialoguer avec les membres de l’association et d’en apprendre davantage sur les défis et les réussites des projets menés sur le terrain. Un moment d’échange enrichissant qui a renforcé la solidarité entre cultures."
+        },
+        {
+            "id": 4,
+            "image": "assets/images/project/project1/4/pic1.jpg",
+            "category": "VENTE",
+            "title": "Vente de mangue et papaye séchées",
+            "locationImg": "assets/images/avatar/emplacement.png",
+            "location": "Rhône",
+            "createDate": "7 decembre 2021",
+            "desc": "Vente de mange et papaye séchées en ligne..",
+            "abstract": "Découvrez nos fruits séchés, un mélange parfait de santé et de saveurs.",
+            "description": "Le 7 décembre 2021, l'association a lancé une vente en ligne de mangues et papayes séchées. Ces fruits, issus de l'agriculture locale durable, offrent une alternative saine et savoureuse aux collations traditionnelles. Chaque achat contribue directement au financement des initiatives éducatives et communautaires de l'association."
+        },
+        {
+            "id": 5,
+            "image": "assets/images/project/project1/7/pic1.jpg",
+            "category": "VENTE",
+            "title": "Vente de tee-shirts et cartes postales",
+            "locationImg": "assets/images/avatar/emplacement.png",
+            "location": "Rhône",
+            "createDate": "14 juin 2020",
+            "desc": "Vente de tee-shirt en ligne avec des motifs burkinabé...",
+            "abstract": "Exprimez votre soutien à l'association avec des tee-shirts et cartes postales aux motifs burkinabés.",
+            "description": "Le 14 juin 2020, l'association a mis en ligne une collection exclusive de tee-shirts et de cartes postales. Chaque produit arbore des motifs inspirés de l'art burkinabé, permettant ainsi aux acheteurs de partager la culture tout en contribuant aux projets de développement de l'association."
+        },
+        {
+            "id": 6,
+            "image": "assets/images/project/project1/10/pic1.jpg",
+            "category": "EVENEMENT",
+            "title": "Diner",
+            "locationImg": "assets/images/avatar/emplacement.png",
+            "location": "Grenoble",
+            "createDate": "16 février 2019",
+            "desc": "En collaboration avec l'association Akatsuki Charity de Grenoble...",
+            "abstract": "Un dîner solidaire en collaboration avec Akatsuki Charity pour une soirée inoubliable.",
+            "description": "Le 16 février 2019, l'association a organisé un dîner caritatif en partenariat avec Akatsuki Charity à Grenoble. La soirée s'est déroulée dans une atmosphère chaleureuse et festive, où les invités ont dégusté un menu inspiré des saveurs burkinabées, allant du riz au gras à des desserts épicés. Au cours de la soirée, des témoignages poignants ont été partagés par des bénévoles et bénéficiaires, illustrant l’impact concret des actions de l’association. Un discours émouvant a rappelé l’importance de l’éducation et du développement durable, piliers des initiatives de l’association. Grâce à la générosité des participants, des fonds substantiels ont été collectés pour financer des infrastructures éducatives."
+        },
+        {
+            "id": 7,
+            "image": "assets/images/project/project1/8/pic3.jpg",
+            "category": "EVENEMENT",
+            "title": "Présentation de l'association",
+            "locationImg": "assets/images/avatar/emplacement.png",
+            "location": "Lantigné",
+            "createDate": "17 juin 2018",
+            "desc": "Présentation de l'association et de ses actions...",
+            "abstract": "Une rencontre inspirante pour découvrir la mission et les actions de l'association.",
+            "description": "Le 17 juin 2018, l’association a tenu une présentation publique à Lantigné pour sensibiliser la communauté locale à ses actions et projets. L’événement a débuté par un discours passionné de la fondatrice, retraçant les origines de l’association et sa mission : promouvoir l’éducation et l’autonomie des communautés burkinabées. Une exposition visuelle, comprenant des photos et des vidéos des projets en cours, a captivé les participants. Un atelier interactif a également permis aux visiteurs de poser leurs questions et d’échanger directement avec les bénévoles. Cette rencontre a non seulement renforcé la confiance dans l’association, mais elle a aussi inspiré de nouveaux volontaires à rejoindre le mouvement."
+        },
+        {
+            "id": 8,
+            "image": "assets/images/project/project1/11/pic38.jpg",
+            "category": "EVENEMENT",
+            "title": "Spectacle",
+            "locationImg": "assets/images/avatar/emplacement.png",
+            "location": "Grenoble",
+            "createDate": "3 juin 2018",
+            "desc": "Spectacle à l'Ecole des Pupilles de l'Air ...",
+            "abstract": "Un spectacle vibrant à l'École des Pupilles de l'Air pour célébrer la culture burkinabée.",
+            "description": "Le 3 juin 2018, l'École des Pupilles de l'Air à Grenoble a accueilli un spectacle exceptionnel. Cet événement, mêlant musique, danse et théâtre, a permis de faire découvrir la richesse culturelle du Burkina Faso tout en collectant des fonds pour les initiatives de l'association. Un moment mémorable pour tous les participants."
+        },
+        {
+            "id": 9,
+            "image": "assets/images/project/project1/9/pic62.jpg",
+            "category": "EVENEMENT",
+            "title": "Repas",
+            "locationImg": "assets/images/avatar/emplacement.png",
+            "location": "Lantigné",
+            "createDate": "10 décembre 2016",
+            "desc": "Repas pour promouvoir l'association et la culture burkinabé...",
+            "abstract": "Un repas convivial pour promouvoir la culture burkinabée et soutenir les projets de l'association.",
+            "description": "Le 10 décembre 2016, Lantigné a été le théâtre d'un repas chaleureux réunissant des membres et amis de l'association. Ce moment a permis de déguster des plats traditionnels tout en sensibilisant les convives aux actions menées par l'association. Une soirée qui a renforcé les liens et permis de collecter des fonds précieux."
+        }
+    ]
+}

@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject, Input, TemplateRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NgClass } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-call-to-action1',
@@ -17,14 +18,20 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrl: './call-to-action1.component.css'
 })
 export class CallToAction1Component {
+  @Input() headerClass: string | null = null;
   subscribeForm: FormGroup;
   message: string | undefined;
   success: boolean | undefined;
+  private modalService = inject(NgbModal);
 
   constructor(private fb: FormBuilder) {
     this.subscribeForm = this.fb.group({
       email: ['', Validators.required]
     });
+  }
+
+  openModal(content: TemplateRef<any>) {
+    this.modalService.open(content, { centered: true, windowClass: 'modal-wrapper' });
   }
 
   onSubmit() {

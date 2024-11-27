@@ -19826,11 +19826,11 @@ section {
   padding: 30px;
   position: fixed;
   height: 100%;
-  width: 350px;
+  width: 400px;
   z-index: 9999999;
   background: #fff;
   top: 0;
-  left: -350px;
+  left: -400px;
   overflow-y: auto;
   -webkit-transition: all 0.5s;
   -ms-transition: all 0.5s;

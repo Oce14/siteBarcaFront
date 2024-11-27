@@ -11,6 +11,8 @@ import { AboutUs6Component } from "../../../elements/about-us/about-us-6/about-u
 import { AboutUs7Component } from "../../../elements/about-us/about-us-7/about-us-7.component";
 import { SVGImageService } from '../../../constent/SVGImage/svgimage.service';
 import { DataService } from '../../../../shared/service/data';
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 
 interface typeofcategory {
   icon: string,
@@ -42,7 +44,9 @@ interface blogType {
     ScrollTopButtonComponent,
     AboutUs5Component,
     AboutUs6Component,
-    AboutUs7Component
+    AboutUs7Component,
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './project-categories.component.html',
   styleUrl: './project-categories.component.css'
@@ -70,7 +74,7 @@ export class ProjectCategoriesComponent {
 
   bennre = {
     bgImage: 'assets/images/banner/bnr1.jpg',
-    title: 'Project Categories',
+    title: 'Nos projets',
     classAdd: 'dz-bnr-inr-sm'
   }
   @HostListener('window:scroll', [])

@@ -9,6 +9,8 @@ import { ScrollTopButtonComponent } from '../../../../elements/short-cods/scroll
 import { Counter2Component } from '../../../../elements/counter/counter2/counter2.component';
 import { Form4Component } from '../../../../elements/form/form-4/form-4.component';
 import { SVGImageService } from '../../../../constent/SVGImage/svgimage.service';
+import { Header2Component } from "../../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../../elements/footers/footer-2/footer-2.component";
 
 interface typeofIcone {
   section_category: string,
@@ -33,7 +35,9 @@ interface typeofIcone {
     Counter2Component,
     CallToAction1Component,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './become-a-volunteer.component.html',
   styleUrl: './become-a-volunteer.component.css'
@@ -47,7 +51,7 @@ export class BecomeAVolunteerComponent {
   }
   bennre = {
     bgImage: 'assets/images/banner/bnr3.jpg',
-    title: 'Become A Volunteer',
+    title: 'Devenir Bénévole',
     classAdd: ''
   }
   @HostListener('window:scroll', [])

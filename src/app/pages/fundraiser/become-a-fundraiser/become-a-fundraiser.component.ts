@@ -6,6 +6,7 @@ import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-to
 import { Form6Component } from '../../../elements/form/form-6/form-6.component';
 import { SVGImageService } from '../../../constent/SVGImage/svgimage.service';
 import { Category2Component } from "../../../elements/category/category-2/category-2.component";
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
 
 interface typeofIcone {
   section_category: string,
@@ -28,7 +29,8 @@ interface typeofIcone {
     Form6Component,
     Footer1Component,
     ScrollTopButtonComponent,
-    Category2Component
+    Category2Component,
+    Header2Component
   ],
   templateUrl: './become-a-fundraiser.component.html',
   styleUrl: './become-a-fundraiser.component.css'
@@ -42,7 +44,7 @@ export class BecomeAFundraiserComponent {
   }
   bennre = {
     bgImage: 'assets/images/banner/bnr3.jpg',
-    title: 'Become A Fundraiser',
+    title: 'Faire Un Don',
     classAdd: 'dz-bnr-inr-sm'
   }
   @HostListener('window:scroll', [])

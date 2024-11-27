@@ -11,6 +11,8 @@ import { CommonModule, CurrencyPipe, UpperCasePipe } from '@angular/common';
 import { Listing1Component } from '../../../elements/listing/listing-1/listing-1.component';
 import { PaginationComponent } from '../../../elements/short-cods/pagination/pagination.component';
 import Isotope from 'isotope-layout';
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 
 
 interface blogType {
@@ -43,7 +45,9 @@ interface blogType {
     CallToAction1Component,
     DropdownComponent,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './project.component.html',
   styleUrl: './project.component.css'
@@ -51,7 +55,7 @@ interface blogType {
 export class ProjectComponent {
   bennre = {
     bgImage: 'assets/images/banner/bnr5.jpg',
-    title: 'Project',
+    title: 'Nos Project En Cours',
     classAdd: 'dz-bnr-inr-sm'
   }
 

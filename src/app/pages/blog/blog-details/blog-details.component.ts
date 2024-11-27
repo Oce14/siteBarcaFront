@@ -9,6 +9,7 @@ import { BlogSlider2SwiperComponent } from '../../../elements/short-cods/swipers
 import { BlogCommentsComponent } from '../../../elements/blog-comments/blog-comments.component';
 import { DataService } from '../../../../shared/service/data';
 import { CommonModule } from '@angular/common';
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
 
 interface typeofList {
   blogImage: string,
@@ -31,7 +32,8 @@ interface typeofList {
     CallToAction1Component,
     Footer1Component,
     CommonModule,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    Header2Component
   ],
   templateUrl: './blog-details.component.html',
   styleUrl: './blog-details.component.css'

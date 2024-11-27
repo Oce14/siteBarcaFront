@@ -91,147 +91,58 @@ export class Navigation1Component {
 
   sidebarMenu: MenuItem[] = [
     {
-      title: 'Home',
-      subMenu: [
-        {
-          title: 'Home 1',
-          route: '/index-1'
-        },
-        {
-          title: 'Home 2',
-          route: '/index-2'
-        },
-        {
-          title: 'Home 3',
-          route: '/index-3'
-        }
-
-      ]
+      title: 'Accueil',
+      route: '/index-2'
     },
     {
-      title: 'Pages',
+      title: 'A propos',
       subMenu: [
         {
-          title: 'About Us',
+          title: 'Qui sommes-nous ?',
           route: '/about-us'
         },
         {
-          title: 'Volunteer',
-          subsubMenu: [
-            {
-              title: 'Volunteer',
-              route: '/volunteer'
-            },
-            {
-              title: 'Become A Volunteer',
-              route: '/become-a-volunteer'
-            }
-          ]
-        },
-        {
-          title: 'Faq',
-          route: '/faq'
-        },
-        {
-          title: 'Certificates',
-          route: '/certificates'
-        },
-        {
-          title: 'Ask A Question',
-          route: '/ask-a-question'
-        },
-        {
-          title: 'Happy Clients',
-          route: '/happy-clients'
-        },
-        {
-          title: 'How It Works',
-          route: '/how-it-works'
-        },
-        {
-          title: 'Mission',
-          route: '/mission'
-        },
-        {
-          title: 'Terms And Condition',
-          route: '/terms-and-condition'
-        },
-        {
-          title: 'Coming Soon',
-          route: '/coming-soon'
-        },
-        {
-          title: 'Under Maintenance',
-          route: '/under-maintenance'
-        },
-        {
-          title: 'Error 404',
-          route: '/error-404'
-        }
-      ]
-    },
-    {
-      title: 'Fundraiser',
-      subMenu: [
-        {
-          title: 'Browse Fundraiser',
-          route: '/browse-fundraiser'
-        },
-        {
-          title: 'Become A Fundraiser',
-          route: '/become-a-fundraiser'
-        },
-        {
-          title: 'Fundraiser Detail',
-          route: '/fundraiser-detail'
-        }
-
-      ]
-    },
-    {
-      title: 'Projects',
-      subMenu: [
-        {
-          title: 'Project',
-          route: '/project'
-        },
-        {
-          title: 'Project Categories',
+          title: 'Nos projets',
           route: '/project-categories'
         },
         {
-          title: 'Project Sidebar',
-          route: '/project-sidebar'
-        },
-        {
-          title: 'Project Story',
-          route: '/project-story'
+          title: 'FAQ',
+          route: '/faq'
         }
       ]
     },
     {
-      title: 'Blog',
+      title: 'Nos Actions',
       subMenu: [
         {
-          title: 'Blog',
+          title: 'Nos Evenements',
+          route: '/browse-fundraiser',
+        },
+        {
+          title: 'Nos réalisations',
           route: '/blog'
         },
         {
-          title: 'Blog Grid',
-          route: '/blog-grid'
+          title: 'Nos Projets en cours',
+          route: '/project',
         },
-        {
-          title: 'Blog List',
-          route: '/blog-list'
-        },
-        {
-          title: 'Blog Details',
-          route: '/blog-details'
-        }
       ]
     },
     {
-      title: 'Contact Us',
+      title: 'Nous Aider',
+      subMenu: [
+        {
+          title: 'Faire un don',
+          route: '/become-a-fundraiser'
+        },
+        {
+          title: 'Devenir bénévole',
+          route: '/become-a-volunteer'
+        },
+      ]
+    },
+    {
+      title: 'Nous contacter',
       route: '/contact-us'
     }
   ]

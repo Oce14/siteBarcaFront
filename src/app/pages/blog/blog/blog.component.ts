@@ -10,6 +10,7 @@ import { PaginationComponent } from '../../../elements/short-cods/pagination/pag
 import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
 import { RecentPostsComponent } from "../../../elements/blog-sidebar/recent-posts/recent-posts.component";
 import { DataService } from '../../../../shared/service/data';
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
 
 
 @Component({
@@ -25,7 +26,8 @@ import { DataService } from '../../../../shared/service/data';
     DropdownComponent,
     Footer1Component,
     ScrollTopButtonComponent,
-    RecentPostsComponent
+    RecentPostsComponent,
+    Header2Component
   ],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
@@ -51,7 +53,7 @@ export class BlogComponent implements OnInit {
 
   bennre = {
     bgImage: 'assets/images/banner/bnr4.jpg',
-    title: 'Blog',
+    title: 'Nos Réalisations',
     classAdd: 'dz-bnr-inr-sm'
   }
 

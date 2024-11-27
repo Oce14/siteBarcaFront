@@ -2,7 +2,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, TemplateRef, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { NgbModal , NgbCollapseModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { Navigation1Component } from '../../navigation/navigation1/navigation1.component';
 
 @Component({
@@ -19,10 +19,10 @@ import { Navigation1Component } from '../../navigation/navigation1/navigation1.c
 })
 export class Header1Component {
   private modalService = inject(NgbModal);
-	isCollapsed = false;
+  isCollapsed = false;
   resetPassword = false;
   navbarToggler: boolean = false;
-  email: string = 'support@akcel.com';
+  email: string = 'association.barca@gmail.com';
 
   constructor() { }
 

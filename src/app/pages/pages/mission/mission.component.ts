@@ -9,6 +9,8 @@ import { Counter4Component } from '../../../elements/counter/counter4/counter4.c
 import { AboutUs5Component } from '../../../elements/about-us/about-us-5/about-us-5.component';
 import { AboutUs6Component } from '../../../elements/about-us/about-us-6/about-us-6.component';
 import { AboutUs7Component } from '../../../elements/about-us/about-us-7/about-us-7.component';
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 
 interface typeofIcone {
   section_category: string,
@@ -34,7 +36,9 @@ interface typeofIcone {
     AboutUs7Component,
     CallToAction1Component,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './mission.component.html',
   styleUrl: './mission.component.css'

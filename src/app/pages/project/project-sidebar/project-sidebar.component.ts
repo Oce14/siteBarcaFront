@@ -9,6 +9,8 @@ import { PaginationComponent } from '../../../elements/short-cods/pagination/pag
 import { CallToAction1Component } from '../../../elements/call-to-action/call-to-action1/call-to-action1.component';
 import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
 import { ClientsSwiperComponent } from '../../../elements/short-cods/swipers/clients-swiper/clients-swiper.component';
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 
 interface blogType {
   projectImg: string,
@@ -36,7 +38,9 @@ interface blogType {
     Listing1Component,
     CallToAction1Component,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './project-sidebar.component.html',
   styleUrl: './project-sidebar.component.css'

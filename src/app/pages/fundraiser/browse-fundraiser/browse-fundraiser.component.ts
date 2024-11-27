@@ -8,6 +8,7 @@ import { CallToAction1Component } from '../../../elements/call-to-action/call-to
 import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
 import { BlogSidebarComponent } from '../../../elements/blog-sidebar/blog-sidebar.component';
 import { PaginationComponent } from '../../../elements/short-cods/pagination/pagination.component';
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
 interface blogType {
   projectImg: string,
   category: string,
@@ -32,15 +33,16 @@ interface blogType {
     PaginationComponent,
     CallToAction1Component,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    Header2Component
   ],
   templateUrl: './browse-fundraiser.component.html',
   styleUrl: './browse-fundraiser.component.css'
 })
 export class BrowseFundraiserComponent {
   bennre = {
-    bgImage:'assets/images/banner/bnr2.jpg',
-    title: 'Browse Fundraiser',
+    bgImage: 'assets/images/banner/bnr2.jpg',
+    title: 'Nos Evénements',
     classAdd: 'dz-bnr-inr-sm'
   }
   dropdown_item = {

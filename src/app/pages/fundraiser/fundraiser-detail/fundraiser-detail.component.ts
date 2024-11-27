@@ -9,6 +9,7 @@ import { Header1Component } from '../../../elements/headers/header-1/header-1.co
 import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
 import { BlogCommentsComponent } from '../../../elements/blog-comments/blog-comments.component';
 import { GallerySwiperComponent } from '../../../elements/short-cods/swipers/gallery-swiper/gallery-swiper.component';
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
 
 @Component({
   selector: 'app-fundraiser-detail',
@@ -23,14 +24,15 @@ import { GallerySwiperComponent } from '../../../elements/short-cods/swipers/gal
     BlogCommentsComponent,
     CallToAction1Component,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    Header2Component
   ],
   templateUrl: './fundraiser-detail.component.html',
   styleUrl: './fundraiser-detail.component.css'
 })
 export class FundraiserDetailComponent {
   bennre = {
-    bgImage:'assets/images/banner/bnr4.jpg',
+    bgImage: 'assets/images/banner/bnr4.jpg',
     title: 'Fundraiser Detail',
     classAdd: 'dz-bnr-inr-sm'
   }

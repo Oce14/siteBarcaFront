@@ -24,7 +24,7 @@ export class Header2Component {
   modalDonateSelect;
   isCollapsed = false;
   resetPassword = false;
-  email: string = 'info@gmail.com, services@gmail.com';
+  email: string = 'association.barca@gmail.com';
   selectedColor: string = 'NOTHING';
   private modalService = inject(NgbModal);
   navbarToggler: boolean = false;

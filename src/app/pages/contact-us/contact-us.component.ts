@@ -8,6 +8,7 @@ import { ScrollTopButtonComponent } from '../../elements/short-cods/scroll-top-b
 import { ClientsSwiperComponent } from '../../elements/short-cods/swipers/clients-swiper/clients-swiper.component';
 import { Form5Component } from '../../elements/form/form-5/form-5.component';
 import { SVGImageService } from '../../constent/SVGImage/svgimage.service';
+import { Header2Component } from "../../elements/headers/header-2/header-2.component";
 
 @Component({
   selector: 'app-contact-us',
@@ -20,20 +21,21 @@ import { SVGImageService } from '../../constent/SVGImage/svgimage.service';
     ClientsSwiperComponent,
     CallToAction1Component,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    Header2Component
   ],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.css'
 })
 export class ContactUsComponent {
   bennre = {
-    bgImage:'assets/images/banner/bnr1.jpg',
-    title: 'Contact Us',
+    bgImage: 'assets/images/banner/bnr1.jpg',
+    title: 'Nous Contacter',
     classAdd: 'dz-bnr-inr-sm'
   }
   SvgImage: any;
 
-  constructor(private svgIcons: SVGImageService) {}
+  constructor(private svgIcons: SVGImageService) { }
   ngOnInit() {
     this.SvgImage = this.svgIcons.content_svgImage.contact_Us_SVG;
   }

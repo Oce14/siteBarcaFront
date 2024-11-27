@@ -4,6 +4,8 @@ import { Footer1Component } from '../../../elements/footers/footer-1/footer-1.co
 import { Header1Component } from '../../../elements/headers/header-1/header-1.component';
 import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
 import { SVGImageService } from '../../../constent/SVGImage/svgimage.service';
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 
 interface type {
   image: string,
@@ -19,7 +21,9 @@ interface type {
     Header1Component,
     Banner4Component,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './happy-clients.component.html',
   styleUrl: './happy-clients.component.css'

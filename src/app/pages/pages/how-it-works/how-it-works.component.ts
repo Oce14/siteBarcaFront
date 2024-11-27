@@ -8,6 +8,8 @@ import { Testimonial1Component } from '../../../elements/testimonial/testimonial
 import { Form3Component } from '../../../elements/form/form-3/form-3.component';
 import { Category2Component } from '../../../elements/category/category-2/category-2.component';
 import { FaqAccordionComponent } from '../../../elements/faq-accordion/faq-accordion.component';
+import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
+import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 
 interface typeofIcone {
   section_category: string,
@@ -45,7 +47,9 @@ interface typeofTestimonial {
     Testimonial1Component,
     CallToAction1Component,
     Footer1Component,
-    ScrollTopButtonComponent
+    ScrollTopButtonComponent,
+    Header2Component,
+    Footer2Component
   ],
   templateUrl: './how-it-works.component.html',
   styleUrl: './how-it-works.component.css'
