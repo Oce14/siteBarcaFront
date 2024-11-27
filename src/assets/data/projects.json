@@ -2,6 +2,7 @@
     "project": [
         {
             "id": 1,
+            "isEvent": false,
             "image": "assets/images/blog/blog-grid/pic4.jpg",
             "type": "Éducation",
             "date": "2027-06-30",
@@ -11,6 +12,7 @@
         },
         {
             "id": 2,
+            "isEvent": false,
             "image": "assets/images/blog/blog-grid/pic4.jpg",
             "type": "Formation",
             "date": "2026-12-31",
@@ -20,6 +22,7 @@
         },
         {
             "id": 3,
+            "isEvent": false,
             "image": "assets/images/blog/blog-grid/pic4.jpg",
             "type": "Infrastructure",
             "date": "2025-03-31",
@@ -29,6 +32,7 @@
         },
         {
             "id": 4,
+            "isEvent": false,
             "image": "assets/images/blog/blog-grid/pic4.jpg",
             "type": "Emploi",
             "date": "2025-09-30",
