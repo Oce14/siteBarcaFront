@@ -19,4 +19,28 @@ export class DataService {
             map(response => response.step)
         );
     }
+
+    getProjectById(id: number): Observable<any> {
+        return this.http.get<any>('assets/data/projects.json').pipe(
+            map(data => data.project.find((project: any) => project.id === id))
+        );
+    }
+
+    getProjects(): Observable<any[]> {
+        return this.http.get<any>('assets/data/projects.json').pipe(
+            map(response => response.project)
+        );
+    }
+
+    getEventById(id: number): Observable<any> {
+        return this.http.get<any>('assets/data/events.json').pipe(
+            map(data => data.event.find((event: any) => event.id === id))
+        );
+    }
+
+    getEvents(): Observable<any[]> {
+        return this.http.get<any>('assets/data/events.json').pipe(
+            map(response => response.event)
+        );
+    }
 }

@@ -52,22 +52,22 @@ interface blogType {
   styleUrl: './project-categories.component.css'
 })
 export class ProjectCategoriesComponent {
-  steps: any[] = [];
-  topSixSteps: any[] = [];
+  projects: any[] = [];
+  topSixProjects: any[] = [];
   SvgImage: any;
 
   constructor(private svgIcons: SVGImageService, private dataService: DataService) { }
   ngOnInit() {
     this.SvgImage = this.svgIcons.content_svgImage.aboutus_6_SVG;
-    this.dataService.getSteps().subscribe(data => {
-      this.steps = data;
+    this.dataService.getProjects().subscribe(data => {
+      this.projects = data;
 
-      this.topSixSteps = this.getTopSixRecentSteps(this.steps);
+      this.topSixProjects = this.getTopSixRecentProjects(this.projects);
     });
   }
 
-  getTopSixRecentSteps(steps: any[]): any[] {
-    return steps
+  getTopSixRecentProjects(projects: any[]): any[] {
+    return projects
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
       .slice(0, 6);
   }

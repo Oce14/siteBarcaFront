@@ -11,16 +11,16 @@
             <li><a href="javascript:void(0);">{{ item.category | uppercase }}</a></li>
           </ul>
           @if(slideItem == 5){
-          <h5 class="dz-title"><a [routerLink]="['/fundraiser-detail']">{{ item.title }}</a></h5>
+          <h5 class="dz-title"><a [routerLink]="['/fundraiser-detail', item.id]">{{ item.title }}</a></h5>
           } @else {
-          <h4 class="dz-title"><a [routerLink]="['/fundraiser-detail']">{{ item.title }}</a></h4>
+          <h4 class="dz-title"><a [routerLink]="['/fundraiser-detail', item.id]">{{ item.title }}</a></h4>
           }
           <ul class="dz-meta">
             <li class="author-wrappper author-wrappper-sm mt-0">
               <div class="author-media">
-                <img src="{{ item.userImg }}" alt="">
+                <img src="{{ item.locationImg }}" alt="">
               </div>
-              <span>{{ item.userName }}</span>
+              <span>{{ item.location }}</span>
             </li>
             <li class="dz-date">
               <i class="fa-solid fa-calendar me-1"></i>
