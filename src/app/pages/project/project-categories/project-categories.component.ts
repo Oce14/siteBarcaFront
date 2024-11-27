@@ -10,6 +10,7 @@ import { AboutUs5Component } from "../../../elements/about-us/about-us-5/about-u
 import { AboutUs6Component } from "../../../elements/about-us/about-us-6/about-us-6.component";
 import { AboutUs7Component } from "../../../elements/about-us/about-us-7/about-us-7.component";
 import { SVGImageService } from '../../../constent/SVGImage/svgimage.service';
+import { DataService } from '../../../../shared/service/data';
 
 interface typeofcategory {
   icon: string,
@@ -47,11 +48,24 @@ interface blogType {
   styleUrl: './project-categories.component.css'
 })
 export class ProjectCategoriesComponent {
+  steps: any[] = [];
+  topSixSteps: any[] = [];
   SvgImage: any;
 
-  constructor(private svgIcons: SVGImageService) { }
+  constructor(private svgIcons: SVGImageService, private dataService: DataService) { }
   ngOnInit() {
     this.SvgImage = this.svgIcons.content_svgImage.aboutus_6_SVG;
+    this.dataService.getSteps().subscribe(data => {
+      this.steps = data;
+
+      this.topSixSteps = this.getTopSixRecentSteps(this.steps);
+    });
+  }
+
+  getTopSixRecentSteps(steps: any[]): any[] {
+    return steps
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 6);
   }
 
   bennre = {

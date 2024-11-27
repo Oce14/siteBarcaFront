@@ -62,7 +62,7 @@
 						@for(item of blogList; track item){
 						<div class="dz-card style-6 blog-half wow fadeInUp" data-wow-delay="0.2s">
 							<div class="dz-media">
-								<a [routerLink]="['/step', item.id]"><img src="{{ item.blogImage }}" alt=""></a>
+								<a [routerLink]="['/step', item.id]"><img src="{{ item.blogPostImage }}" alt=""></a>
 								<ul class="dz-badge-list">
 									<li><a href="javascript:void(0);" class="dz-badge">{{ item.date }}</a></li>
 								</ul>
@@ -89,7 +89,7 @@
 					</div>
 					<div class="col-xl-5 col-lg-12 m-b30 wow fadeInUp" data-wow-delay="0.6s">
 						<div class="dz-card style-7"
-							[style.backgroundImage]="'url(' + secondMostRecentStep.blogImage + ')'">
+							[style.backgroundImage]="'url(' + secondMostRecentStep.blogPostImage + ')'">
 							<div class="dz-category">
 								<ul class="dz-badge-list">
 									<li><a href="javascript:void(0);" class="dz-badge">{{ secondMostRecentStep.date
