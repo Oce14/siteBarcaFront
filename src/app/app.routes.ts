@@ -52,12 +52,12 @@ export const routes: Routes = [
   // Fundraiser --
   { path: 'browse-fundraiser', component: BrowseFundraiserComponent },
   { path: 'become-a-fundraiser', component: BecomeAFundraiserComponent },
-  { path: 'fundraiser-detail', component: FundraiserDetailComponent },
+  { path: 'fundraiser-detail/:id', component: FundraiserDetailComponent },
   // Project --
   { path: 'project', component: ProjectComponent },
   { path: 'project-categories', component: ProjectCategoriesComponent },
   { path: 'project-sidebar', component: ProjectSidebarComponent },
-  { path: 'project-story', component: ProjectStoryComponent },
+  { path: 'project-story/:id', component: ProjectStoryComponent },
   // Blog --
   { path: 'blog', component: BlogComponent },
   { path: 'blog-grid', component: BlogGridComponent },

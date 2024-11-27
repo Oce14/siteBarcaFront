@@ -3,13 +3,16 @@
   <li class="{{ addClass }} {{ item.type }}">
     <div class="dz-card style-2 overlay-skew">
       <div class="dz-media">
-        <a [routerLink]="['/fundraiser-detail', item.id]"><img class="myImage" src="{{ item.image }}" alt=""></a>
+        <a [routerLink]="item.isEvent ? ['/fundraiser-detail', item.id] : ['/project-story', item.id]"><img
+            class="myImage" src="{{ item.image }}" alt=""></a>
       </div>
       <div class="dz-info">
         <ul class="dz-category">
           <li><a href="javascript:void(0);">{{ item.type | uppercase }}</a></li>
         </ul>
-        <h5 class="dz-title"><a [routerLink]="['/fundraiser-detail', item.id]">{{ item.title }}</a></h5>
+        <h5 class="dz-title"><a
+            [routerLink]="item.isEvent ? ['/fundraiser-detail', item.id] : ['/project-story', item.id]">{{
+            item.title }}</a></h5>
         <p class="dz-text">{{ item.abstract }}</p>
         <div class="progress-bx style-1">
           <!-- <div class="progress">

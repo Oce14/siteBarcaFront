@@ -2,6 +2,7 @@
     "event": [
         {
             "id": 1,
+            "isEvent": true,
             "image": "assets/images/project/project1/6/pic2.jpg",
             "type": "VENTE",
             "title": "Vente de gingembre et de bissap",
@@ -14,6 +15,7 @@
         },
         {
             "id": 2,
+            "isEvent": true,
             "image": "assets/images/project/project1/2/pic2.jpg",
             "type": "VENTE",
             "title": "Achat de bissap et gingembre",
@@ -26,6 +28,7 @@
         },
         {
             "id": 3,
+            "isEvent": true,
             "image": "assets/images/project/project1/3/pic1.jpg",
             "type": "Porte ouverte La Rejoinère",
             "title": "Vente de produits burkinabé",
@@ -38,6 +41,7 @@
         },
         {
             "id": 4,
+            "isEvent": true,
             "image": "assets/images/project/project1/4/pic1.jpg",
             "type": "VENTE",
             "title": "Vente de mangue et papaye séchées",
@@ -50,6 +54,7 @@
         },
         {
             "id": 5,
+            "isEvent": true,
             "image": "assets/images/project/project1/7/pic1.jpg",
             "type": "VENTE",
             "title": "Vente de tee-shirts et cartes postales",
@@ -62,6 +67,7 @@
         },
         {
             "id": 6,
+            "isEvent": true,
             "image": "assets/images/project/project1/10/pic1.jpg",
             "type": "EVENEMENT",
             "title": "Diner",
@@ -74,6 +80,7 @@
         },
         {
             "id": 7,
+            "isEvent": true,
             "image": "assets/images/project/project1/8/pic3.jpg",
             "type": "EVENEMENT",
             "title": "Présentation de l'association",
@@ -86,6 +93,7 @@
         },
         {
             "id": 8,
+            "isEvent": true,
             "image": "assets/images/project/project1/11/pic38.jpg",
             "type": "EVENEMENT",
             "title": "Spectacle",
@@ -98,6 +106,7 @@
         },
         {
             "id": 9,
+            "isEvent": true,
             "image": "assets/images/project/project1/9/pic62.jpg",
             "type": "EVENEMENT",
             "title": "Repas",

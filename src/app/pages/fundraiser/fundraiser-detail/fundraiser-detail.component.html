@@ -19,38 +19,34 @@
 
 							<app-gallery-swiper [data]="swiperItem"></app-gallery-swiper>
 
-							<h2 class="title">Schooling Special Needs Children Education</h2>
+							<h2 class="title">{{ event.title }}</h2>
+							<p>{{ event.abstract }}</p>
+							<p>{{ event.description }}</p>
+							<!-- <h5>About the Fundraiser</h5>
 							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-							<h5>About the Fundraiser</h5>
-							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p> -->
 							<ul class="fundraiser-bottom">
-								<li>
+								<!-- <li>
 									<a href="javascript:void(0);" class="btn btn-primary btn-sm me-1"
 										(click)="modalDonate(content)"><i class="flaticon-like me-2"></i> Donate Now
 									</a>
-								</li>
+								</li> -->
 								<li>
 									<a href="https://www.facebook.com/login/" target="_blank"
 										class="btn facebook btn-primary btn-sm me-1"><i
-											class="fa-brands fa-facebook-square me-2"></i> Spread The World</a>
+											class="fa-brands fa-facebook-square me-2"></i> Partager</a>
 								</li>
 								<li>
 									<a href="https://web.whatsapp.com/" target="_blank"
 										class="btn whatsapp btn-primary btn-sm"><i
-											class="fa-brands fa-whatsapp me-2"></i>Share</a>
+											class="fa-brands fa-whatsapp me-2"></i>Partager</a>
 								</li>
 							</ul>
 						</div>
 
 						<!-- Widget Refer -->
-						<div class="widget style-1 widget_refer">
+						<!-- <div class="widget style-1 widget_refer">
 							<div class="widget-title">
 								<h4 class="title">Refer a Friend</h4>
 							</div>
@@ -58,10 +54,10 @@
 								and Akcel will get in touch with.</p>
 							<a href="javascript:void(0);" class="btn btn-outline-primary"
 								(click)="modalDonate(modalRefer)">Refer Now</a>
-						</div>
+						</div> -->
 
 						<!-- Comment List -->
-						<app-blog-comments></app-blog-comments>
+						<!-- <app-blog-comments></app-blog-comments> -->
 
 					</div>
 					<div class="col-xl-4 col-lg-4">
@@ -70,19 +66,19 @@
 							<div class="widget style-1 widget_donate">
 								<a href="javascript:void(0);" class="btn btn-donate btn-primary w-100"
 									(click)="modalDonate(content)">
-									<i class="flaticon-like me-3"></i> Donate Now </a>
-								<div class="tagcloud">
+									<i class="flaticon-like me-3"></i> Faire un don </a>
+								<!-- <div class="tagcloud">
 									<a href="javascript:void(0);" (click)="modalDonate(content)">Cards</a>
 									<a href="javascript:void(0);" (click)="modalDonate(content)">Net Banking</a>
 									<a href="javascript:void(0);" (click)="modalDonate(content)">UPI</a>
-								</div>
+								</div> -->
 								<a href="https://www.facebook.com/" target="_blank"
 									class="btn btn-primary facebook w-100 btn-bottom">
-									<i class="fa-brands fa-facebook-square me-2"></i> Spread The World</a>
+									<i class="fa-brands fa-facebook-square me-2"></i>Partager</a>
 							</div>
 
 							<!--  Widget Fund -->
-							<div class="widget style-1 widget_fund">
+							<!-- <div class="widget style-1 widget_fund">
 								<h3 class="title">₹ 45,00,000</h3>
 								<p>raised of <span>₹ 50,00,000</span> goal</p>
 								<div class="progress-bx style-1">
@@ -100,49 +96,37 @@
 										<h5>52</h5><span class="ms-2">days left</span>
 									</li>
 								</ul>
-							</div>
+							</div> -->
 
 							<!-- Fundraiser Post -->
 							<div class="widget style-1 recent-posts-entry">
 								<div class="widget-title">
-									<h5 class="title">Fundraiser Post</h5>
+									<h5 class="title">Recents Evenements</h5>
 								</div>
 								<div class="widget-post-bx">
+									@for(item of topTreeEvents; track item){
 									<div class="widget-post clearfix">
 										<div class="dz-media">
-											<img src="assets/images/blog/recent-blog/pic1.jpg" alt="">
+											<img src={{item.image}} alt="">
 										</div>
 										<div class="dz-info">
-											<h6 class="title"><a [routerLink]="['/blog-details']">How To Teach Education
-													Like A Pro.</a></h6>
+											<h6 class="title"><a [routerLink]="['/fundraiser-detail', item.id]">{{
+													item.title }}</a>
+											</h6>
 											<div class="dz-meta">
 												<ul>
-													<li class="post-date"><i class="flaticon-placeholder"></i>
-														Coimbatore</li>
+													<li class="post-date">
+														{{ item.date }}</li>
 												</ul>
 											</div>
 										</div>
 									</div>
-									<div class="widget-post clearfix">
-										<div class="dz-media">
-											<img src="assets/images/blog/recent-blog/pic2.jpg" alt="">
-										</div>
-										<div class="dz-info">
-											<h6 class="title"><a [routerLink]="['/blog-details']">Quick and Easy Fix For
-													Your Education.</a></h6>
-											<div class="dz-meta">
-												<ul>
-													<li class="post-date"><i class="flaticon-placeholder"></i>
-														Coimbatore</li>
-												</ul>
-											</div>
-										</div>
-									</div>
+									}
 								</div>
 							</div>
 
 							<!-- Fundraising Team -->
-							<div class="widget style-1 widget_avatar">
+							<!-- <div class="widget style-1 widget_avatar">
 								<div class="widget-title">
 									<h5 class="title">Fundraising Team</h5>
 								</div>
@@ -180,9 +164,9 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<!-- Top Donors -->
-							<div class="widget style-1 widget_avatar">
+							<!-- <div class="widget style-1 widget_avatar">
 								<div class="widget-title">
 									<h5 class="title">Top Donors</h5>
 								</div>
@@ -224,7 +208,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</aside>
 					</div>
 				</div>
