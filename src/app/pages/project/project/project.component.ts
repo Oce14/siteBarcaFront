@@ -82,14 +82,14 @@ export class ProjectComponent {
   private iso: any;
   activeFilter: string = '*';
 
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.iso = new Isotope('.masonry-grid', {
-        itemSelector: '.grid-item',
-        layoutMode: 'fitRows'
-      });
-    }, 1000);
-  }
+  // ngAfterViewInit(): void {
+  //   setTimeout(() => {
+  //     this.iso = new Isotope('.masonry-grid', {
+  //       itemSelector: '.grid-item',
+  //       layoutMode: 'fitRows'
+  //     });
+  //   }, 1000);
+  // }
 
   filterItems(filter: string): void {
     this.activeFilter = filter;
