@@ -36,20 +36,20 @@ import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.co
 })
 export class BlogComponent implements OnInit {
 
-  steps: any[] = [];
+  posts: any[] = [];
   listData: any[] = [];
-  mostRecentStep: any | null = null;
-  secondMostRecentStep: any | null = null;
+  mostRecentPost: any | null = null;
+  secondMostRecentPost: any | null = null;
 
   constructor(private dataService: DataService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.dataService.getSteps().subscribe(data => {
-      this.steps = data;
-      const { mostRecent, secondMostRecent } = this.findMostRecentSteps(this.steps);
-      this.mostRecentStep = mostRecent;
-      this.secondMostRecentStep = secondMostRecent;
-      this.listData = this.sortByMostRecent(this.steps);
+    this.dataService.getPosts().subscribe(data => {
+      this.posts = data;
+      const { mostRecent, secondMostRecent } = this.findMostRecentPosts(this.posts);
+      this.mostRecentPost = mostRecent;
+      this.secondMostRecentPost = secondMostRecent;
+      this.listData = this.sortByMostRecent(this.posts);
     });
   }
 
@@ -159,20 +159,20 @@ export class BlogComponent implements OnInit {
   //   },
   // ]
 
-  findMostRecentSteps(steps: any[]): any | null {
+  findMostRecentPosts(posts: any[]): any | null {
     const today = new Date();
 
-    const sortedSteps = steps
-      .filter(step => new Date(step.date) <= today)
+    const sortedPosts = posts
+      .filter(post => new Date(post.date) <= today)
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-    const mostRecent = sortedSteps[0] || null;
-    const secondMostRecent = sortedSteps[1] || null;
+    const mostRecent = sortedPosts[0] || null;
+    const secondMostRecent = sortedPosts[1] || null;
 
     return { mostRecent, secondMostRecent };
   }
 
-  sortByMostRecent(steps: any[]): any[] {
-    return steps.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  sortByMostRecent(posts: any[]): any[] {
+    return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }
 }

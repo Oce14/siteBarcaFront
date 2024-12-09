@@ -44,10 +44,10 @@
             <h4 class="widget-title">Récentes Avancées</h4>
             <div class="separator-2 bg-secondary m-b30"></div>
             <div class="widget-post-bx">
-              @for (item of topTwoSteps; track topTwoSteps) {
+              @for (item of topTwoPosts; track topTwoPosts) {
               <div class="widget-post clearfix">
                 <div class="dz-info">
-                  <h6 class="title"><a [routerLink]="['/step', item.id]">{{ item.title }}</a></h6>
+                  <h6 class="title"><a [routerLink]="['/post', item.id]">{{ item.title }}</a></h6>
                   <span class="post-date">{{ item.date }}</span>
                 </div>
               </div>

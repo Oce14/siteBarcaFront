@@ -4,11 +4,11 @@
     <div class="swiper-slide">
       <div class="dz-card style-1">
         <div class="dz-media">
-          <a [routerLink]="['/step', item.id]"><img src="{{ item.blogPostImage }}" alt=""></a>
+          <a [routerLink]="['/post', item.id]"><img src="{{ item.blogPostImage }}" alt=""></a>
           <ul class="dz-badge-list">
             <li><a href="javascript:void(0);" class="dz-badge">{{ item.type }}</a></li>
           </ul>
-          <a [routerLink]="['/step', item.id]" class="btn btn-secondary">Read More</a>
+          <a [routerLink]="['/post', item.id]" class="btn btn-secondary">Read More</a>
         </div>
         <div class="author-wrappper">
           <!-- <div class="author-media">
@@ -24,7 +24,7 @@
           </div>
         </div>
         <div class="dz-info">
-          <h5 class="dz-title"><a [routerLink]="['/step', item.id]">{{ item.title }}</a></h5>
+          <h5 class="dz-title"><a [routerLink]="['/post', item.id]">{{ item.title }}</a></h5>
           <p>{{ item.abstract }}</p>
 
 

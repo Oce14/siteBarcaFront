@@ -5,13 +5,13 @@
     <div class="swiper-slide">
       <div class="dz-card style-2 overlay-skew">
         <div class="dz-media">
-          <a [routerLink]="['/step', item.id]"><img src="{{ item.image }}" alt=""></a>
+          <a [routerLink]="['/post', item.id]"><img src="{{ item.image }}" alt=""></a>
         </div>
         <div class="dz-info">
           <ul class="dz-category">
             <li><a href="javascript:void(0);">{{ item.type | uppercase }}</a></li>
           </ul>
-          <h5 class="dz-title"><a [routerLink]="['/step', item.id]">{{ item.title }}</a>
+          <h5 class="dz-title"><a [routerLink]="['/post', item.id]">{{ item.title }}</a>
           </h5>
           <div class="progress-bx style-1">
             <!-- <div class="progress">
@@ -33,7 +33,7 @@
           <div class="footer-bottom d-flex">
             <a href="javascript:void(0);" class="btn btn-sm btn-secondary btn-rounded me-3 bookmark-btn"
               (click)="openModal(modalDonate)"><i class="flaticon-like"></i></a>
-            <a [routerLink]="['/step', item.id]" class="btn btn-primary btn-rounded btn-block">Faire un don</a>
+            <a [routerLink]="['/post', item.id]" class="btn btn-primary btn-rounded btn-block">Faire un don</a>
           </div>
         </div>
       </div>

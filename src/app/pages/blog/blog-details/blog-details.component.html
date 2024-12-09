@@ -12,12 +12,12 @@
 					<div class="col-xl-8 col-lg-8 m-b30">
 						<div class="dz-card blog-single sidebar">
 							<div class="dz-media">
-								<img src="{{ step.blogPostImage }}" alt="">
+								<img src="{{ post.blogPostImage }}" alt="">
 							</div>
 							<div class="dz-info">
 								<div class="dz-meta">
 									<ul>
-										<li class="post-date"><i class="fa-solid fa-calendar-days"></i> {{ step.date }}
+										<li class="post-date"><i class="fa-solid fa-calendar-days"></i> {{ post.date }}
 										</li>
 										<!-- <li class="post-author ms-1"><a href="javascript:void(0);"><i
 													class="fa-solid fa-user"></i> By Johne Doe</a></li> -->
@@ -25,9 +25,9 @@
 								</div>
 								<div class="dz-post-text">
 
-									<h1 class="dz-title">{{ step.title }}</h1>
+									<h1 class="dz-title">{{ post.title }}</h1>
 
-									<p>{{ step.description }}</p>
+									<p>{{ post.description }}</p>
 									<!-- <ul class="wp-block-gallery columns-3">
 										<li class="blocks-gallery-item"><img alt=""
 												src="assets/images/blog/blog-grid/pic2.jpg"></li>
@@ -71,13 +71,15 @@
 								<div class="dz-social-icon">
 									<h6 class="title">Share:</h6>
 									<ul>
-										<li><a class="fab fa-facebook-f me-1" href="javascript:void(0);"></a></li>
-										<li><a class="fab fa-instagram me-1" href="javascript:void(0);"></a></li>
-										<li><a class="fab fa-twitter" href="javascript:void(0);"></a></li>
+										<li><a class="fab fa-facebook-f me-1"
+												href="https://www.facebook.com/barcaburkina/"></a></li>
+										<li><a class="fab fa-instagram me-1"
+												href="https://www.instagram.com/barcaburkina/"></a></li>
+										<!-- <li><a class="fab fa-twitter" href="javascript:void(0);"></a></li> -->
 									</ul>
 								</div>
 								<div class="post-tags">
-									<a href="javascript:void(0);">#{{ step.type }}</a>
+									<a href="javascript:void(0);">#{{ post.type }}</a>
 									<!-- <a href="javascript:void(0);">#Software</a>
 									<a href="javascript:void(0);">#Technology</a> -->
 								</div>
@@ -136,9 +138,9 @@
 		<section class="content-inner-3">
 			<div class="container">
 				<div class="section-head">
-					<h2 class="title">Réalisations en lien avec {{ step.type }}</h2>
+					<h2 class="title">Réalisations en lien avec {{ post.type }}</h2>
 				</div>
-				<app-blog-slider-2-swiper [data]="filteredSteps"></app-blog-slider-2-swiper>
+				<app-blog-slider-2-swiper [data]="filteredPosts"></app-blog-slider-2-swiper>
 			</div>
 		</section>
 		<!-- Our Blog  -->

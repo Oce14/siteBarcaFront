@@ -1,0 +1,17 @@
+.myImage {
+    width: 100% !important;
+    height: 100px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+}
+
+.dz-media {
+    img {
+        width: 100% !important;
+        height: 100px !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+    }
+}

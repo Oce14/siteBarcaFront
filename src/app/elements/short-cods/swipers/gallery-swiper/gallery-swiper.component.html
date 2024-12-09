@@ -1,31 +1,18 @@
 <div class="custom-swiper fundraiser-gallery-wrapper">
-  <swiper
-      style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff"
-      [spaceBetween]="0"
-      [navigation]="true"
-      [loop]="false"
-      [thumbs]="{ swiper: thumbsSwiper }"
-      class="fundraiser-gallery-swiper"
-      >
-      <ng-template swiperSlide *ngFor="let item of data">
-          <div class="dz-media">
-              <img src="{{ item.img }}" alt="">
-          </div>
-      </ng-template>
+  <swiper style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff" [spaceBetween]="0" [navigation]="true"
+    [loop]="false" [thumbs]="{ swiper: thumbsSwiper }" class="fundraiser-gallery-swiper">
+    <ng-template swiperSlide *ngFor="let item of data">
+      <div class="dz-media">
+        <img class="myImage" src="{{ item.img }}" alt="">
+      </div>
+    </ng-template>
   </swiper>
-  <swiper
-      (swiper)="thumbsSwiper = $event"
-      [spaceBetween]="10"
-      [freeMode]="true"
-      [loop]="false"
-      [slidesPerView]="4"
-      [watchSlidesProgress]="false"
-      class="fundraiser-gallery-thumb"
-      >
-      <ng-template swiperSlide *ngFor="let item of data">
-        <div class="dz-media">
-          <img src="{{ item.img }}" alt="">
-        </div>
-      </ng-template>
+  <swiper *ngIf="data.length > 1" (swiper)="thumbsSwiper = $event" [spaceBetween]="10" [freeMode]="true" [loop]="false"
+    [slidesPerView]="4" [watchSlidesProgress]="false" class="fundraiser-gallery-thumb">
+    <ng-template swiperSlide *ngFor="let item of data">
+      <div class="dz-media">
+        <img class="myImage2" src="{{ item.img }}" alt="">
+      </div>
+    </ng-template>
   </swiper>
 </div>

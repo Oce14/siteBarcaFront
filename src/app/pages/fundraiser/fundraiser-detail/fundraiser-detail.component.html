@@ -17,7 +17,7 @@
 					<div class="col-xl-8 col-lg-8 m-b30">
 						<div class="fundraiser-single">
 
-							<app-gallery-swiper [data]="swiperItem"></app-gallery-swiper>
+							<app-gallery-swiper [data]="event.swiperImg"></app-gallery-swiper>
 
 							<h2 class="title">{{ event.title }}</h2>
 							<p>{{ event.abstract }}</p>
@@ -33,15 +33,15 @@
 									</a>
 								</li> -->
 								<li>
-									<a href="https://www.facebook.com/login/" target="_blank"
+									<a href="https://www.facebook.com/barcaburkina/" target="_blank"
 										class="btn facebook btn-primary btn-sm me-1"><i
 											class="fa-brands fa-facebook-square me-2"></i> Partager</a>
 								</li>
-								<li>
+								<!-- <li>
 									<a href="https://web.whatsapp.com/" target="_blank"
 										class="btn whatsapp btn-primary btn-sm"><i
 											class="fa-brands fa-whatsapp me-2"></i>Partager</a>
-								</li>
+								</li> -->
 							</ul>
 						</div>
 
@@ -72,7 +72,7 @@
 									<a href="javascript:void(0);" (click)="modalDonate(content)">Net Banking</a>
 									<a href="javascript:void(0);" (click)="modalDonate(content)">UPI</a>
 								</div> -->
-								<a href="https://www.facebook.com/" target="_blank"
+								<a href="https://www.facebook.com/barcaburkina/" target="_blank"
 									class="btn btn-primary facebook w-100 btn-bottom">
 									<i class="fa-brands fa-facebook-square me-2"></i>Partager</a>
 							</div>
@@ -107,7 +107,7 @@
 									@for(item of topTreeEvents; track item){
 									<div class="widget-post clearfix">
 										<div class="dz-media">
-											<img src={{item.image}} alt="">
+											<img class="myImage" src={{item.image}} alt="">
 										</div>
 										<div class="dz-info">
 											<h6 class="title"><a [routerLink]="['/fundraiser-detail', item.id]">{{

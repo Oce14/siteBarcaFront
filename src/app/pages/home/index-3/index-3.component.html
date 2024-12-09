@@ -1,92 +1,92 @@
-
 <div class="page-wraper page-wraper-sidebar">
-	<div class="page-sidebar">
-		<ul class="dz-social">
-			<li><a target="_blank" href="https://www.facebook.com/">Facebook</a></li>
-			<li><a target="_blank" href="https://twitter.com/">Twitter</a></li>
-			<li><a target="_blank" href="https://www.linkedin.com/">Linkedin</a></li>
-		</ul>
-		<a href="javascript:void(0);" class="btn-bottom btn btn-primary light" (click)="openModal(modalDonate)">Donate Now</a>
-	</div>
-	<!-- Header -->
+  <div class="page-sidebar">
+    <ul class="dz-social">
+      <li><a target="_blank" href="https://www.facebook.com/barcaburkina/">Facebook</a></li>
+      <!-- <li><a target="_blank" href="https://twitter.com/">Twitter</a></li>
+			<li><a target="_blank" href="https://www.linkedin.com/">Linkedin</a></li> -->
+    </ul>
+    <a href="javascript:void(0);" class="btn-bottom btn btn-primary light" (click)="openModal(modalDonate)">Donate
+      Now</a>
+  </div>
+  <!-- Header -->
   <app-header-2 [headerClass]="headerClass"></app-header-2>
-	<!-- Header End -->
+  <!-- Header End -->
 
-	<div class="page-content bg-white">
+  <div class="page-content bg-white">
 
-		<!-- Banner -->
-		<app-banner-3></app-banner-3>
+    <!-- Banner -->
+    <app-banner-3></app-banner-3>
 
-		<!-- Trending Fundraisers -->
-		<app-course-2></app-course-2>
-		<!-- Online Courses End -->
+    <!-- Trending Fundraisers -->
+    <app-course-2></app-course-2>
+    <!-- Online Courses End -->
 
-		<!-- About Us -->
-		<app-about-us-2></app-about-us-2>
-		<!-- About Us -->
+    <!-- About Us -->
+    <app-about-us-2></app-about-us-2>
+    <!-- About Us -->
 
-		<!-- Services -->
-		<app-service-2></app-service-2>
-		<!-- Services -->
+    <!-- Services -->
+    <app-service-2></app-service-2>
+    <!-- Services -->
 
-		<!-- vedio-bx -->
-		<app-content-3></app-content-3>
-		<!-- vedio-bx -->
+    <!-- vedio-bx -->
+    <app-content-3></app-content-3>
+    <!-- vedio-bx -->
 
-		<!-- Testimonial Start -->
-		<app-testimonial-3 [data]="testimonial"></app-testimonial-3>
-		<!-- Testimonial End -->
+    <!-- Testimonial Start -->
+    <app-testimonial-3 [data]="testimonial"></app-testimonial-3>
+    <!-- Testimonial End -->
 
-		<!-- Join Form Start -->
-		<app-form-1></app-form-1>
-		<!-- Join Form End -->
+    <!-- Join Form Start -->
+    <app-form-1></app-form-1>
+    <!-- Join Form End -->
 
-		<!-- Our Blog  -->
-		<section class="content-inner">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-8 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
-						<div class="section-head">
-							<h2 class="title">Latest News Feed</h2>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 m-b30 text-end d-none d-lg-block wow fadeInUp" data-wow-delay="0.4s">
-						<a [routerLink]="['/blog-grid']" class="btn btn-primary">All Blogs</a>
-					</div>
-				</div>
-			</div>
-			<div class="container position-relative">
-				<app-blog-slider-3-swiper [data]="blogData"></app-blog-slider-3-swiper>
-			</div>
-		</section>
-		<!-- Our Blog End  -->
+    <!-- Our Blog  -->
+    <section class="content-inner">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="section-head">
+              <h2 class="title">Latest News Feed</h2>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 m-b30 text-end d-none d-lg-block wow fadeInUp" data-wow-delay="0.4s">
+            <a [routerLink]="['/blog-grid']" class="btn btn-primary">All Blogs</a>
+          </div>
+        </div>
+      </div>
+      <div class="container position-relative">
+        <app-blog-slider-3-swiper [data]="blogData"></app-blog-slider-3-swiper>
+      </div>
+    </section>
+    <!-- Our Blog End  -->
 
-		<hr class="container">
+    <hr class="container">
 
-		<!-- Donate Charity -->
-		<section class="content-inner-3">
-			<div class="container">
-				<div class="section-head text-center m-b30 wow fadeInUp" data-wow-delay="0.2s">
-					<h2 class="title text-capitalize">Donate to charity projects <br>around the world</h2>
-				</div>
-				<div class="text-center wow fadeInUp" data-wow-delay="0.4s">
-					<a [routerLink]="['/become-a-fundraiser']" class="btn btn-primary">View All Feed</a>
-				</div>
-			</div>
-		</section>
-		<!-- Donate Charity -->
+    <!-- Donate Charity -->
+    <section class="content-inner-3">
+      <div class="container">
+        <div class="section-head text-center m-b30 wow fadeInUp" data-wow-delay="0.2s">
+          <h2 class="title text-capitalize">Donate to charity projects <br>around the world</h2>
+        </div>
+        <div class="text-center wow fadeInUp" data-wow-delay="0.4s">
+          <a [routerLink]="['/become-a-fundraiser']" class="btn btn-primary">View All Feed</a>
+        </div>
+      </div>
+    </section>
+    <!-- Donate Charity -->
 
-		<!-- Client Logo -->
-		<div class="clients-wrapper">
-			<div class="container">
+    <!-- Client Logo -->
+    <div class="clients-wrapper">
+      <div class="container">
         <app-clients-swiper></app-clients-swiper>
-			</div>
-		</div>
-		<!-- Client Logo -->
+      </div>
+    </div>
+    <!-- Client Logo -->
 
-	</div>
+  </div>
 
-	<!-- Footer -->
+  <!-- Footer -->
   <app-footer-3></app-footer-3>
   <!-- Footer End -->
 
@@ -95,17 +95,19 @@
 
 <ng-template #modalDonate let-modal>
   <div class="modal-header">
-		<h5 class="modal-title">Choose a donation amount</h5>
-		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"><i class="flaticon-close"></i></button>
-	</div>
-	<div class="modal-body">
+    <h5 class="modal-title">Choose a donation amount</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"><i
+        class="flaticon-close"></i></button>
+  </div>
+  <div class="modal-body">
     <form class="p-0" action="">
       <div class="row">
         <div class="col-lg-12">
           <div class="tag-donate style-1">
             <div class="donate-categories">
               <div class="form-check">
-                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault" name="flexRadioDefault" value="500" id="flexRadioDefault11">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault"
+                  name="flexRadioDefault" value="500" id="flexRadioDefault11">
                 <label class="form-check-label" for="flexRadioDefault11">
                   $500
                 </label>
@@ -113,7 +115,8 @@
             </div>
             <div class="donate-categories">
               <div class="form-check">
-                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault" value="1000"  name="flexRadioDefault2" id="flexRadioDefault22">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault"
+                  value="1000" name="flexRadioDefault2" id="flexRadioDefault22">
                 <label class="form-check-label" for="flexRadioDefault22">
                   $1000
                 </label>
@@ -121,7 +124,8 @@
             </div>
             <div class="donate-categories">
               <div class="form-check">
-                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault" value="2000"  name="flexRadioDefault3" id="flexRadioDefault33">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault"
+                  value="2000" name="flexRadioDefault3" id="flexRadioDefault33">
                 <label class="form-check-label" for="flexRadioDefault33">
                   $2000
                 </label>
@@ -129,7 +133,8 @@
             </div>
             <div class="donate-categories">
               <div class="form-check">
-                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault" value="5000"  name="flexRadioDefault4" id="flexRadioDefault44">
+                <input class="form-check-input" type="radio" [(ngModel)]="modalDonateSelect.flexRadioDefault"
+                  value="5000" name="flexRadioDefault4" id="flexRadioDefault44">
                 <label class="form-check-label" for="flexRadioDefault44">
                   $5000
                 </label>
@@ -142,7 +147,7 @@
           <div class="form-group">
             <label class="form-label">Other Amount</label>
             <div class="input-group">
-              <input type="number" class="form-control"  placeholder="Other Amount">
+              <input type="number" class="form-control" placeholder="Other Amount">
             </div>
           </div>
         </div>

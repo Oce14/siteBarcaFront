@@ -63,10 +63,10 @@ interface typeofList {
   styleUrl: './index-2.component.css'
 })
 export class Index2Component {
-  steps: any[] = [];
+  posts: any[] = [];
   blogList: any[] = [];
-  mostRecentStep: any | null = null;
-  secondMostRecentStep: any | null = null;
+  mostRecentPost: any | null = null;
+  secondMostRecentPost: any | null = null;
 
 
   @Input() dataList: any | null = null;
@@ -81,12 +81,12 @@ export class Index2Component {
 
   ngOnInit(): void {
     this.setCurrentYear();
-    this.dataService.getSteps().subscribe(data => {
-      this.steps = data;
-      const { mostRecent, secondMostRecent } = this.findMostRecentSteps(this.steps);
-      this.mostRecentStep = mostRecent;
-      this.secondMostRecentStep = secondMostRecent;
-      this.blogList = this.getSecondAndThirdMostRecent(this.steps);
+    this.dataService.getPosts().subscribe(data => {
+      this.posts = data;
+      const { mostRecent, secondMostRecent } = this.findMostRecentPosts(this.posts);
+      this.mostRecentPost = mostRecent;
+      this.secondMostRecentPost = secondMostRecent;
+      this.blogList = this.getSecondAndThirdMostRecent(this.posts);
     });
   }
   setCurrentYear = () => {
@@ -166,21 +166,21 @@ export class Index2Component {
     }
   ];
 
-  findMostRecentSteps(steps: any[]): any | null {
+  findMostRecentPosts(posts: any[]): any | null {
     const today = new Date();
 
-    const sortedSteps = steps
-      .filter(step => new Date(step.date) <= today)
+    const sortedPosts = posts
+      .filter(post => new Date(post.date) <= today)
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-    const mostRecent = sortedSteps[0] || null;
-    const secondMostRecent = sortedSteps[1] || null;
+    const mostRecent = sortedPosts[0] || null;
+    const secondMostRecent = sortedPosts[1] || null;
 
     return { mostRecent, secondMostRecent };
   }
 
-  sortByMostRecent(steps: any[]): any[] {
-    return steps.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  sortByMostRecent(posts: any[]): any[] {
+    return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }
 
   getSecondAndThirdMostRecent(events: any[]): any[] {

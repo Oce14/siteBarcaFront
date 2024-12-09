@@ -18,21 +18,21 @@
 							<div class="dz-media">
 								<img src="assets/images/blog/blog-grid/pic2.jpg" alt="">
 							</div>
-							<div *ngIf="secondMostRecentStep">
+							<div *ngIf="secondMostRecentPost">
 								<div class="dz-info">
 									<div class="dz-category">
 										<ul>
-											<li><a href="javascript:void(0);">{{ secondMostRecentStep.type }}</a></li>
+											<li><a href="javascript:void(0);">{{ secondMostRecentPost.type }}</a></li>
 										</ul>
 									</div>
 
 									<h5 class="dz-title">
-										<a [routerLink]="['/step', secondMostRecentStep.id]" class="text-white">
-											{{ secondMostRecentStep.title }}
+										<a [routerLink]="['/post', secondMostRecentPost.id]" class="text-white">
+											{{ secondMostRecentPost.title }}
 										</a>
 									</h5>
 								</div>
-								<div *ngIf="!secondMostRecentStep">
+								<div *ngIf="!secondMostRecentPost">
 									<p>Aucun post disponible.</p>
 									console.log("Aucun post disponible.");
 								</div>
@@ -44,21 +44,21 @@
 							<div class="dz-media">
 								<img src="assets/images/blog/blog-grid/pic6.jpg" alt="">
 							</div>
-							<div *ngIf="mostRecentStep">
+							<div *ngIf="mostRecentPost">
 								<div class="dz-info">
 									<div class="dz-category">
 										<ul>
-											<li><a href="javascript:void(0);">{{ mostRecentStep.type }}</a></li>
+											<li><a href="javascript:void(0);">{{ mostRecentPost.type }}</a></li>
 										</ul>
 									</div>
 
 									<h5 class="dz-title">
-										<a [routerLink]="['/step', mostRecentStep.id]" class="text-white">
-											{{ mostRecentStep.title }}
+										<a [routerLink]="['/post', mostRecentPost.id]" class="text-white">
+											{{ mostRecentPost.title }}
 										</a>
 									</h5>
 								</div>
-								<div *ngIf="!mostRecentStep">
+								<div *ngIf="!mostRecentPost">
 									<p>Aucun post disponible.</p>
 									console.log("Aucun post disponible.");
 								</div>
@@ -99,7 +99,7 @@
 				<!-- list -->
 				<div class="row">
 					<div class="col-12 m-sm-t0 m-t30">
-						<app-pagination></app-pagination>
+						<!-- <app-pagination></app-pagination> -->
 					</div>
 				</div>
 			</div>

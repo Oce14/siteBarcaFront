@@ -42,10 +42,10 @@ interface typeofList {
 })
 export class BlogDetailsComponent implements OnInit {
 
-  step: any;
-  stepType: string = '';
-  steps: any[] = [];
-  filteredSteps: any[] = [];
+  post: any;
+  postType: string = '';
+  posts: any[] = [];
+  filteredPosts: any[] = [];
   loaded: boolean = false;
 
   constructor(private dataService: DataService, private route: ActivatedRoute) { }
@@ -53,26 +53,26 @@ export class BlogDetailsComponent implements OnInit {
   ngOnInit(): void {
 
     this.route.params.subscribe(params => {
-      const stepId = Number(params['id']);
-      this.dataService.getStepById(stepId).subscribe(data => {
-        this.step = data;
+      const postId = Number(params['id']);
+      this.dataService.getPostById(postId).subscribe(data => {
+        this.post = data;
         this.loaded = true;
 
-        if (this.step) {
-          this.stepType = this.step.type;
+        if (this.post) {
+          this.postType = this.post.type;
         }
       });
-      this.dataService.getSteps().subscribe(data => {
-        this.steps = data;
-        this.filteredSteps = this.getStepsByType(this.stepType);
-        console.log(this.filteredSteps);
+      this.dataService.getPosts().subscribe(data => {
+        this.posts = data;
+        this.filteredPosts = this.getPostsByType(this.postType);
+        console.log(this.filteredPosts);
       });
     });
 
   }
 
 
-  getStepsByType(type: string): any[] {
-    return this.steps.filter(steps => steps.type === type);
+  getPostsByType(type: string): any[] {
+    return this.posts.filter(posts => posts.type === type);
   }
 }

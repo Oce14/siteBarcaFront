@@ -1,5 +1,6 @@
 import { NgFor } from "@angular/common";
 import { Component, Input } from "@angular/core";
+import { CommonModule } from '@angular/common';
 // import Swiper core and required modules
 import SwiperCore, { FreeMode, Navigation, Thumbs } from "swiper";
 import { SwiperModule } from "swiper/angular";
@@ -16,6 +17,7 @@ interface type {
   standalone: true,
   imports: [
     NgFor,
+    CommonModule,
     SwiperModule
   ],
   templateUrl: './gallery-swiper.component.html',

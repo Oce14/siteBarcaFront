@@ -27991,6 +27991,7 @@ ul a.rsswidget:hover {
 }
 
 .recent-posts-entry.style-1 .widget-post-bx .widget-post .dz-media {
+  height: 60px !important;
   width: 80px;
   min-width: 80px;
   -webkit-transition: all 0.5s;

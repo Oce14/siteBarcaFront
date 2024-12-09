@@ -11,15 +11,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CategoriesComponent {
   // @Input() data: any | null = null;
-  steps: any[] = [];
+  posts: any[] = [];
   categories: { type: string; count: number }[] = [];
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.dataService.getSteps().subscribe(data => {
-      this.steps = data;
-      this.categories = this.countPostsByType(this.steps);
+    this.dataService.getPosts().subscribe(data => {
+      this.posts = data;
+      this.categories = this.countPostsByType(this.posts);
 
     });
   }
@@ -27,7 +27,7 @@ export class CategoriesComponent {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['data'] && changes['data'].currentValue) {
-      this.categories = this.countPostsByType(this.steps);
+      this.categories = this.countPostsByType(this.posts);
     }
   }
 
