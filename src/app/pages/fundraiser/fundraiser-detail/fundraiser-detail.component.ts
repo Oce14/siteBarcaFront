@@ -12,6 +12,7 @@ import { GallerySwiperComponent } from '../../../elements/short-cods/swipers/gal
 import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
 import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
 import { DataService } from '../../../../shared/service/data';
+import { PopUpHelloAssoComponent } from "../../../elements/pop-up-hello-asso/pop-up-hello-asso.component";
 
 @Component({
   selector: 'app-fundraiser-detail',
@@ -28,7 +29,8 @@ import { DataService } from '../../../../shared/service/data';
     Footer1Component,
     ScrollTopButtonComponent,
     Header2Component,
-    Footer2Component
+    Footer2Component,
+    PopUpHelloAssoComponent
   ],
   templateUrl: './fundraiser-detail.component.html',
   styleUrl: './fundraiser-detail.component.css'
@@ -81,7 +83,7 @@ export class FundraiserDetailComponent {
   }
 
   bennre = {
-    bgImage: 'assets/images/banner/bnr4.jpg',
+    bgImage: 'assets/images/banner/bnr3.jpg',
     title: 'Détails de l\'événement',
     classAdd: 'dz-bnr-inr-sm'
   }

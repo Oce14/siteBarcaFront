@@ -3,7 +3,13 @@
         {
             "id": 1,
             "isEvent": false,
-            "image": "assets/images/blog/blog-grid/pic4.jpg",
+            "image": "assets/images/blog/ia/1.webp",
+            "images": [
+                {
+                    "id": 1,
+                    "img": "assets/images/blog/ia/1.webp"
+                }
+            ],
             "type": "Éducation",
             "date": "2027-06-30",
             "title": "Acheter des ordinateurs pour les cours à distance",
@@ -13,7 +19,13 @@
         {
             "id": 2,
             "isEvent": false,
-            "image": "assets/images/blog/blog-grid/pic4.jpg",
+            "image": "assets/images/blog/ia/2.webp",
+            "images": [
+                {
+                    "id": 2,
+                    "img": "assets/images/blog/ia/2.webp"
+                }
+            ],
             "type": "Formation",
             "date": "2026-12-31",
             "title": "Trouver des enseignants ou professionnels volontaires",
@@ -23,7 +35,13 @@
         {
             "id": 3,
             "isEvent": false,
-            "image": "assets/images/blog/blog-grid/pic4.jpg",
+            "image": "assets/images/blog/ia/3.webp",
+            "images": [
+                {
+                    "id": 3,
+                    "img": "assets/images/blog/ia/3.webp"
+                }
+            ],
             "type": "Infrastructure",
             "date": "2025-03-31",
             "title": "Entretenir le terrain",
@@ -33,7 +51,13 @@
         {
             "id": 4,
             "isEvent": false,
-            "image": "assets/images/blog/blog-grid/pic4.jpg",
+            "image": "assets/images/blog/ia/4.webp",
+            "images": [
+                {
+                    "id": 4,
+                    "img": "assets/images/blog/ia/4.webp"
+                }
+            ],
             "type": "Emploi",
             "date": "2025-09-30",
             "title": "Payer les agents travaillant dans l'association au Burkina",

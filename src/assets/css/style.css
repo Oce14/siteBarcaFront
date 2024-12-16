@@ -7515,7 +7515,7 @@ fieldset:disabled .wp-block-button__link {
   }
 
   .modal-dialog {
-    max-width: var(--bs-modal-width);
+    /* max-width: var(--bs-modal-width); */
     margin-right: auto;
     margin-left: auto;
   }
@@ -28569,7 +28569,7 @@ ul a.rsswidget:hover {
 }
 
 .modal-wrapper .modal-dialog {
-  max-width: 450px;
+  max-width: 1500px;
   position: relative;
   padding: 15px 15px;
 }

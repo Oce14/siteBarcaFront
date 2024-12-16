@@ -41,7 +41,7 @@ interface typeofList {
 })
 export class BlogListComponent {
   bennre = {
-    bgImage: 'assets/images/banner/bnr5.jpg',
+    bgImage: 'assets/images/banner/bnr3.jpg',
     title: 'Blog List',
     classAdd: 'dz-bnr-inr-sm'
   }

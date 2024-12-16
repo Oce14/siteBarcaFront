@@ -37,7 +37,7 @@ interface typeofList {
 })
 export class FaqComponent {
   bennre = {
-    bgImage: 'assets/images/banner/bnr4.jpg',
+    bgImage: 'assets/images/banner/bnr3.jpg',
     title: 'FAQ',
     classAdd: 'dz-bnr-inr-sm'
   }
@@ -45,7 +45,7 @@ export class FaqComponent {
   faqSection: typeofList[] = [
     {
       section_title: `Qui sommes-nous ?`,
-      section_image: `assets/images/project/pic3.jpg`,
+      section_image: `assets/images/about/pic5.jpg`,
       activeTab: 0,
       section_custom_class: "",
       section_description: "Découvrez la mission et les valeurs de l'association Barca, engagée pour un impact durable dans les communautés locales.",
@@ -66,7 +66,7 @@ export class FaqComponent {
     },
     {
       section_title: `Soutenir l'association`,
-      section_image: `assets/images/project/pic2.jpg`,
+      section_image: `assets/images/about/pic4.jpg`,
       activeTab: 0,
       section_custom_class: "",
       section_description: "Apprenez comment vous pouvez aider l'association Barca à atteindre ses objectifs.",
@@ -87,7 +87,7 @@ export class FaqComponent {
     },
     {
       section_title: `Questions fréquentes`,
-      section_image: `assets/images/project/pic6.jpg`,
+      section_image: `assets/images/about/pic1.jpg`,
       activeTab: 0,
       section_custom_class: "content-inner-2",
       section_description: "Vous avez des questions ? Voici les réponses aux interrogations les plus fréquentes.",

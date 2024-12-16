@@ -64,7 +64,7 @@ export class ProjectComponent {
     });
   }
   bennre = {
-    bgImage: 'assets/images/banner/bnr5.jpg',
+    bgImage: 'assets/images/banner/bnr3.jpg',
     title: 'Nos Projects En Cours',
     classAdd: 'dz-bnr-inr-sm'
   }

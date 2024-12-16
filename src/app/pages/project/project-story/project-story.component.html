@@ -17,7 +17,7 @@
 					<div class="col-xl-8 col-lg-8 m-b30">
 						<div class="fundraiser-single">
 
-							<app-gallery-swiper [data]="swiperItem"></app-gallery-swiper>
+							<app-gallery-swiper [data]="project.images"></app-gallery-swiper>
 
 							<h2 class="title">{{ project.title }}</h2>
 							<p>{{ project.abstract }}</p>
@@ -110,7 +110,7 @@
 											<img src={{item.image}} alt="">
 										</div>
 										<div class="dz-info">
-											<h6 class="title"><a [routerLink]="['/fundraiser-detail', item.id]">{{
+											<h6 class="title"><a [routerLink]="['/project-story', item.id]">{{
 													item.title }}</a>
 											</h6>
 											<div class="dz-meta">
@@ -216,9 +216,7 @@
 		</section>
 		<!-- Fundraiser Detail -->
 
-		<!-- Call Action -->
-		<app-call-to-action1></app-call-to-action1>
-		<!-- Call Action -->
+
 
 	</div>
 
@@ -227,118 +225,14 @@
 	<!-- Footer End -->
 
 	<ng-template #content let-modal>
-		<div class="modal-header ">
-			<h5 class="modal-title">Choose a donation amount</h5>
-			<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"> <i
-					class="flaticon-close"></i></button>
+		<div class="modal-header">
+			<h5 class="modal-title">Faire un don</h5>
+			<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+				<i class="flaticon-close"></i>
+			</button>
 		</div>
 		<div class="modal-body">
-			<form>
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="tag-donate style-1">
-							<div class="donate-categories">
-								<div class="form-check">
-									<input class="form-check-input" type="radio"
-										[(ngModel)]="modalDonateSelect.flexRadioDefault" name="flexRadioDefault"
-										value="500" id="flexRadioDefault11">
-									<label class="form-check-label" for="flexRadioDefault11">
-										$500
-									</label>
-								</div>
-							</div>
-							<div class="donate-categories">
-								<div class="form-check">
-									<input class="form-check-input" type="radio"
-										[(ngModel)]="modalDonateSelect.flexRadioDefault" value="1000"
-										name="flexRadioDefault2" id="flexRadioDefault22">
-									<label class="form-check-label" for="flexRadioDefault22">
-										$1000
-									</label>
-								</div>
-							</div>
-							<div class="donate-categories">
-								<div class="form-check">
-									<input class="form-check-input" type="radio"
-										[(ngModel)]="modalDonateSelect.flexRadioDefault" value="2000"
-										name="flexRadioDefault3" id="flexRadioDefault33">
-									<label class="form-check-label" for="flexRadioDefault33">
-										$2000
-									</label>
-								</div>
-							</div>
-							<div class="donate-categories">
-								<div class="form-check">
-									<input class="form-check-input" type="radio"
-										[(ngModel)]="modalDonateSelect.flexRadioDefault" value="5000"
-										name="flexRadioDefault4" id="flexRadioDefault44">
-									<label class="form-check-label" for="flexRadioDefault44">
-										$5000
-									</label>
-								</div>
-							</div>
-							<p>Most Donors donate approx <span>${{modalDonateSelect.flexRadioDefault}}</span> to this
-								Fundraiser</p>
-						</div>
-					</div>
-					<div class="col-lg-12">
-						<div class="form-group">
-							<label class="form-label">Other Amount</label>
-							<div class="input-group">
-								<input type="number" class="form-control" placeholder="Other Amount">
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-12">
-						<div class="form-group">
-							<label class="form-label">Name</label>
-							<div class="input-group">
-								<input name="dzName" required="" type="text" class="form-control"
-									placeholder="Jakob Bothman">
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-12">
-						<div class="form-group">
-							<label class="form-label">Email address</label>
-							<div class="input-group">
-								<input name="dzEmail" required type="text" class="form-control"
-									placeholder="info@mail.com">
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-12">
-						<div class="form-group">
-							<label class="form-label">Phone Number</label>
-							<div class="input-group">
-								<input type="number" class="form-control" placeholder="Phone Number">
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-12">
-						<div class="form-group">
-							<label class="form-label">Address</label>
-							<div class="input-group">
-								<input required type="text" class="form-control" placeholder="Address">
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-12">
-						<div class="form-group">
-							<label class="form-label">Pancard</label>
-							<div class="input-group">
-								<input type="number" class="form-control" placeholder="Pancard">
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-12">
-						<div class="form-group mb-0 text-center">
-							<button name="submit" type="submit" value="Submit" class="btn btn-primary btn-block">Proceed
-								To Pay</button>
-						</div>
-					</div>
-				</div>
-			</form>
+			<app-pop-up-hello-asso></app-pop-up-hello-asso>
 		</div>
 	</ng-template>
 

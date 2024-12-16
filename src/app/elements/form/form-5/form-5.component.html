@@ -10,17 +10,18 @@
         style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
     </div>
     <div class="row justify-content-end">
-      <!-- <div class="col-xl-6 col-lg-8 col-sm-12">
-        <div class="contact-info form-wrapper style-1"> -->
-      <!-- <h2 class="title">Write us a message</h2>
+      <div class="col-xl-6 col-lg-8 col-sm-12">
+        <div class="contact-info form-wrapper style-1">
+          <h2 class="title">Write us a message</h2>
           <div class="contact-area">
             <form class="dz-form dzForm contact-bx" [formGroup]="createForm" (ngSubmit)="onSubmit()">
               <div class="dzFormMsg">
                 @if(submitted && f['dzEmail'].errors && f['dzEmail'].errors['required']==true){
-                  <div class="err alert alert-danger">{{ submissionStatus }} </div>
+                <div class="err alert alert-danger">{{ submissionStatus }} </div>
                 }
                 @if(submitted && successFullStatus) {
-                  <div class="err alert alert-{{ submissionStatus!='Submiting..'? 'success':'danger' }}">{{ submissionStatus }} </div>
+                <div class="err alert alert-{{ submissionStatus!='Submiting..'? 'success':'danger' }}">{{
+                  submissionStatus }} </div>
                 }
               </div>
               <input type="hidden" class="form-control" name="dzToDo" value="Contact">
@@ -40,29 +41,32 @@
                 <div class="col-md-6">
                   <label class="form-label">Email address</label>
                   <div class="input-group">
-                    <input formControlName="dzEmail" required type="text" class="form-control" placeholder="info&#64;example.com">
+                    <input formControlName="dzEmail" required type="text" class="form-control"
+                      placeholder="info&#64;example.com">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Phone Number</label>
                   <div class="input-group">
-                    <input formControlName="dzPhoneNumber" required type="text" class="form-control" placeholder="987 654 3210">
+                    <input formControlName="dzPhoneNumber" required type="text" class="form-control"
+                      placeholder="987 654 3210">
                   </div>
                 </div>
                 <div class="col-md-12">
                   <label class="form-label">Message</label>
                   <div class="input-group">
-                    <textarea formControlName="dzMessage" rows="5" required class="form-control" placeholder="Dear Sir/Madam"></textarea>
+                    <textarea formControlName="dzMessage" rows="5" required class="form-control"
+                      placeholder="Dear Sir/Madam"></textarea>
                   </div>
                 </div>
                 <div class="col-md-12">
                   <button name="submit" type="submit" value="Submit" class="btn btn-secondary">Submit Now</button>
                 </div>
               </div>
-            </form> -->
-      <!-- </div> -->
-      <!-- </div>
-      </div> -->
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <svg class="shape-2 move-2" viewBox="0 0 95 95" xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano"

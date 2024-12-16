@@ -5,6 +5,8 @@ import { RouterLink } from '@angular/router';
 import { NgbModal, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { Navigation1Component } from '../../navigation/navigation1/navigation1.component';
 import { FormsModule } from '@angular/forms';
+import { PopUpHelloAssoComponent } from '../../pop-up-hello-asso/pop-up-hello-asso.component';
+
 
 @Component({
   selector: 'app-header-2',
@@ -14,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     NgbCollapseModule,
     FormsModule,
-    Navigation1Component
+    Navigation1Component,
+    PopUpHelloAssoComponent
   ],
   templateUrl: './header-2.component.html',
   styleUrl: './header-2.component.css'
@@ -24,6 +27,7 @@ export class Header2Component {
   modalDonateSelect;
   isCollapsed = false;
   resetPassword = false;
+  showHelloAssoPopup = false;
   email: string = 'association.barca@gmail.com';
   selectedColor: string = 'NOTHING';
   private modalService = inject(NgbModal);

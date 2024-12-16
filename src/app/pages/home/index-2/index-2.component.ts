@@ -145,7 +145,7 @@ export class Index2Component {
 
     {
       section_title: `Questions fréquentes`,
-      section_image: `assets/images/project/pic6.jpg`,
+      section_image: `assets/images/about/pic1.jpg`,
       activeTab: 0,
       section_custom_class: "content-inner-2",
       section_description: "Vous avez des questions ? Voici les réponses aux interrogations les plus fréquentes.",

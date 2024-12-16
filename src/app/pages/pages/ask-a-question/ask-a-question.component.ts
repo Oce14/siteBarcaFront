@@ -24,7 +24,7 @@ import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.co
 })
 export class AskAQuestionComponent {
   bennre = {
-    bgImage: 'assets/images/banner/bnr1.jpg',
+    bgImage: 'assets/images/banner/bnr3.jpg',
     title: 'Ask A Question',
     classAdd: 'dz-bnr-inr-sm'
   }

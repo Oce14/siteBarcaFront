@@ -1,9 +1,10 @@
 import { CurrencyPipe, NgClass, UpperCasePipe } from '@angular/common';
-import { Component, Input , TemplateRef, inject } from '@angular/core';
+import { Component, Input, TemplateRef, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Swiper } from "swiper";
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { PopUpHelloAssoComponent } from "../../../pop-up-hello-asso/pop-up-hello-asso.component";
 
 @Component({
   selector: 'app-recent-blog-siwper-1',
@@ -13,7 +14,8 @@ import { FormsModule } from '@angular/forms';
     RouterLink,
     UpperCasePipe,
     CurrencyPipe,
-    FormsModule
+    FormsModule,
+    PopUpHelloAssoComponent
   ],
   templateUrl: './recent-blog-siwper-1.component.html',
   styleUrl: './recent-blog-siwper-1.component.css'

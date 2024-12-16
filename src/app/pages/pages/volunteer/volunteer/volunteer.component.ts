@@ -20,7 +20,7 @@ import { ScrollTopButtonComponent } from '../../../../elements/short-cods/scroll
 })
 export class VolunteerComponent {
   bennre = {
-    bgImage: 'assets/images/banner/bnr2.jpg',
+    bgImage: 'assets/images/banner/bnr3.jpg',
     title: 'Volunteer',
     classAdd: 'dz-bnr-inr-sm'
   }

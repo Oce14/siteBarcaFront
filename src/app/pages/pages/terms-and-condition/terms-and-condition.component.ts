@@ -26,7 +26,7 @@ import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.co
 })
 export class TermsAndConditionComponent {
   bennre = {
-    bgImage: 'assets/images/banner/bnr5.jpg',
+    bgImage: 'assets/images/banner/bnr3.jpg',
     title: 'Terms And Condition',
     classAdd: 'dz-bnr-inr-sm'
   }

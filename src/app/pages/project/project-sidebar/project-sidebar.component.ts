@@ -47,7 +47,7 @@ interface blogType {
 })
 export class ProjectSidebarComponent {
   bennre = {
-    bgImage: 'assets/images/banner/bnr2.jpg',
+    bgImage: 'assets/images/banner/bnr3.jpg',
     title: 'Project Sidebar',
     classAdd: ''
   }

@@ -2,7 +2,7 @@
     "post": [
         {
             "id": 1,
-            "blogPostImage": "assets/images/blog/blog-grid/pic4.jpg",
+            "blogPostImage": "assets/images/blog/projet/5.jpg",
             "type": "Infrastructure",
             "date": "2022-06-01",
             "title": "Nouvelle étape dans notre projet : Création de toilettes sèches !",
@@ -11,7 +11,7 @@
         },
         {
             "id": 2,
-            "blogPostImage": "assets/images/blog/blog-grid/pic4.jpg",
+            "blogPostImage": "assets/images/blog/projet/4.jpg",
             "type": "Eau",
             "date": "2023-11-17",
             "title": "Une avancée majeure : le château d’eau est en place !",
@@ -20,7 +20,7 @@
         },
         {
             "id": 3,
-            "blogPostImage": "assets/images/blog/blog-grid/pic4.jpg",
+            "blogPostImage": "assets/images/blog/projet/1.jpg",
             "type": "Education",
             "date": "2024-08-08",
             "title": "Une première inoubliable : Notre tout premier cours !",
@@ -29,7 +29,7 @@
         },
         {
             "id": 4,
-            "blogPostImage": "assets/images/blog/blog-grid/pic4.jpg",
+            "blogPostImage": "assets/images/blog/projet/6.jpg",
             "type": "Infrastructure",
             "date": "2022-06-01",
             "title": "Pose du premier conteneur : une étape clé pour nos infrastructures !",
@@ -38,7 +38,7 @@
         },
         {
             "id": 5,
-            "blogPostImage": "assets/images/blog/blog-grid/pic4.jpg",
+            "blogPostImage": "assets/images/blog/projet/3.jpg",
             "type": "Education",
             "date": "2023-11-29",
             "title": "Une salle de classe unique dans notre conteneur !",
@@ -47,7 +47,7 @@
         },
         {
             "id": 6,
-            "blogPostImage": "assets/images/blog/blog-grid/pic4.jpg",
+            "blogPostImage": "assets/images/blog/projet/2.jpg",
             "type": "Agriculture",
             "date": "2024-11-20",
             "title": "Première récolte : les fruits de notre travail !",

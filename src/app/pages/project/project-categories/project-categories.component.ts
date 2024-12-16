@@ -73,7 +73,7 @@ export class ProjectCategoriesComponent {
   }
 
   bennre = {
-    bgImage: 'assets/images/banner/bnr1.jpg',
+    bgImage: 'assets/images/banner/bnr3.jpg',
     title: 'Nos projets',
     classAdd: 'dz-bnr-inr-sm'
   }

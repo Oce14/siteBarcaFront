@@ -14,6 +14,7 @@ import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.co
 import { DataService } from '../../../../shared/service/data';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { GallerySwiperComponent } from "../../../elements/short-cods/swipers/gallery-swiper/gallery-swiper.component";
+import { PopUpHelloAssoComponent } from "../../../elements/pop-up-hello-asso/pop-up-hello-asso.component";
 
 interface typeofTestimonial {
   section_title: string,
@@ -43,7 +44,8 @@ interface typeofTestimonial {
     ScrollTopButtonComponent,
     Header2Component,
     Footer2Component,
-    GallerySwiperComponent
+    GallerySwiperComponent,
+    PopUpHelloAssoComponent
   ],
   templateUrl: './project-story.component.html',
   styleUrl: './project-story.component.css'
@@ -108,25 +110,25 @@ export class ProjectStoryComponent {
     this.modalService.open(content, { centered: true, windowClass: 'modal-wrapper' });
   }
 
-  swiperItem = [
-    {
-      img: 'assets/images/blog/large/pic1.jpg',
-    },
-    {
-      img: 'assets/images/blog/large/pic2.jpg',
-    },
-    {
-      img: 'assets/images/blog/large/pic3.jpg',
-    },
-    {
-      img: 'assets/images/blog/large/pic4.jpg',
-    },
-    {
-      img: 'assets/images/blog/large/pic5.jpg',
-    },
-    {
-      img: 'assets/images/blog/large/pic6.jpg',
-    }
-  ]
+  // swiperItem = [
+  //   {
+  //     img: 'assets/images/blog/large/pic1.jpg',
+  //   },
+  //   {
+  //     img: 'assets/images/blog/large/pic2.jpg',
+  //   },
+  //   {
+  //     img: 'assets/images/blog/large/pic3.jpg',
+  //   },
+  //   {
+  //     img: 'assets/images/blog/large/pic4.jpg',
+  //   },
+  //   {
+  //     img: 'assets/images/blog/large/pic5.jpg',
+  //   },
+  //   {
+  //     img: 'assets/images/blog/large/pic6.jpg',
+  //   }
+  // ]
 }
 

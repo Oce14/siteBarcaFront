@@ -54,7 +54,7 @@ export class BlogComponent implements OnInit {
   }
 
   bennre = {
-    bgImage: 'assets/images/banner/bnr4.jpg',
+    bgImage: 'assets/images/banner/bnr3.jpg',
     title: 'Nos Réalisations',
     classAdd: 'dz-bnr-inr-sm'
   }
@@ -173,6 +173,9 @@ export class BlogComponent implements OnInit {
   }
 
   sortByMostRecent(posts: any[]): any[] {
+    //Remove the most recent and second most recent posts
+    posts = posts.filter(post => post !== this.mostRecentPost && post !== this.secondMostRecentPost);
+    //Sort the remaining posts by date
     return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }
 }

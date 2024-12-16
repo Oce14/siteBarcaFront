@@ -30,7 +30,7 @@ interface type {
 })
 export class HappyClientsComponent {
   bennre = {
-    bgImage: 'assets/images/banner/bnr2.jpg',
+    bgImage: 'assets/images/banner/bnr3.jpg',
     title: 'Happy Clients',
     classAdd: 'dz-bnr-inr-sm'
   }

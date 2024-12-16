@@ -39,7 +39,7 @@ interface typeofList {
 })
 export class BlogGridComponent {
   bennre = {
-    bgImage: 'assets/images/banner/bnr4.jpg',
+    bgImage: 'assets/images/banner/bnr3.jpg',
     title: 'Blog Grid',
     classAdd: 'dz-bnr-inr-sm'
   }

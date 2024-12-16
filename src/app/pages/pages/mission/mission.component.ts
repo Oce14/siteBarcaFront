@@ -45,7 +45,7 @@ interface typeofIcone {
 })
 export class MissionComponent {
   bennre = {
-    bgImage: 'assets/images/banner/bnr4.jpg',
+    bgImage: 'assets/images/banner/bnr3.jpg',
     title: 'Mission',
     classAdd: 'dz-bnr-inr-sm'
   }

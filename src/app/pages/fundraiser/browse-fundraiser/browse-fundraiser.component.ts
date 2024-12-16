@@ -53,7 +53,7 @@ export class BrowseFundraiserComponent {
     });
   }
   bennre = {
-    bgImage: 'assets/images/banner/bnr2.jpg',
+    bgImage: 'assets/images/banner/bnr3.jpg',
     title: 'Nos Evénements',
     classAdd: 'dz-bnr-inr-sm'
   }
