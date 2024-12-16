@@ -3,7 +3,7 @@
     <div class="map-iframe style-1">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d237110.57783334478!2d-1.7684393231821858!3d12.335421487924586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2e912009c4425d%3A0xa495072b991c5837!2sZagtouli!5e1!3m2!1sfr!2sfr!4v1732723654926!5m2!1sfr!2sfr"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
       <!-- <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14448.884443175983!2d75.81853095!3d25.128214449999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f835fcc2a9e43%3A0x69e74069e551d77d!2sRajasthan%20Technical%20University%2C%20Kota!5e0!3m2!1sen!2sin!4v1645506412870!5m2!1sen!2sin"
@@ -12,55 +12,54 @@
     <div class="row justify-content-end">
       <div class="col-xl-6 col-lg-8 col-sm-12">
         <div class="contact-info form-wrapper style-1">
-          <h2 class="title">Write us a message</h2>
+          <h2 class="title">Une question ? Une idée ? Laissez-nous un message !</h2>
           <div class="contact-area">
-            <form class="dz-form dzForm contact-bx" [formGroup]="createForm" (ngSubmit)="onSubmit()">
-              <div class="dzFormMsg">
-                @if(submitted && f['dzEmail'].errors && f['dzEmail'].errors['required']==true){
-                <div class="err alert alert-danger">{{ submissionStatus }} </div>
-                }
-                @if(submitted && successFullStatus) {
-                <div class="err alert alert-{{ submissionStatus!='Submiting..'? 'success':'danger' }}">{{
-                  submissionStatus }} </div>
-                }
-              </div>
-              <input type="hidden" class="form-control" name="dzToDo" value="Contact">
+            <form id="emailForm" (submit)="sendEmail($event)">
               <div class="row sp15">
                 <div class="col-md-6">
-                  <label class="form-label">First Name</label>
+                  <label class="form-label">Prénom</label>
                   <div class="input-group">
-                    <input formControlName="dzFirstName" required type="text" class="form-control" placeholder="John">
+                    <input type="text" name="dzFirstName" class="form-control" required placeholder="Jean">
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label">Last Name</label>
+                  <label class="form-label">Nom</label>
                   <div class="input-group">
-                    <input formControlName="dzLastName" required type="text" class="form-control" placeholder="Deo">
+                    <input type="text" name="dzLastName" class="form-control" required placeholder="Dupont">
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label">Email address</label>
+                  <label class="form-label">Adresse e-mail</label>
                   <div class="input-group">
-                    <input formControlName="dzEmail" required type="text" class="form-control"
-                      placeholder="info&#64;example.com">
+                    <input type="email" name="dzEmail" class="form-control" required placeholder="exemple@mail.com">
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label">Phone Number</label>
+                  <label class="form-label">Numéro de téléphone</label>
                   <div class="input-group">
-                    <input formControlName="dzPhoneNumber" required type="text" class="form-control"
-                      placeholder="987 654 3210">
+                    <input type="text" name="dzPhoneNumber" class="form-control" required placeholder="06 12 34 56 78">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label">Objet</label>
+                  <div class="input-group">
+                    <input type="text" name="dzSubject" class="form-control" required
+                      placeholder="Sujet de votre message">
                   </div>
                 </div>
                 <div class="col-md-12">
                   <label class="form-label">Message</label>
                   <div class="input-group">
-                    <textarea formControlName="dzMessage" rows="5" required class="form-control"
-                      placeholder="Dear Sir/Madam"></textarea>
+                    <textarea name="dzMessage" rows="5" class="form-control" required
+                      placeholder="Votre message ici..."></textarea>
                   </div>
                 </div>
                 <div class="col-md-12">
-                  <button name="submit" type="submit" value="Submit" class="btn btn-secondary">Submit Now</button>
+                  <button type="submit" class="btn btn-secondary">
+                    <span *ngIf="!successMessage && !errorMessage">Envoyer</span>
+                    <span *ngIf="successMessage">Message envoyé avec succès !</span>
+                    <span *ngIf="errorMessage">Une erreur est survenue, veuillez réessayer</span>
+                  </button>
                 </div>
               </div>
             </form>
