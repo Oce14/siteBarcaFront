@@ -17,7 +17,8 @@ export const appConfig: ApplicationConfig = {
       HttpClientModule,
       BrowserAnimationsModule,
       RouterModule.forRoot(routes, {
-        scrollPositionRestoration: 'top'
+        scrollPositionRestoration: 'top',
+        anchorScrolling: 'enabled',
       })
     ), provideAnimationsAsync()
   ]

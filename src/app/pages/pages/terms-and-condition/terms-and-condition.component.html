@@ -18,35 +18,44 @@
 							<div class="dz-terms-list">
 								<ul class="navbar-nav navbar-scroll">
 									<li [ngClass]="{'active': activeScroll === 'scrollNavSection01'}"><a
-											href="javascript:void(0)" class="nav-link scroll">Présentation de
+											(click)="onClick('scrollNavSection01')" class="nav-link scroll">Présentation
+											de
 											l’association</a></li>
 									<li [ngClass]="{'active': activeScroll === 'scrollNavSection02'}"><a
-											href="javascript:void(0)" class="nav-link scroll">Objet des présentes
+											(click)="onClick('scrollNavSection02')" class="nav-link scroll">Objet des
+											présentes
 											conditions</a></li>
 									<li [ngClass]="{'active': activeScroll === 'scrollNavSection03'}"><a
-											href="javascript:void(0)" class="nav-link scroll"> Accès et utilisation du
+											(click)="onClick('scrollNavSection03')" class="nav-link scroll"> Accès et
+											utilisation du
 											site</a></li>
 									<li [ngClass]="{'active': activeScroll === 'scrollNavSection04'}"><a
-											href="javascript:void(0)" class="nav-link scroll">Collecte de dons et
+											(click)="onClick('scrollNavSection04')" class="nav-link scroll">Collecte de
+											dons et
 											adhésions via HelloAsso</a>
 									</li>
 									<li [ngClass]="{'active': activeScroll === 'scrollNavSection05'}"><a
-											href="javascript:void(0)" class="nav-link scroll">Protection des données
+											(click)="onClick('scrollNavSection05')" class="nav-link scroll">Protection
+											des données
 											personnelles</a></li>
 									<li [ngClass]="{'active': activeScroll === 'scrollNavSection06'}"><a
-											href="javascript:void(0)" class="nav-link scroll">Responsabilités</a></li>
+											(click)="onClick('scrollNavSection06')"
+											class="nav-link scroll">Responsabilités</a></li>
 									<li [ngClass]="{'active': activeScroll === 'scrollNavSection07'}"><a
-											href="javascript:void(0)" class="nav-link scroll">Propriété
+											(click)="onClick('scrollNavSection07')" class="nav-link scroll">Propriété
 											intellectuelle</a>
 									</li>
 									<li [ngClass]="{'active': activeScroll === 'scrollNavSection08'}"><a
-											href="javascript:void(0)" class="nav-link scroll">Modification des
+											(click)="onClick('scrollNavSection08')" class="nav-link scroll">Modification
+											des
 											CGU/CGV</a></li>
 									<li [ngClass]="{'active': activeScroll === 'scrollNavSection09'}"><a
-											href="javascript:void(0)" class="nav-link scroll">Droit applicable et
+											(click)="onClick('scrollNavSection09')" class="nav-link scroll">Droit
+											applicable et
 											juridiction compétente</a></li>
 									<li [ngClass]="{'active': activeScroll === 'scrollNavSection10'}"><a
-											href="javascript:void(0)" class="nav-link scroll">Contact</a></li>
+											(click)="onClick('scrollNavSection10')" class="nav-link scroll">Contact</a>
+									</li>
 								</ul>
 							</div>
 						</aside>
@@ -191,11 +200,19 @@
 						</div>
 
 						<div class="dz-terms-content" id="scrollNavSection10">
-							<h4 class="title">Contact</h4>
+							<h4 class="title">Contact & WebMaster</h4>
 							<p>Pour toute question relative aux présentes conditions, vous pouvez nous contacter par
 								e-mail à
 								<strong><a class="text-dark gmail" target="_blank"
 										href="mailto:association.barca@gmail.com">association.barca&#64;gmail.com</a></strong>
+							</p>
+							<p>
+								Le site est créé par <strong><a class="text-dark gmail" target="_blank"
+										href="mailto:lequellecoceane@live.fr">Océane Le Quellec</a></strong>, secrétaire
+								&
+								webmaster de l’association, joignable par e-mail à l’adresse suivante :
+								<strong><a class="text-dark gmail" target="_blank"
+										href="mailto:lequellecoceane@live.fr">lequellecoceane&#64;live.fr</a></strong>.
 							</p>
 						</div>
 

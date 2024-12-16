@@ -1,4 +1,4 @@
-import { NgClass } from '@angular/common';
+import { NgClass, ViewportScroller } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { Banner4Component } from '../../../elements/banners/banner-4/banner-4.component';
 import { CallToAction1Component } from '../../../elements/call-to-action/call-to-action1/call-to-action1.component';
@@ -7,6 +7,8 @@ import { Header1Component } from '../../../elements/headers/header-1/header-1.co
 import { ScrollTopButtonComponent } from '../../../elements/short-cods/scroll-top-button/scroll-top-button.component';
 import { Header2Component } from "../../../elements/headers/header-2/header-2.component";
 import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.component";
+import { RouterModule } from '@angular/router';
+import { routes } from '../../../app.routes';
 
 @Component({
   selector: 'app-terms-and-condition',
@@ -19,6 +21,7 @@ import { Footer2Component } from "../../../elements/footers/footer-2/footer-2.co
     Footer1Component,
     ScrollTopButtonComponent,
     Header2Component,
+    RouterModule,
     Footer2Component
   ],
   templateUrl: './terms-and-condition.component.html',
@@ -33,6 +36,7 @@ export class TermsAndConditionComponent {
 
   activeScroll: string | null = 'scrollNavSection01';
 
+  constructor(private viewportScoller: ViewportScroller) { }
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
     this.checkScroll();
@@ -58,5 +62,9 @@ export class TermsAndConditionComponent {
         box.classList.add('split-active');
       }
     });
+  }
+
+  public onClick(elementId: string): void {
+    this.viewportScoller.scrollToAnchor(elementId);
   }
 }
