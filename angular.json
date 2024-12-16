@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "akcel": {
+    "barcaBurkina": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/akcel",
+            "outputPath": "dist/barca-burkina",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "akcel:build:production"
+              "buildTarget": "barcaBurkina:build:production"
             },
             "development": {
-              "buildTarget": "akcel:build:development"
+              "buildTarget": "barcaBurkina:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "akcel:build"
+            "buildTarget": "barcaBurkina:build"
           }
         },
         "test": {

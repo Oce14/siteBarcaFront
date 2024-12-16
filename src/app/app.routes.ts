@@ -32,21 +32,21 @@ export const routes: Routes = [
   { path: '', component: Index2Component },
   // Home ---
   { path: 'index', component: Index2Component },
-  { path: 'index-1', component: Index1Component },
+  // { path: 'index-1', component: Index1Component },
   { path: 'index-2', component: Index2Component },
-  { path: 'index-3', component: Index3Component },
+  // { path: 'index-3', component: Index3Component },
   // Pages --
   { path: 'about-us', component: AboutUsComponent },
-  { path: 'volunteer', component: VolunteerComponent },
+  // { path: 'volunteer', component: VolunteerComponent },
   { path: 'become-a-volunteer', component: BecomeAVolunteerComponent },
   { path: 'faq', component: FaqComponent },
-  { path: 'certificates', component: CertificatesComponent },
-  { path: 'ask-a-question', component: AskAQuestionComponent },
-  { path: 'happy-clients', component: HappyClientsComponent },
-  { path: 'how-it-works', component: HowItWorksComponent },
-  { path: 'mission', component: MissionComponent },
+  // { path: 'certificates', component: CertificatesComponent },
+  // { path: 'ask-a-question', component: AskAQuestionComponent },
+  // { path: 'happy-clients', component: HappyClientsComponent },
+  // { path: 'how-it-works', component: HowItWorksComponent },
+  // { path: 'mission', component: MissionComponent },
   { path: 'terms-and-condition', component: TermsAndConditionComponent },
-  { path: 'coming-soon', component: ComingSoonComponent },
+  // { path: 'coming-soon', component: ComingSoonComponent },
   { path: 'under-maintenance', component: UnderMaintenanceComponent },
   { path: 'error-404', component: Error404Component },
   // Fundraiser --
@@ -56,14 +56,18 @@ export const routes: Routes = [
   // Project --
   { path: 'project', component: ProjectComponent },
   { path: 'project-categories', component: ProjectCategoriesComponent },
-  { path: 'project-sidebar', component: ProjectSidebarComponent },
+  // { path: 'project-sidebar', component: ProjectSidebarComponent },
   { path: 'project-story/:id', component: ProjectStoryComponent },
   // Blog --
   { path: 'blog', component: BlogComponent },
-  { path: 'blog-grid', component: BlogGridComponent },
-  { path: 'blog-list', component: BlogListComponent },
+  // { path: 'blog-grid', component: BlogGridComponent },
+  // { path: 'blog-list', component: BlogListComponent },
   { path: 'post/:id', component: BlogDetailsComponent },
   // Contact --
   { path: 'contact-us', component: ContactUsComponent },
+  {
+    path: '**',
+    redirectTo: 'error-404'
+  }
 
 ];
