@@ -3,11 +3,11 @@
         {
             "id": 1,
             "isEvent": false,
-            "image": "assets/images/blog/ia/1.webp",
+            "image": "assets/images/freepik/10.jpg",
             "images": [
                 {
                     "id": 1,
-                    "img": "assets/images/blog/ia/1.webp"
+                    "img": "assets/images/freepik/10.jpg"
                 }
             ],
             "type": "Éducation",
@@ -19,11 +19,11 @@
         {
             "id": 2,
             "isEvent": false,
-            "image": "assets/images/blog/ia/2.webp",
+            "image": "assets/images/freepik/11.jpg",
             "images": [
                 {
                     "id": 2,
-                    "img": "assets/images/blog/ia/2.webp"
+                    "img": "assets/images/freepik/11.jpg"
                 }
             ],
             "type": "Formation",
@@ -35,11 +35,11 @@
         {
             "id": 3,
             "isEvent": false,
-            "image": "assets/images/blog/ia/3.webp",
+            "image": "assets/images/freepik/8.jpg",
             "images": [
                 {
                     "id": 3,
-                    "img": "assets/images/blog/ia/3.webp"
+                    "img": "assets/images/freepik/8.jpg"
                 }
             ],
             "type": "Infrastructure",
@@ -51,11 +51,11 @@
         {
             "id": 4,
             "isEvent": false,
-            "image": "assets/images/blog/ia/4.webp",
+            "image": "assets/images/freepik/9.jpg",
             "images": [
                 {
                     "id": 4,
-                    "img": "assets/images/blog/ia/4.webp"
+                    "img": "assets/images/freepik/9.jpg"
                 }
             ],
             "type": "Emploi",

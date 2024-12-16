@@ -123,12 +123,12 @@ export class BecomeAVolunteerComponent {
           desc: 'Participer à des projets durables et significatifs, qu’il s’agisse d’éducation, d’agriculture ou d’écologie.'
         },
         {
-          icon: 'flaticon-raw-food',
+          icon: 'flaticon-responsibility',
           title: 'Partager',
           desc: 'Partager vos compétences tout en acquérant de nouvelles expériences enrichissantes.'
         },
         {
-          icon: 'flaticon-doctor-bag',
+          icon: 'flaticon-raw-food',
           title: 'Communauté ',
           desc: 'Faire partie d’une communauté solidaire et engagée pour un monde meilleur.'
         }

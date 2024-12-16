@@ -83,12 +83,12 @@ export class BecomeAFundraiserComponent {
       section_description: "En soutenant l'association BARCA, vous contribuez directement à :",
       list: [
         {
-          icon: 'flaticon-like-1',
+          icon: 'flaticon-open-book',
           title: 'Favoriser l’accès à l’éducation',
           desc: 'Aide aux devoirs, formations en langues, et préparation aux examens.'
         },
         {
-          icon: 'flaticon-open-book',
+          icon: 'flaticon-responsibility',
           title: 'Améliorer les conditions de vie',
           desc: 'Construction de châteaux d\'eau, de toilettes sèches, et de potagers communautaires.'
         },
@@ -98,7 +98,7 @@ export class BecomeAFundraiserComponent {
           desc: 'Sensibilisation à la biodiversité et formation à l’autosuffisance alimentaire.'
         },
         {
-          icon: 'flaticon-doctor-bag',
+          icon: 'flaticon-like-1',
           title: 'Créer un impact ',
           desc: 'Créer un impact réel et mesurable dans les communautés locales.'
         }

@@ -120,7 +120,7 @@ export class AboutUsComponent {
 
   iconBox: iconBoxType[] = [
     {
-      icon: 'flaticon-vr-glasses',
+      icon: 'flaticon-open-book',
       title: 'Éducation pour tous',
       desc: 'Offrir des outils pour réussir.',
     },
@@ -130,12 +130,12 @@ export class AboutUsComponent {
       desc: 'Travailler main dans la main.',
     },
     {
-      icon: 'flaticon-doctor-bag',
+      icon: 'flaticon-raw-food',
       title: 'Durabilité',
       desc: 'Pratiques agricoles respectueuses de l’environnement.',
     },
     {
-      icon: 'flaticon-open-book',
+      icon: 'flaticon-like-1',
       title: 'Autonomisation',
       desc: 'Former et créer des emplois.',
     }
@@ -148,7 +148,7 @@ export class AboutUsComponent {
       category: [
         {
           dz_title: 'Aide aux devoirs et passages d\'examens',
-          icon: 'flaticon-raw-food',
+          icon: 'flaticon-open-book',
           url: '/project-categories'
         },
         {
@@ -158,22 +158,22 @@ export class AboutUsComponent {
         },
         {
           dz_title: 'Ateliers pratiques : gestes de secours, jardinage, etc',
-          icon: 'flaticon-vr-glasses',
+          icon: 'flaticon-doctor-bag',
           url: '/project-categories'
         },
         {
           dz_title: 'Sensibilisation à la biodiversité et à l’autosuffisance alimentaire',
-          icon: 'flaticon-open-book',
+          icon: 'flaticon-raw-food',
           url: '/project-categories'
         },
         {
           dz_title: 'Lieu de convivialité pour renforcer le lien social',
-          icon: 'flaticon-video',
+          icon: 'flaticon-like-1',
           url: '/project-categories'
         },
         // {
         //   dz_title: 'Fashion',
-        //   icon: 'flaticon-like-1',
+        //   icon: 'flaticon-video',
         //   url: '/project-categories'
         // },
         // {
@@ -183,7 +183,7 @@ export class AboutUsComponent {
         // },
         // {
         //   dz_title: 'Medical',
-        //   icon: 'flaticon-doctor-bag',
+        //   icon: 'flaticon-vr-glasses',
         //   url: '/project-categories'
         // }
       ]
