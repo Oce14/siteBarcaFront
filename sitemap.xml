@@ -86,4 +86,10 @@
 	<changefreq>always</changefreq>
 	<priority>0.5</priority>
 </url>
+<url>
+	<loc>https://barca-burkina.fr/terms-and-condition</loc>
+	<lastmod>2024-12-19T11:43:34+01:00</lastmod>
+	<changefreq>always</changefreq>
+	<priority>0.5</priority>
+</url>
 </urlset>
